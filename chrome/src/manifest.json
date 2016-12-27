@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-
   "name": "Amazon Smile Redirect",
-  "description": "This extension will automatically redirect you to the corresponding smile.amazon.com page so you will never need to remember to go to smile.amazon.com first.",
+  "short_name": "Amazon Smile Redirect",
+  "description": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com",
   "version": "1.0",
   "author": "Michael J Scarchilli & Bunnies... lots and lots of bunnies!",
   "homepage_url": "https://www.linkedin.com/in/mscarchilli",
