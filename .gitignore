@@ -39,3 +39,4 @@ Thumbs.db
 
 # custom #
 ######################
+/chrome/dist/amazon-smile-redirect.pem
