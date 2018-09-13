@@ -2,7 +2,7 @@
 // @name       	Amazon Smile Redirect
 // @namespace  	http://www.mikevision.com/
 // @version    	1.1
-// @description This script will automatically redirect you to the corresponding smile.amazon.com page.
+// @description This script will automatically redirect you to the corresponding Amazon Smile page in the US, UK, and DE.
 // @include 		http://www.amazon.com/*
 // @include     http://www.amazon.co.uk/*
 // @include 		http://www.amazon.de/*
