@@ -25,7 +25,8 @@
 // @updateURL 	https://openuserjs.org/meta/mscarchilli/Amazon_Smile_Redirect.meta.js
 // @downloadURL https://openuserjs.org/install/mscarchilli/Amazon_Smile_Redirect.user.js
 // @icon 				http://www.amazon.com/favicon.ico
-// @grant none
+// @grant       none
+// @license     MIT
 // ==/UserScript==
 
 
