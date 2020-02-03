@@ -1,17 +1,50 @@
+// ----------------------------------------------------- Extension Toggle //
+const enabledItem = '<i class="enabled fa-fw fas fa-check"></i> Enabled';
+const disabledItem = '<i class="fa-fw fas fa-times"></i> Disabled';
+const bg = chrome.extension.getBackgroundPage();
+let newStatus;
 
-var maniFest = chrome.runtime.getManifest();
+function setStatusText() {
+  const html = newStatus === 'enabled' ? enabledItem : disabledItem;
 
-console.log('maniFest', maniFest);
+  $('#toggle-status').html(html);
+}
 
 
+function getStatus() {
+  chrome.storage.local.get(['extensionStatus'], result => {
+    newStatus = result.extensionStatus || 'enabled';
+    setStatusText();
+  });
+}
+
+function toggleStatus() {
+  if (typeof newStatus === 'undefined') {
+    getStatus();
+  }
+  else {
+    newStatus = newStatus === 'enabled' ? 'disabled' : 'enabled';
+    setStatusText();
+  }
+}
+
+toggleStatus();
+
+$('body').on('click', '#toggle-status', () => {
+  toggleStatus();
+  bg.toggleStatus();
+});
 
 
 // ----------------------------------------------------- External Links //
 $('body').on('click', '.external', function() {
-  var url = '';
-  var type = $(this).attr('data-type');
+  let url = '';
+  const type = $(this).attr('data-type');
 
-  if (type === "amazonSmile") {
+  if (type === 'amazonSmile') {
+    url = 'https://smile.amazon.com/';
+  }
+  if (type === 'about') {
     url = 'about.html';
   }
   else if (type === 'devSite') {
@@ -26,4 +59,3 @@ $('body').on('click', '.external', function() {
 
   window.open(url, '_blank');
 });
-

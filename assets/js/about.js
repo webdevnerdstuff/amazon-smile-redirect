@@ -1,8 +1,8 @@
-var manifest = chrome.runtime.getManifest();
+const manifest = chrome.runtime.getManifest();
 
 $('.version span').html(manifest.version);
 
-var date = new Date();
-var year = date.getFullYear();
+const date = new Date();
+const year = date.getFullYear();
 
 $('.copyright span').html(year);

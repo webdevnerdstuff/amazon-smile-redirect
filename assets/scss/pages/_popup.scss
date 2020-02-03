@@ -1,0 +1,59 @@
+// ------------------------------------------------------ popup.html //
+#asr-popup {
+  background: #ddd;
+  font-family: Arial, Helvitica sans-serif;
+  font-size: 14px;
+  margin: 2px;
+  min-width: 18em;
+
+  .blue {
+    color: #146eb4;
+  }
+
+  .orange {
+    color: #f90;
+  }
+
+  ul,
+  li,
+  p,
+  img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      background: #fff;
+      border-radius: 2px;
+      cursor: pointer;
+      margin: 2px auto;
+      padding: 7px;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+
+    .fa-fw {
+      margin-right: 5px;
+    }
+
+    .fa-check {
+      color: #228b22;
+    }
+
+    .fa-arrow-circle-right {
+      color: #202d3b
+    }
+
+    .fa-times,
+    .fa-heart {
+      color: #f00;
+    }
+  }
+}

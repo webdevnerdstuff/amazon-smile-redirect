@@ -8,11 +8,12 @@
   "homepage_url": "https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg",
   "browser_action": {
     "default_icon": "assets/images/icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "pages/popup.html"
   },
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "background": {
     "scripts": [

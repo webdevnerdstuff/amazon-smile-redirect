@@ -219,7 +219,8 @@ module.exports = grunt => {
 
       // Run JS Tasks //
       if (fileInfo.ext === '.js' && task !== 'javascript_plugins') {
-        const newFilePath = `${fileInfo.dir}/min/${fileInfo.name}.min${fileInfo.ext}`;
+        const newFilePath = `chrome/src/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
+        console.log('newFilePath', newFilePath);
         grunt.config.set('tempFile', newFilePath);
         grunt.config.set('outgoingFile', newFilePath);
 
