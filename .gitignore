@@ -53,7 +53,7 @@ uploads/logs
 # Assets #
 ##########
 src/assets/css/*
-src/assets/js/*
+src/assets/js/min/*
 src/assets/vendor/*
 
 
