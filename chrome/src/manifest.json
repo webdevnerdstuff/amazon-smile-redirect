@@ -3,7 +3,7 @@
   "name": "Amazon Smile Redirect",
   "short_name": "Amazon Smile Redirect",
   "description": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com",
-  "version": "1.2",
+  "version": "1.3",
   "author": "Michael J Scarchilli & Bunnies... lots and lots of bunnies!",
   "homepage_url": "https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg",
   "browser_action": {
