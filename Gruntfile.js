@@ -63,16 +63,16 @@ module.exports = grunt => {
           files: [
             {
               expand: true,
-              cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts/',
+              cwd: 'node_modules/@fortawesome/fontawesome-free/',
               src: '**',
-              dest: 'src/assets/vendor/fontawesome/',
+              dest: 'chrome/src/assets/vendor/fontawesome/',
             },
           ],
         },
         jquery: {
           expand: true,
           src: 'node_modules/jquery/dist/jquery.slim.min.js',
-          dest: 'src/assets/vendor/jquery/',
+          dest: 'chrome/src/assets/vendor',
         },
       },
       // ==================================================== JAVASCRIPT TASKS //
@@ -90,8 +90,8 @@ module.exports = grunt => {
         },
         all: {
           expand: true,
-          cwd: './src/assets/js/',
-          src: ['**/*.js', '~!**/*.min.js'],
+          cwd: 'assets/js/',
+          src: ['**/*.js'],
           ext: '.min.js',
           dest: '_temp/assets/js',
         },
@@ -123,7 +123,7 @@ module.exports = grunt => {
               cwd: './_temp/assets/js',
               src: '**/*.js',
               ext: '.min.js',
-              dest: 'src/assets/js',
+              dest: 'chrome/src/assets/js',
             },
           ],
         },
@@ -150,15 +150,15 @@ module.exports = grunt => {
             precision: 10,
             sourceMap: true,
             sourceMapContents: true,
-            outFile: 'src/assets/css/main.min.css.map',
+            outFile: 'chrome/src/assets/css/main.min.css.map',
             outputStyle: 'compressed',
           },
           files: [
             {
               expand: true,
-              cwd: 'src/assets/scss',
+              cwd: 'assets/scss',
               src: 'main.scss',
-              dest: 'src/assets/css',
+              dest: 'chrome/src/assets/css',
               ext: '.min.css',
             },
           ],
@@ -171,8 +171,8 @@ module.exports = grunt => {
           formatter: 'stylish',
         },
         allFiles: [
-          'src/assets/scss/**/*.scss',
-          '!src/assets/vendor/**/*.scss',
+          'assets/scss/**/*.scss',
+          'assets/vendor/**/*.scss',
         ],
         newerFiles: ['<%= filePath %>'],
       },
@@ -187,12 +187,12 @@ module.exports = grunt => {
           map: {
             inline: false,
             sourcesContent: true,
-            prev: 'src/assets/css/main.min.css.map',
-            annotation: 'src/assets/css/',
+            prev: 'chrome/src/assets/css/main.min.css.map',
+            annotation: 'chrome/src/assets/css/',
           },
         },
         dist: {
-          src: 'src/assets/css/main.min.css',
+          src: 'chrome/src/assets/css/main.min.css',
         },
       },
       // ---------------------------------------------------- WATCH //
@@ -202,13 +202,10 @@ module.exports = grunt => {
           spawn: false,
         },
         javascript: {
-          files: ['src/assets/js/**/*.js', '!src/assets/js/**/*.min.js'],
-        },
-        javascript_plugins: {
-          files: ['src/assets/vendor/**/*.js', '!src/assets/vendor/**/*.min.js'],
+          files: ['assets/js/**/*.js'],
         },
         scss: {
-					files: ['src/assets/**/*.scss'],
+					files: ['assets/**/*.scss'],
 				},
       },
     });

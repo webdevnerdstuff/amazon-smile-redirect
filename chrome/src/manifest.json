@@ -16,7 +16,7 @@
   ],
   "background": {
     "scripts": [
-      "assets/js/background.js"
+      "assets/js/background.min.js"
     ],
     "persistent": false
   },
@@ -28,7 +28,7 @@
         "*://www.amazon.de/*"
       ],
       "js": [
-        "assets/js/redirect.js"
+        "assets/js/redirect.min.js"
       ]
     }
   ],
