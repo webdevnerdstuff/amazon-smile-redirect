@@ -37,7 +37,25 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# custom #
-######################
+# Custom #
+##########
 /chrome/dist/amazon-smile-redirect.pem
+
+.sass-cache
+node_modules
+npm-debug.log
+
 .history/
+_temp
+
+uploads/logs
+
+# Assets #
+##########
+src/assets/css/*
+src/assets/js/*
+src/assets/vendor/*
+
+
+
+
