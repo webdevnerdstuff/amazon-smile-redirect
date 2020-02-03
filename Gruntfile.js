@@ -56,6 +56,13 @@ module.exports = grunt => {
         temp: {
           src: ['_temp'],
         },
+        assets: {
+          src: [
+            'chrome/src/assets/js',
+            'chrome/src/assets/css',
+            'chrome/src/assets/vendor',
+          ],
+        },
       },
       // ---------------------------------------------------- COPY //
       copy: {
@@ -70,9 +77,14 @@ module.exports = grunt => {
           ],
         },
         jquery: {
-          expand: true,
-          src: 'node_modules/jquery/dist/jquery.slim.min.js',
-          dest: 'chrome/src/assets/vendor',
+          files: [
+            {
+              expand: true,
+              cwd: 'node_modules/jquery/dist/',
+              src: 'jquery.slim.min.js',
+              dest: 'chrome/src/assets/vendor/',
+            },
+          ],
         },
       },
       // ==================================================== JAVASCRIPT TASKS //
@@ -268,6 +280,7 @@ module.exports = grunt => {
     // Run Tasks //
     grunt.task.run([
       'clean:temp',
+      'clean:assets',
       'copy:fontawesome',
       'copy:jquery',
       'babel:all',
