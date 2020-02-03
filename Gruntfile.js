@@ -6,9 +6,6 @@ module.exports = grunt => {
 
 
   // ---------------------------------------------------- REQUIRE PAGE SCRIPTS FILE - DONE //
-  const pageScriptsFile = require('./assets/js/pageScripts.js');
-  const pageScripts = pageScriptsFile.includedPageScripts();
-  const pages = pageScripts.js;
   let env;
 
   // ---------------------------------------------------- FILE INFO BUILDER //
@@ -17,7 +14,7 @@ module.exports = grunt => {
 
     // Set compiling file paths //
     const tempFile = `_temp/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
-    let outgoingFile = `web/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
+    let outgoingFile = `src/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
 
     // Remove "default" from end of file name //
     if (tempFile.substring(tempFile.lastIndexOf('-') + 1) === 'default.min.js') {
@@ -54,7 +51,6 @@ module.exports = grunt => {
     // ---------------------------------------------------- GRUNT INIT CONFIG //
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-      pageScripts,
       // ---------------------------------------------------- CLEAN //
       clean: {
         temp: {
@@ -74,14 +70,9 @@ module.exports = grunt => {
           ],
         },
         jquery: {
-          files: [
-            {
-              expand: true,
-              cwd: 'node_modules/jquery/dist/jquery.slim.min.js',
-              src: '**',
-              dest: 'src/assets/vendor/jquery/',
-            },
-          ],
+          expand: true,
+          src: 'node_modules/jquery/dist/jquery.slim.min.js',
+          dest: 'src/assets/vendor/jquery/',
         },
       },
       // ==================================================== JAVASCRIPT TASKS //
@@ -100,7 +91,7 @@ module.exports = grunt => {
         all: {
           expand: true,
           cwd: './src/assets/js/',
-          src: ['**/*.js', '!pageScripts.js'],
+          src: ['**/*.js', '~!**/*.min.js'],
           ext: '.min.js',
           dest: '_temp/assets/js',
         },
@@ -132,7 +123,7 @@ module.exports = grunt => {
               cwd: './_temp/assets/js',
               src: '**/*.js',
               ext: '.min.js',
-              dest: 'web/assets/js',
+              dest: 'src/assets/js',
             },
           ],
         },
@@ -211,7 +202,7 @@ module.exports = grunt => {
           spawn: false,
         },
         javascript: {
-          files: ['src/assets/js/**/*.js', '!src/assets/js/pageScripts.js'],
+          files: ['src/assets/js/**/*.js', '!src/assets/js/**/*.min.js'],
         },
         javascript_plugins: {
           files: ['src/assets/vendor/**/*.js', '!src/assets/vendor/**/*.min.js'],
@@ -268,99 +259,21 @@ module.exports = grunt => {
     grunt.log.writeln('Building page assets.'.green.bold);
     grunt.log.writeln('==========================================='.green.bold);
 
-    const sections = [];
     const sourceMaps =
       grunt.option('env') === 'default' ||
       grunt.option('env') === 'dev' ||
       grunt.option('env') === 'build' ||
       false;
-    let fileInfo;
-    let lastFileInArray;
-    let outgoingFile;
-    let subSectionFiles;
-    let tempFile;
 
     grunt.option('sourceMaps', sourceMaps);
-    grunt.task.run(['clean:assets']);
-
-    // Collect page sections //
-    Object.keys(pages).forEach(section => {
-      sections.push(section);
-    });
-
-		const babelArray = [];
-		const uglifyArray = [];
-		let count = 0;
-
-    Object.keys(pages).forEach((section, i) => {
-      page = pages[section];
-
-      // Page Subsections //
-      Object.keys(page).forEach((subSection, ssi) => {
-        subSectionFiles = page[subSection];
-        lastFileInArray = subSectionFiles.pop();
-
-        // Check to make sure the last file in the array is from the "assets/js" directory //
-        if (!lastFileInArray.includes('assets/js')) {
-          fileOrderError(Object.keys(pages)[0], subSection);
-        }
-
-        fileInfo = fileInfoBuilder(lastFileInArray);
-        tempFile = fileInfo.tempFile;
-        outgoingFile = fileInfo.outgoingFile;
-
-        subSectionFiles.push(tempFile);
-
-        // Set Grunt configs //
-        grunt.config.set('filePath', null);
-        grunt.config.set('tempFile', null);
-        grunt.config.set('outgoingFile', null);
-        grunt.config.set('subSectionFiles', null);
-
-        // Build Task arrays //
-				babelArray.push(`babel:${fileInfo.name}`);
-				uglifyArray.push(`uglify:${fileInfo.name}`);
-
-        // Merge script Tasks //
-				gruntMerge = grunt.config.merge({
-					babel: {
-						[`${fileInfo.name}`]: {
-							options: {
-								comments: false,
-								sourceMap: grunt.option('sourceMaps') === true || false,
-								presets: ['@babel/preset-env'],
-							},
-							files: {
-								[tempFile]: lastFileInArray,
-							},
-						},
-					},
-					uglify: {
-						[`${fileInfo.name}`]: {
-							options: {
-								sourceMap: {
-									includeSources: grunt.option('sourceMaps') === true || false,
-								},
-								mangle: false,
-								sourceMapIn: `${tempFile}.map`,
-								sourceMapName: `${outgoingFile}.map`,
-							},
-							src: tempFile,
-							dest: outgoingFile,
-						},
-					},
-				});
-      });
-    });
 
     // Run Tasks //
-		grunt.task.run(['clean:temp']);
-		grunt.task.run(babelArray);
-		grunt.task.run(uglifyArray);
-
     grunt.task.run([
+      'clean:temp',
       'copy:fontawesome',
       'copy:jquery',
+      'babel:all',
+      'uglify:all',
       'sass:dev',
       'postcss',
       'clean:temp',
