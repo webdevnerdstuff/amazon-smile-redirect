@@ -1,60 +1,100 @@
 let extensionStatus;
+let tabs = [];
 
-// ----------------------------------------------------- Get Status //
+console.log('chrome', chrome);
 
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+	if (request.checkPageLoadCount) {
+    console.log('======================================= checkPageLoadCount');
+    // If the extension is disabled //
+		if (extensionStatus === 'disabled') {
+      sendResponse({ pageLoadCount: 0 });
+      tabs = [];
+      return false;
+    }
 
-// ----------------------------------------------------- Update Popup //
+    checkPageLoadCount(sender.tab);
+    console.log('tabs[sender.tab.id].tabCount', tabs[sender.tab.id].tabCount);
+
+    if (tabs[sender.tab.id] && tabs[sender.tab.id].tabCount >= 1) {
+      tabs[sender.tab.id].tabCount = 0;
+    }
+
+    sendResponse({ pageLoadCount: tabs[sender.tab.id].tabCount });
+    return false;
+	}
+
+  return false;
+});
+
+// ----------------------------------------------------- Check Page Load Count //
+function checkPageLoadCount(tab) {
+	const tabId = tab.id;
+
+	if (!tabs[tabId]) {
+		tabs[tabId] = tab;
+		tabs[tabId].tabCount = 0;
+	}
+
+	tabs[tabId].tabCount += 1;
+
+	return tabs[tabId].tabCount;
+}
+
+// ----------------------------------------------------- Update Popup Status Icon //
 function updateIcon(status) {
-  console.log('updateIcon', status);
-  if (status === 'enabled') {
-    chrome.browserAction.setIcon({
-      path: 'assets/images/icon.png',
-    });
-  }
-  else {
-    chrome.browserAction.setIcon({
-      path: 'assets/images/icon-disabled.png',
-    });
-  }
+	if (status === 'enabled') {
+		chrome.browserAction.setIcon({
+			path: 'assets/images/icon.png',
+		});
+	}
+	else {
+		chrome.browserAction.setIcon({
+			path: 'assets/images/icon-disabled.png',
+		});
+	}
 }
 
 // ----------------------------------------------------- Set Status //
 function setStatus(status) {
-  console.log('setStatus');
-  updateIcon(status);
-
-  chrome.storage.local.set({ extensionStatus: status }, () => { });
+	updateIcon(status);
+	extensionStatus = status;
+	chrome.storage.local.set({ extensionStatus: status }, () => {});
 }
-
-function getStatus() {
-  console.log('getStatus');
-  chrome.storage.local.get(['extensionStatus'], result => {
-    extensionStatus = result.extensionStatus || 'enabled';
-    setStatus(extensionStatus);
-  });
-}
-
-getStatus();
 
 // ----------------------------------------------------- Update Status //
 function updateStatus(status) {
-  let newStatus = status === 'enabled' ? 'enabled' : 'disabled';
+	let newStatus = status === 'enabled' ? 'enabled' : 'disabled';
 
-  if (status === 'enabled') {
-    newStatus = 'disabled';
-  }
-  else {
-    newStatus = 'enabled';
-  }
+	if (status === 'enabled') {
+		newStatus = 'disabled';
+	}
+	else {
+		newStatus = 'enabled';
+	}
 
-  setStatus(newStatus);
+	console.log('newStatus', newStatus);
+	setStatus(newStatus);
 }
 
 // ----------------------------------------------------- Toggle Status //
 function toggleStatus() {
-  console.log('toggleStatus');
-  chrome.storage.local.get(['extensionStatus'], result => {
-    extensionStatus = result.extensionStatus;
-    updateStatus(extensionStatus);
-  });
+	console.group('toggleStatus');
+	console.log('--------------------------------- toggleStatus');
+	chrome.storage.local.get(['extensionStatus'], result => {
+		extensionStatus = result.extensionStatus;
+		console.log('toggle', extensionStatus);
+		console.groupEnd();
+		tabs = [];
+		updateStatus(extensionStatus);
+	});
 }
+
+// ----------------------------------------------------- On Install Get/Set Local Storage //
+chrome.runtime.onInstalled.addListener(() => {
+	chrome.storage.local.get(['extensionStatus'], result => {
+		extensionStatus = result.extensionStatus || 'enabled';
+		chrome.storage.local.set({ extensionStatus }, () => {});
+		setStatus(extensionStatus);
+	});
+});

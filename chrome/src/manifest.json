@@ -12,8 +12,8 @@
   },
   "permissions": [
     "activeTab",
-    "tabs",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "background": {
     "scripts": [
@@ -29,8 +29,9 @@
         "*://www.amazon.de/*"
       ],
       "js": [
-        "assets/js/redirect.min.js"
-      ]
+        "assets/js/content.min.js"
+      ],
+      "run_at": "document_idle"
     }
   ],
   "icons": {

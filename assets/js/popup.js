@@ -54,7 +54,7 @@ $('body').on('click', '.external', function() {
     url = 'https://openuserjs.org/scripts/mscarchilli/Amazon_Smile_Redirect';
   }
   else if (type === 'donate') {
-    url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donate%40mikevision%2ecom&lc=US&item_name=MikeVision%2ecom&item_number=Amazon%20Smile%20Redirect&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted';
+    url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=webdevnerdstuff%40gmail.com&item_name=Amazon+Smile+Redirect&currency_code=USD&source=url';
   }
 
   window.open(url, '_blank');
