@@ -19,7 +19,7 @@
     "scripts": [
       "assets/js/background.min.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [
     {
