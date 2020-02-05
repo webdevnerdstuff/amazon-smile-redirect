@@ -76,16 +76,6 @@ module.exports = grunt => {
             },
           ],
         },
-        jquery: {
-          files: [
-            {
-              expand: true,
-              cwd: 'node_modules/jquery/dist/',
-              src: 'jquery.slim.min.js',
-              dest: 'chrome/src/assets/vendor/',
-            },
-          ],
-        },
       },
       // ==================================================== JAVASCRIPT TASKS //
       // ---------------------------------------------------- BABEL //
@@ -121,7 +111,7 @@ module.exports = grunt => {
       // ---------------------------------------------------- UGLIFY //
       uglify: {
         options: {
-          mangle: true,
+          beautify: grunt.option('sourceMaps') || false,
           sourceMap: grunt.option('sourceMaps') || false,
           sourceMapIncludeSources: grunt.option('sourceMaps') || false,
         },
@@ -232,7 +222,7 @@ module.exports = grunt => {
       // Run JS Tasks //
       if (fileInfo.ext === '.js' && task !== 'javascript_plugins') {
         const newFilePath = `chrome/src/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
-        console.log('newFilePath', newFilePath);
+
         grunt.config.set('tempFile', newFilePath);
         grunt.config.set('outgoingFile', newFilePath);
 
@@ -282,7 +272,6 @@ module.exports = grunt => {
       'clean:temp',
       'clean:assets',
       'copy:fontawesome',
-      'copy:jquery',
       'babel:all',
       'uglify:all',
       'sass:dev',
