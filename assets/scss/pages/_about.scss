@@ -1,54 +1,49 @@
 // ------------------------------------------------------ about.html //
 #asr-about {
-  font-size: 13px;
-  line-height: 19px;
+	font-size: 13px;
+	line-height: 19px;
 
-  header {
-    align-items: center;
-    border-bottom: 1px solid #777;
-    color: #000;
-    display: flex;
-    padding-bottom: 10px;
-  }
+	header {
+		align-items: center;
+		border-bottom: 1px solid $black;
+		display: flex;
+		padding-bottom: 10px;
+	}
 
-  section {
-    padding: 20px 0;
-  }
+	section {
+		padding: 20px 0;
+	}
 
-  h3 {
-    color: #232f3e;
-  }
+	p {
+		margin: 0 0 16px;
+	}
 
-  p {
-    margin: 0 0 16px;
-  }
+	a {
+		color: $link;
+		text-decoration: none;
 
-  a {
-    color: #0066c0;
-    text-decoration: none;
+		&:hover {
+			color: $link-hover;
+			text-decoration: underline;
+		}
+	}
 
-    &:hover {
-      color: #c45500;
-      text-decoration: underline;
-    }
-  }
+	.icon {
+		display: block;
+		margin-right: 10px;
+		width: 50px;
+	}
 
-  .icon {
-    display: block;
-    margin-right: 10px;
-    width: 50px;
-  }
+	.title {
+		font-size: 16px;
+		font-weight: bold;
+	}
 
-  .title {
-    font-size: 16px;
-    font-weight: bold;
-  }
+	.version {
+		font-size: 12px;
+	}
 
-  .version {
-    font-size: 12px;
-  }
-
-  .disclaimer {
-    font-style: italic;
-  }
+	.disclaimer {
+		font-style: italic;
+	}
 }

@@ -6,14 +6,14 @@
   "version": "1.3",
   "author": "Michael J Scarchilli & Bunnies... lots and lots of bunnies!",
   "homepage_url": "https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg",
-  "browser_action": {
-    "default_icon": "assets/images/icon.png",
-    "default_popup": "pages/popup.html"
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
   },
   "permissions": [
     "activeTab",
-    "storage",
-    "tabs"
+    "storage"
   ],
   "background": {
     "scripts": [
@@ -34,7 +34,12 @@
       "run_at": "document_idle"
     }
   ],
-  "icons": {
-    "128": "assets/images/icon.png"
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon48.png",
+      "128": "assets/images/icon128.png"
+    },
+    "default_popup": "pages/popup.html"
   }
 }

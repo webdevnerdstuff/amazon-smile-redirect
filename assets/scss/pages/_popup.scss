@@ -1,59 +1,53 @@
 // ------------------------------------------------------ popup.html //
 #asr-popup {
-  background: #ddd;
-  font-family: Arial, Helvitica sans-serif;
-  font-size: 14px;
-  margin: 2px;
-  min-width: 18em;
+	font-size: 14px;
+	margin: 0;
+	min-width: 18em;
 
-  .blue {
-    color: #146eb4;
-  }
+	.orange {
+		color: $orange;
+	}
 
-  .orange {
-    color: #f90;
-  }
+	ul,
+	li,
+	p,
+	img {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
 
-  ul,
-  li,
-  p,
-  img {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
+	ul {
+		display: grid;
+		grid-template-rows: auto;
+		list-style-type: none;
 
-  ul {
-    margin: 0;
-    padding: 0;
+		li {
+			background-color: $white;
+			cursor: pointer;
+			padding: 7px;
+			transition: background-color .25s ease;
 
-    li {
-      background: #fff;
-      border-radius: 2px;
-      cursor: pointer;
-      margin: 2px auto;
-      padding: 7px;
+			&:hover {
+				background-color: $list-hover;
+			}
+		}
 
-      &:hover {
-        background-color: #eee;
-      }
-    }
+		.fa-fw {
+			margin-right: 5px;
+		}
 
-    .fa-fw {
-      margin-right: 5px;
-    }
+		.fa-check {
+			color: $green;
+		}
 
-    .fa-check {
-      color: #228b22;
-    }
+		.fa-info {
+			color: $blue;
+		}
 
-    .fa-arrow-circle-right {
-      color: #202d3b
-    }
-
-    .fa-times,
-    .fa-heart {
-      color: #f00;
-    }
-  }
+		.fa-times,
+		.fa-heart {
+			color: $red;
+		}
+	}
 }
