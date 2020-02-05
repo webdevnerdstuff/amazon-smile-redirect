@@ -30,7 +30,7 @@ module.exports = grunt => {
   // ---------------------------------------------------- INIT TASK //
   grunt.registerTask('init', 'Starting Tasks', () => {
     env = grunt.option('env');
-    const sourceMaps = env === 'default' || env === 'dev' || env === 'build' || false;
+    const sourceMaps = env === 'default' || env === 'dev' || false;
 
     grunt.option('sourceMaps', sourceMaps);
 
@@ -112,6 +112,7 @@ module.exports = grunt => {
       uglify: {
         options: {
           beautify: grunt.option('sourceMaps') || false,
+          mangle: grunt.option('sourceMaps') !== true || false,
           sourceMap: grunt.option('sourceMaps') || false,
           sourceMapIncludeSources: grunt.option('sourceMaps') || false,
         },
@@ -134,7 +135,6 @@ module.exports = grunt => {
             sourceMap: {
               includeSources: grunt.option('sourceMaps') || false,
             },
-            mangle: true,
             sourceMapIn: '<%= tempFile %>.map',
             sourceMapName: '<%= outgoingFile %>.map',
           },
