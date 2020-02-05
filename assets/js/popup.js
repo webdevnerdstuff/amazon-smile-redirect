@@ -12,9 +12,7 @@ function setElementsStatus(extensionStatus) {
 
 // ---------------------------------------------------- Runtime SendMessage //
 chrome.runtime.sendMessage({ getExtensionStatus: true }, response => {
-	const status = response.extensionStatus || 'enabled';
-
-	setElementsStatus(status);
+	setElementsStatus(response.extensionStatus);
 });
 
 // ---------------------------------------------------- Toggle Status //

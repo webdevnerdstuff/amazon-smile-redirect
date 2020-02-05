@@ -1,5 +1,3 @@
-console.log('chrome', chrome);
-
 // ---------------------------------------------------- Get Storage //
 chrome.runtime.sendMessage({ checkPageLoadCount: true }, response => {
   const extensionStatus = response.extensionStatus;

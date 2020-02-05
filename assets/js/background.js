@@ -38,17 +38,10 @@ function updateIcon() {
 			48: 'assets/images/icon48.png',
 			128: 'assets/images/icon128.png',
 		},
-	});
+  });
+
 	return false;
 }
-
-chrome.runtime.onSuspend.dispatch(() => {
-	updateIcon();
-});
-
-chrome.runtime.onStartup.addListener(() => {
-	updateIcon();
-});
 
 // ---------------------------------------------------- Update Status //
 function updateStatus() {
@@ -104,11 +97,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 	// Get Storage //
 	if (request.getStorage) {
-		sendResponse({ storage });
+    sendResponse({ storage });
+
+    return false;
   }
 
 	if (request.getExtensionStatus) {
-		sendResponse({ extensionStatus });
+    const blarg = extensionStatus;
+    sendResponse({ extensionStatus });
+
+    return false;
 	}
 
 	// Toggle Status //
