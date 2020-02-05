@@ -48,6 +48,22 @@ module.exports = grunt => {
       grunt.task.run(['watch']);
     }
 
+    // Set PostCss map option based on build //
+    function postCssMap() {
+      let map = false;
+
+      if (grunt.option('sourceMaps')) {
+        map = {
+          inline: false,
+          sourcesContent: true,
+          prev: 'chrome/src/assets/css/main.min.css.map',
+          annotation: 'chrome/src/assets/css/',
+        };
+      }
+
+      return map;
+    }
+
     // ---------------------------------------------------- GRUNT INIT CONFIG //
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
@@ -150,10 +166,10 @@ module.exports = grunt => {
           options: {
             implementation: sass,
             precision: 10,
-            sourceMap: true,
-            sourceMapContents: true,
+            sourceMap: grunt.option('sourceMaps') || false,
+            sourceMapContents: grunt.option('sourceMaps') || false,
             outFile: 'chrome/src/assets/css/main.min.css.map',
-            outputStyle: 'compressed',
+            outputStyle: grunt.option('sourceMaps') ? 'expanded' : 'compressed',
           },
           files: [
             {
@@ -186,12 +202,7 @@ module.exports = grunt => {
               config: '.browserslistrc',
             }),
           ],
-          map: {
-            inline: false,
-            sourcesContent: true,
-            prev: 'chrome/src/assets/css/main.min.css.map',
-            annotation: 'chrome/src/assets/css/',
-          },
+          map: postCssMap(),
         },
         dist: {
           src: 'chrome/src/assets/css/main.min.css',

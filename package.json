@@ -13,8 +13,7 @@
   "url": ""
  },
  "dependencies": {
-  "@fortawesome/fontawesome-free": "^5.12.0",
-  "jquery": "^3.4.1"
+  "@fortawesome/fontawesome-free": "^5.12.0"
  },
  "devDependencies": {
   "@babel/core": "^7.6.4",
