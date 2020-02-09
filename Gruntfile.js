@@ -82,13 +82,23 @@ module.exports = grunt => {
       },
       // ---------------------------------------------------- COPY //
       copy: {
-        fontawesome: {
+        fontawesome_fonts: {
           files: [
             {
               expand: true,
-              cwd: 'node_modules/@fortawesome/fontawesome-free/',
+              cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts/',
               src: '**',
               dest: 'chrome/src/assets/vendor/fontawesome/',
+            },
+          ],
+        },
+        fontawesome_js: {
+          files: [
+            {
+              expand: true,
+              cwd: 'node_modules/@fortawesome/fontawesome-free/js/',
+              src: 'all.min.js',
+              dest: 'chrome/src/assets/vendor/fontawesome/js/',
             },
           ],
         },
@@ -282,7 +292,8 @@ module.exports = grunt => {
     grunt.task.run([
       'clean:temp',
       'clean:assets',
-      'copy:fontawesome',
+      'copy:fontawesome_fonts',
+      'copy:fontawesome_js',
       'babel:all',
       'uglify:all',
       'sass:dev',
