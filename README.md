@@ -1,6 +1,7 @@
 # Amazon Smile Redirect
 
 [Chrome Extension](https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg)
+
 [Userscript Home](https://openuserjs.org/scripts/mscarchilli/Amazon_Smile_Redirect)
 
 ## Description
