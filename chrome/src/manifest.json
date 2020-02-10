@@ -3,17 +3,24 @@
   "name": "Amazon Smile Redirect",
   "short_name": "Amazon Smile Redirect",
   "description": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com",
-  "version": "1.2",
+  "version": "2.0.0",
   "author": "Michael J Scarchilli & Bunnies... lots and lots of bunnies!",
-  "homepage_url": "https://www.linkedin.com/in/mscarchilli",
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+  "homepage_url": "https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg",
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
   },
   "permissions": [
     "activeTab",
-    "tabs"
+    "storage"
   ],
+  "background": {
+    "scripts": [
+      "assets/js/background.min.js"
+    ],
+    "persistent": true
+  },
   "content_scripts": [
     {
       "matches": [
@@ -22,11 +29,17 @@
         "*://www.amazon.de/*"
       ],
       "js": [
-        "redirect.js"
-      ]
+        "assets/js/content.min.js"
+      ],
+      "run_at": "document_idle"
     }
   ],
-  "icons": {
-    "128": "icon.png"
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon48.png",
+      "128": "assets/images/icon128.png"
+    },
+    "default_popup": "pages/popup.html"
   }
 }
