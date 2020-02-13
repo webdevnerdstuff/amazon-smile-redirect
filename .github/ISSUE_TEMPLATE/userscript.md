@@ -1,6 +1,6 @@
 ---
 name: Userscript
-about: Issues related to the Chrome Userscript
+about: Issues related to the Userscript
 title: ''
 labels: Userscript
 assignees: ''
