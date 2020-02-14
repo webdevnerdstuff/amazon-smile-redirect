@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       	Amazon Smile Redirect
 // @namespace  	https://webdevnerdstuff.com
-// @version    	1.4
+// @version    	1.5
 // @description This script will automatically redirect you to the corresponding Amazon Smile page in the US, UK, and DE.
 // @include     http://www.amazon.com/*
 // @include     http://www.amazon.co.uk/*
@@ -46,7 +46,7 @@ function fetchNavLines() {
 
   for ( var i = 0; i < navLines.length; i++ )
   {
-    if (navLines[i].innerHTML.includes( 'Hello.') || navLines[i].innerHTML.includes( 'Hallo!'))
+    if (navLines[i].innerHTML.includes( 'Hello.') || navLines[i].innerHTML.includes( 'Hello,') || navLines[i].innerHTML.includes( 'Hallo!'))
     {
       navLine     = navLines[i];
       navlineText = navLines[i].innerHTML;
@@ -56,7 +56,7 @@ function fetchNavLines() {
   }
 
   // Redirect user to corresponding page on Amazon Smile //
-  if (navlineText === 'Hello. Sign in' && navlineText === 'Hello, Sign in' && navlineText === 'Hallo! Anmelden') {
+  if (navlineText !== 'Hello. Sign in' && navlineText !== 'Hello, Sign in' && navlineText !== 'Hallo! Anmelden') {
     window.location.replace('https://smile.amazon.' + domainExtension + window.location.pathname + location.search);
   }
   // Redirect user to login page with return_to URL //
