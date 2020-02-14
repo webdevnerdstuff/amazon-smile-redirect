@@ -46,7 +46,7 @@ function fetchNavLines() {
 
   for ( var i = 0; i < navLines.length; i++ )
   {
-    if (navLines[i].innerHTML.includes( 'Hello.') || navLines[i].innerHTML.includes( 'Hallo!'))
+    if (navLines[i].innerHTML.includes( 'Hello.') || navLines[i].innerHTML.includes( 'Hello,') || navLines[i].innerHTML.includes( 'Hallo!'))
     {
       navLine     = navLines[i];
       navlineText = navLines[i].innerHTML;
