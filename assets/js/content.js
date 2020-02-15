@@ -6,6 +6,36 @@ chrome.runtime.sendMessage({ getExtensionStatus: true }, response => {
   return false;
 });
 
+// ---------------------------------------------------- Check for Excluded Pages //
+function isExcludedPage() {
+  const href = window.location.href;
+  const excludeSites = [
+    'advertising.amazon.',
+    'affiliate-program.amazon.',
+    'alexa.amazon.',
+    'amzn_photos_web_us',
+    'aws.amazon.',
+    'developer.amazon.',
+    'ignite.amazon.',
+    'kdp.amazon.',
+    'music.amazon.',
+    'payments.amazon.',
+    'read.amazon.',
+    'videodirect.amazon.',
+    'www.acx.',
+    'www.audible.',
+  ];
+  let exclude = false;
+
+  Object.values(excludeSites).forEach(elm => {
+    if (href.includes(elm)) {
+      exclude = true;
+    }
+  });
+
+  return exclude;
+}
+
 // ---------------------------------------------------- Checked if Logged Out //
 function loggedOut(navLineText) {
   return navLineText === 'Hello. Sign in' || navLineText === 'Hello, Sign in' || navLineText === 'Hallo! Anmelden' || navLineText === '';
@@ -13,29 +43,31 @@ function loggedOut(navLineText) {
 
 // ---------------------------------------------------- Go To Page //
 function goToPage(navLineText, domainExtension, goToLogin) {
-  // Redirect user to corresponding page on Amazon Smile //
-  if (!loggedOut(navLineText) && !goToLogin) {
-    window.location.replace(`https://smile.amazon.${domainExtension}${window.location.pathname}${location.search}`);
-  }
-  else {
-    // Redirect user to login page with return_to URL //
-    const redirectURL = encodeURIComponent(`https://smile.amazon.${domainExtension}${window.location.pathname}`);
-    const redirectSearch = encodeURIComponent(location.search);
+  if (!isExcludedPage()) {
+    if (!loggedOut(navLineText) && !goToLogin) {
+      // Redirect user to corresponding page on Amazon Smile //
+      window.location.replace(`https://smile.amazon.${domainExtension}${window.location.pathname}${location.search}`);
+    }
+    else {
+      // Redirect user to login page with return_to URL //
+      const redirectURL = encodeURIComponent(`https://smile.amazon.${domainExtension}${window.location.pathname}`);
+      const redirectSearch = encodeURIComponent(location.search);
 
-    if (window.location.hostname === 'www.amazon.com') {
-      window.location.replace(
-        `https://smile.amazon.${domainExtension}/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=${redirectURL}${redirectSearch}`
-      );
-    }
-    else if (window.location.hostname === 'www.amazon.co.uk') {
-      window.location.replace(
-        `https://smile.amazon.${domainExtension}/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=gbflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=${redirectURL}${redirectSearch}`
-      );
-    }
-    else if (window.location.hostname === 'www.amazon.de') {
-      window.location.replace(
-        `https://smile.amazon.${domainExtension}/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=deflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=${redirectURL}${redirectSearch}`
-      );
+      if (window.location.hostname === 'www.amazon.com') {
+        window.location.replace(
+          `https://smile.amazon.${domainExtension}/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=${redirectURL}${redirectSearch}`
+        );
+      }
+      else if (window.location.hostname === 'www.amazon.co.uk') {
+        window.location.replace(
+          `https://smile.amazon.${domainExtension}/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=gbflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=${redirectURL}${redirectSearch}`
+        );
+      }
+      else if (window.location.hostname === 'www.amazon.de') {
+        window.location.replace(
+          `https://smile.amazon.${domainExtension}/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=deflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=${redirectURL}${redirectSearch}`
+        );
+      }
     }
   }
 }
