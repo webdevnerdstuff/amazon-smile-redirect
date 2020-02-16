@@ -243,7 +243,7 @@ module.exports = grunt => {
             {
               expand: true,
               cwd: 'extension/',
-              src: ['**', '!README.md'],
+              src: ['**'],
               dest: '/',
             },
           ],
