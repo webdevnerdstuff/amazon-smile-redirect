@@ -39,7 +39,7 @@ Thumbs.db
 
 # Custom #
 ##########
-/extension/dist/amazon-smile-redirect.pem
+amazon-smile-redirect.pem
 
 .sass-cache
 node_modules
