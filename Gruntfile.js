@@ -56,8 +56,8 @@ module.exports = grunt => {
         map = {
           inline: false,
           sourcesContent: true,
-          prev: 'chrome/src/assets/css/main.min.css.map',
-          annotation: 'chrome/src/assets/css/',
+          prev: 'extension/src/assets/css/main.min.css.map',
+          annotation: 'extension/src/assets/css/',
         };
       }
 
@@ -74,9 +74,9 @@ module.exports = grunt => {
         },
         assets: {
           src: [
-            'chrome/src/assets/js',
-            'chrome/src/assets/css',
-            'chrome/src/assets/vendor',
+            'extension/src/assets/js',
+            'extension/src/assets/css',
+            'extension/src/assets/vendor',
           ],
         },
       },
@@ -88,7 +88,7 @@ module.exports = grunt => {
               expand: true,
               cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts/',
               src: '**',
-              dest: 'chrome/src/assets/vendor/fontawesome/',
+              dest: 'extension/src/assets/vendor/fontawesome/',
             },
           ],
         },
@@ -98,7 +98,7 @@ module.exports = grunt => {
               expand: true,
               cwd: 'node_modules/@fortawesome/fontawesome-free/js/',
               src: 'all.min.js',
-              dest: 'chrome/src/assets/vendor/fontawesome/js/',
+              dest: 'extension/src/assets/vendor/fontawesome/js/',
             },
           ],
         },
@@ -152,7 +152,7 @@ module.exports = grunt => {
               cwd: './_temp/assets/js',
               src: '**/*.js',
               ext: '.min.js',
-              dest: 'chrome/src/assets/js',
+              dest: 'extension/src/assets/js',
             },
           ],
         },
@@ -178,7 +178,7 @@ module.exports = grunt => {
             precision: 10,
             sourceMap: grunt.option('sourceMaps') || false,
             sourceMapContents: grunt.option('sourceMaps') || false,
-            outFile: 'chrome/src/assets/css/main.min.css.map',
+            outFile: 'extension/src/assets/css/main.min.css.map',
             outputStyle: grunt.option('sourceMaps') ? 'expanded' : 'compressed',
           },
           files: [
@@ -186,7 +186,7 @@ module.exports = grunt => {
               expand: true,
               cwd: 'assets/scss',
               src: 'main.scss',
-              dest: 'chrome/src/assets/css',
+              dest: 'extension/src/assets/css',
               ext: '.min.css',
             },
           ],
@@ -215,7 +215,7 @@ module.exports = grunt => {
           map: postCssMap(),
         },
         dist: {
-          src: 'chrome/src/assets/css/main.min.css',
+          src: 'extension/src/assets/css/main.min.css',
         },
       },
       // ---------------------------------------------------- WATCH //
@@ -242,7 +242,7 @@ module.exports = grunt => {
 
       // Run JS Tasks //
       if (fileInfo.ext === '.js' && task !== 'javascript_plugins') {
-        const newFilePath = `chrome/src/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
+        const newFilePath = `extension/src/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
 
         grunt.config.set('tempFile', newFilePath);
         grunt.config.set('outgoingFile', newFilePath);

@@ -39,7 +39,7 @@ Thumbs.db
 
 # Custom #
 ##########
-/chrome/dist/amazon-smile-redirect.pem
+/extension/dist/amazon-smile-redirect.pem
 
 .sass-cache
 node_modules
@@ -52,9 +52,9 @@ uploads/logs
 
 # Assets #
 ##########
-chrome/src/assets/css
-chrome/src/assets/js
-chrome/src/assets/vendor
+extension/src/assets/css
+extension/src/assets/js
+extension/src/assets/vendor
 
 
 
