@@ -41,9 +41,9 @@ module.exports = grunt => {
     else if (env === 'build') {
       grunt.task.run(['buildAssets']);
     }
-		else if (env === 'default' || env === 'lint') {
-			grunt.task.run(['watch']);
-		}
+    else if (env === 'default' || env === 'lint') {
+      grunt.task.run(['watch']);
+    }
     else {
       grunt.task.run(['watch']);
     }
@@ -78,6 +78,9 @@ module.exports = grunt => {
             'extension/src/assets/css',
             'extension/src/assets/vendor',
           ],
+        },
+        dist: {
+          src: ['dist'],
         },
       },
       // ---------------------------------------------------- COPY //
@@ -228,8 +231,60 @@ module.exports = grunt => {
           files: ['assets/js/**/*.js'],
         },
         scss: {
-					files: ['assets/**/*.scss'],
-				},
+          files: ['assets/**/*.scss'],
+        },
+      },
+      compress: {
+        chrome_ext: {
+          options: {
+            archive: 'dist/chrome_extension.zip',
+          },
+          files: [
+            {
+              expand: true,
+              cwd: 'extension/',
+              src: ['**', '!README.md'],
+              dest: '/',
+            },
+          ],
+        },
+        firefox_ext: {
+          options: {
+            archive: 'dist/firefox_extension.zip',
+          },
+          files: [
+            {
+              expand: true,
+              cwd: 'extension/src',
+              src: ['**'],
+              dest: '/',
+            },
+          ],
+        },
+        firefox_source_code: {
+          options: {
+            archive: 'dist/firefox_source_code.zip',
+          },
+          files: [
+            {
+              expand: true,
+              cwd: '.',
+              src: [
+                'assets/**',
+                'extension/**',
+                '.babelrc',
+                '.browserslistrc',
+                '.eslintrc.js',
+                '.sass-lint.yml',
+                'Gruntfile.js',
+                'LICENSE',
+                'package.json',
+                'README.md',
+              ],
+              dest: '/',
+            },
+          ],
+        },
       },
     });
 
@@ -252,21 +307,21 @@ module.exports = grunt => {
       else if (fileInfo.ext === '.scss') {
         // -------------------------- Run SCSS Tasks //
 
-				// main.scss //
-				if (fileInfo.name === 'main' && !lintOnly) {
-					grunt.task.run('sass:dev', 'postcss', 'sasslint:allFiles');
-				}
-				else if (fileInfo.name === 'main') {
-					grunt.task.run('sasslint:allFiles');
-				}
-				else {
+        // main.scss //
+        if (fileInfo.name === 'main' && !lintOnly) {
+          grunt.task.run('sass:dev', 'postcss', 'sasslint:allFiles');
+        }
+        else if (fileInfo.name === 'main') {
+          grunt.task.run('sasslint:allFiles');
+        }
+        else {
           // **/*.scss //
-					if (!lintOnly) {
-						grunt.task.run('sass:dev', 'postcss');
-					}
+          if (!lintOnly) {
+            grunt.task.run('sass:dev', 'postcss');
+          }
 
-					grunt.task.run(['sasslint:newerFiles']);
-				}
+          grunt.task.run(['sasslint:newerFiles']);
+        }
       }
 
       return false;
@@ -290,8 +345,7 @@ module.exports = grunt => {
 
     // Run Tasks //
     grunt.task.run([
-      'clean:temp',
-      'clean:assets',
+      'clean',
       'copy:fontawesome_fonts',
       'copy:fontawesome_js',
       'babel:all',
@@ -300,6 +354,10 @@ module.exports = grunt => {
       'postcss',
       'clean:temp',
     ]);
+
+    if (grunt.option('env') === 'build') {
+      grunt.task.run(['compress']);
+    }
 
     return true;
   });
