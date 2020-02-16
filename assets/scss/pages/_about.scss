@@ -1,0 +1,49 @@
+// ------------------------------------------------------ about.html //
+#asr-about {
+	font-size: 13px;
+	line-height: 19px;
+
+	header {
+		align-items: center;
+		border-bottom: 1px solid $black;
+		display: flex;
+		padding-bottom: 10px;
+	}
+
+	section {
+		padding: 20px 0;
+	}
+
+	p {
+		margin: 0 0 16px;
+	}
+
+	a {
+		color: $link;
+		text-decoration: none;
+
+		&:hover {
+			color: $link-hover;
+			text-decoration: underline;
+		}
+	}
+
+	.icon {
+		display: block;
+		margin-right: 10px;
+		width: 50px;
+	}
+
+	.title {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.version {
+		font-size: 12px;
+	}
+
+	.disclaimer {
+		font-style: italic;
+	}
+}
