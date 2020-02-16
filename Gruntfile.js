@@ -243,7 +243,7 @@ module.exports = grunt => {
             {
               expand: true,
               cwd: 'extension/',
-              src: ['**'],
+              src: ['**', '!README.md'],
               dest: '/',
             },
           ],
@@ -345,8 +345,7 @@ module.exports = grunt => {
 
     // Run Tasks //
     grunt.task.run([
-      'clean:temp',
-      'clean:assets',
+      'clean',
       'copy:fontawesome_fonts',
       'copy:fontawesome_js',
       'babel:all',
@@ -357,7 +356,7 @@ module.exports = grunt => {
     ]);
 
     if (grunt.option('env') === 'build') {
-      grunt.task.run(['clean:dist', 'compress']);
+      grunt.task.run(['compress']);
     }
 
     return true;
