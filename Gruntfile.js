@@ -234,6 +234,7 @@ module.exports = grunt => {
           files: ['assets/**/*.scss'],
         },
       },
+      // ---------------------------------------------------- EXTENSION ZIPS //
       compress: {
         chrome_ext: {
           options: {
@@ -284,6 +285,16 @@ module.exports = grunt => {
               dest: '/',
             },
           ],
+        },
+      },
+      // ---------------------------------------------------- EXTENSION CRX //
+      crx: {
+        mySignedExtension: {
+          src: 'extension/src/**/*',
+          dest: 'dist/asr.crx',
+        },
+        options: {
+          privateKey: 'amazon-smile-redirect.pem',
         },
       },
     });
@@ -356,7 +367,7 @@ module.exports = grunt => {
     ]);
 
     if (grunt.option('env') === 'build') {
-      grunt.task.run(['compress']);
+      grunt.task.run(['crx']);
     }
 
     return true;
