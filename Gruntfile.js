@@ -367,7 +367,7 @@ module.exports = grunt => {
     ]);
 
     if (grunt.option('env') === 'build') {
-      grunt.task.run(['crx']);
+      grunt.task.run(['compress', 'crx']);
     }
 
     return true;
