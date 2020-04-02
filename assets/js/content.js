@@ -91,7 +91,8 @@ function fetchNavLines(extensionStatus) {
       if (
         navLines[i].innerHTML.includes('Hello.') ||
         navLines[i].innerHTML.includes('Hello,') ||
-        navLines[i].innerHTML.includes('Hallo!')
+        navLines[i].innerHTML.includes('Hallo!') ||
+        navLines[i].innerHTML.includes('Hallo,')
       ) {
         navLineText = navLines[i].innerHTML;
 
