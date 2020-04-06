@@ -1,7 +1,18 @@
+const namePattern = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
+
 module.exports =
 {
-  extends: 'stylelint-config-sass-guidelines',
+  plugins: [
+    'stylelint-order',
+    'stylelint-scss',
+  ],
   rules: {
+    // ------------------------------------------------------ CSS
+
+    /*
+      * Stylelint CSS Rules Reference: https://stylelint.io/user-guide/rules/list
+    */
+
     // ---------------------------- Possible errors
     // Color
     'color-no-invalid-hex': true,
@@ -25,7 +36,7 @@ module.exports =
     'property-no-unknown': true,
 
     // Keyframe declaration
-    'keyframe-declaration-no-important': true,
+    'keyframe-declaration-no-important': null,
 
     // Declaration block
     'declaration-block-no-duplicate-properties': true,
@@ -43,7 +54,7 @@ module.exports =
     'media-feature-name-no-unknown': true,
 
     // At-rule
-    'at-rule-no-unknown': true,
+    'at-rule-no-unknown': null,
 
     // Comment
     'comment-no-empty': true,
@@ -97,7 +108,7 @@ module.exports =
 
     // Declaration
     'declaration-block-no-redundant-longhand-properties': true,
-    'declaration-no-important': true,
+    'declaration-no-important': null,
     'declaration-property-unit-blacklist': {},
     'declaration-property-unit-whitelist': null,
     'declaration-property-value-blacklist': {
@@ -126,7 +137,7 @@ module.exports =
     'selector-combinator-whitelist': null,
     'selector-id-pattern': '',
     'selector-max-attribute': 1,
-    'selector-max-class': 1,
+    'selector-max-class': null,
     'selector-max-combinators': null,
     'selector-max-compound-selectors': null,
     'selector-max-empty-lines': 0,
@@ -267,7 +278,7 @@ module.exports =
     'rule-empty-line-before': [
       'always',
       {
-        except: ['after-single-line-comment'],
+        except: ['after-single-line-comment', 'first-nested'],
         ignore: ['after-comment'],
       },
     ],
@@ -290,7 +301,7 @@ module.exports =
     'at-rule-empty-line-before': [
       'always',
       {
-        except: ['after-same-name'],
+        except: ['blockless-after-same-name-blockless', 'first-nested'],
         ignore: ['after-comment'],
       },
     ],
@@ -315,41 +326,155 @@ module.exports =
     'unicode-bom': 'never',
 
 
-    // 'order/order': [
-    //   [
-    //     'custom-properties',
-    //     'dollar-variables',
-    //     {
-    //       type: 'at-rule',
-    //       name: 'extend',
-    //     },
-    //     {
-    //       type: 'at-rule',
-    //       name: 'include',
-    //       hasBlock: false,
-    //     },
-    //     'declarations',
-    //     {
-    //       type: 'at-rule',
-    //       name: 'include',
-    //       hasBlock: true,
-    //     },
-    //     'rules',
-    //   ],
-    // ],
-    // 'order/properties-alphabetical-order': true,
+    // ------------------------------------------------------ SCSS
 
+    /*
+      * Stylelint SCSS Rules Reference: https://github.com/kristerkari/stylelint-scss
+    */
 
-    // 'scss/at-extend-no-missing-placeholder': true,
-    // 'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    // 'scss/at-import-no-partial-leading-underscore': true,
-    // 'scss/at-import-partial-extension-blacklist': ['scss'],
-    // 'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    // 'scss/at-rule-no-unknown': true,
-    // 'scss/dollar-variable-colon-space-after': 'always',
-    // 'scss/dollar-variable-colon-space-before': 'never',
-    // 'scss/dollar-variable-pattern': '^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    // 'scss/percent-placeholder-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    // 'scss/selector-no-redundant-nesting-selector': true,
+    // @-each
+    'scss/at-each-key-value-single-line': true,
+
+    // @-else
+    'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
+    'scss/at-else-closing-brace-space-after': 'always-intermediate',
+    'scss/at-else-empty-line-before': 'never',
+    'scss/at-else-if-parentheses-space-before': 'always',
+
+    // @-extend
+    'scss/at-extend-no-missing-placeholder': true,
+
+    // @-function
+    'scss/at-function-named-arguments': 'always',
+    'scss/at-function-parentheses-space-before': 'always',
+    'scss/at-function-pattern': namePattern,
+
+    // @-if
+    'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
+    'scss/at-if-closing-brace-space-after': 'always-intermediate',
+    'scss/at-if-no-null': true,
+
+    // @-import
+    'scss/at-import-no-partial-leading-underscore': true,
+    'scss/at-import-partial-extension': 'never',
+    'scss/at-import-partial-extension-blacklist': ['scss'],
+    'scss/at-import-partial-extension-whitelist': null,
+
+    // @-mixin
+    'scss/at-mixin-argumentless-call-parentheses': null,
+    'scss/at-mixin-named-arguments': 'always',
+    'scss/at-mixin-parentheses-space-before': 'always',
+    'scss/at-mixin-pattern': namePattern,
+
+    // @-rule
+    'scss/at-rule-conditional-no-parentheses': null,
+    'scss/at-rule-no-unknown': true,
+
+    // $-variable
+    'scss/dollar-variable-colon-newline-after': null,
+    'scss/dollar-variable-colon-space-after': 'always',
+    'scss/dollar-variable-colon-space-before': 'never',
+    'scss/dollar-variable-default': null,
+    'scss/dollar-variable-empty-line-after': [
+      'always',
+      {
+        except: ['last-nested', 'before-dollar-variable'],
+        ignore: ['inside-single-line-block'],
+      },
+    ],
+    'scss/dollar-variable-empty-line-before': null,
+    'scss/dollar-variable-first-in-block': null,
+    'scss/dollar-variable-no-missing-interpolation': true,
+    'scss/dollar-variable-pattern': namePattern,
+
+    // %-placeholder
+    'scss/percent-placeholder-pattern': namePattern,
+
+    // //-comment
+    'scss/double-slash-comment-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested', 'inside-block'],
+        ignore: ['between-comments', 'stylelint-commands', 'inside-block'],
+      },
+    ],
+    'scss/double-slash-comment-inline': [
+      'never',
+      {
+        ignore: ['stylelint-commands'],
+      },
+    ],
+    'scss/double-slash-comment-whitespace-inside': 'always',
+
+    // Comment
+    'scss/comment-no-loud': true,
+
+    // Declaration
+    'scss/declaration-nested-properties': 'never',
+    'scss/declaration-nested-properties-no-divided-groups': true,
+
+    // Dimension
+    'scss/dimension-no-non-numeric-values': null,
+
+    // Function
+    'scss/function-color-relative': null,
+    'scss/function-quote-no-quoted-strings-inside': null,
+    'scss/function-unquote-no-unquoted-strings-inside': null,
+
+    // Map
+    'scss/map-keys-quotes': null,
+
+    // Media feature
+    'scss/media-feature-value-dollar-variable': null,
+
+    // Operator
+    'scss/operator-no-newline-after': true,
+    'scss/operator-no-newline-before': true,
+    'scss/operator-no-unspaced': true,
+
+    // Partial
+    'scss/partial-no-import': true,
+
+    // Selector
+    'scss/selector-nest-combinators': null,
+    'scss/selector-no-redundant-nesting-selector': true,
+    'scss/selector-no-union-class-name': true,
+
+    // General / Sheet
+    'scss/no-dollar-variables': null,
+    'scss/no-duplicate-dollar-variables': true,
+    'scss/no-duplicate-mixins': true,
+    'scss/no-global-function-names': true,
+
+    // ------------------------------------------------------ Order
+
+    /*
+      * Stylelint Order Rules Reference: https://github.com/hudochenkov/stylelint-order
+    */
+
+    'order/order': [
+      [
+        'custom-properties',
+        'dollar-variables',
+        {
+          type: 'at-rule',
+          name: 'extend',
+        },
+        {
+          type: 'at-rule',
+          name: 'include',
+          hasBlock: false,
+        },
+        'declarations',
+        {
+          type: 'at-rule',
+          name: 'include',
+          hasBlock: true,
+        },
+        'rules',
+      ],
+    ],
+    'order/properties-order': [],
+    'order/properties-alphabetical-order': true,
   },
 };
