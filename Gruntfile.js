@@ -195,13 +195,17 @@ module.exports = grunt => {
           ],
         },
       },
-      // ---------------------------------------------------- SASS-LINT //
-      sasslint: {
+      // ---------------------------------------------------- STYLELINT //
+      stylelint: {
         options: {
-          configFile: '.sass-lint.yml',
-          formatter: 'stylish',
+          configFile: 'stylelint.config.js',
+          formatter: 'string',
+          ignoreDisables: false,
+          failOnError: true,
+          reportNeedlessDisables: false,
+          syntax: '',
         },
-        allFiles: [
+        all: [
           'assets/scss/**/*.scss',
           'assets/vendor/**/*.scss',
         ],
@@ -276,7 +280,7 @@ module.exports = grunt => {
                 '.babelrc',
                 '.browserslistrc',
                 '.eslintrc.js',
-                '.sass-lint.yml',
+                'stylelint.config.js',
                 'Gruntfile.js',
                 'LICENSE',
                 'package.json',
@@ -320,10 +324,10 @@ module.exports = grunt => {
 
         // main.scss //
         if (fileInfo.name === 'main' && !lintOnly) {
-          grunt.task.run('sass:dev', 'postcss', 'sasslint:allFiles');
+          grunt.task.run('sass:dev', 'postcss', 'stylelint:all');
         }
         else if (fileInfo.name === 'main') {
-          grunt.task.run('sasslint:allFiles');
+          grunt.task.run('stylelint:all');
         }
         else {
           // **/*.scss //
@@ -331,7 +335,7 @@ module.exports = grunt => {
             grunt.task.run('sass:dev', 'postcss');
           }
 
-          grunt.task.run(['sasslint:newerFiles']);
+          grunt.task.run(['stylelint:newerFiles']);
         }
       }
 
