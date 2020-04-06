@@ -43,6 +43,7 @@
   "load-grunt-tasks": "^5.1.0",
   "node-sass": "^4.13.1",
   "stylelint": "^13.3.0",
-  "stylelint-config-sass-guidelines": "^7.0.0"
+  "stylelint-order": "^4.0.0",
+  "stylelint-scss": "^3.16.0"
  }
 }
