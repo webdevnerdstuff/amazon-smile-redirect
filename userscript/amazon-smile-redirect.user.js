@@ -46,7 +46,7 @@ function fetchNavLines() {
 
   for ( var i = 0; i < navLines.length; i++ )
   {
-    if (navLines[i].innerHTML.includes( 'Hello.') || navLines[i].innerHTML.includes( 'Hello,') || navLines[i].innerHTML.includes( 'Hallo!'))
+    if (navLines[i].innerHTML.includes( 'Hello.') || navLines[i].innerHTML.includes( 'Hello,') || navLines[i].innerHTML.includes( 'Hallo!') || navLines[i].innerHTML.includes( 'Hallo,'))
     {
       navLine     = navLines[i];
       navlineText = navLines[i].innerHTML;
@@ -56,7 +56,7 @@ function fetchNavLines() {
   }
 
   // Redirect user to corresponding page on Amazon Smile //
-  if (navlineText !== 'Hello. Sign in' && navlineText !== 'Hello, Sign in' && navlineText !== 'Hallo! Anmelden') {
+  if (navlineText !== 'Hello. Sign in' && navlineText !== 'Hello, Sign in' && navlineText !== 'Hallo! Anmelden' && navlineText !== 'Hallo, Anmelden') {
     window.location.replace('https://smile.amazon.' + domainExtension + window.location.pathname + location.search);
   }
   // Redirect user to login page with return_to URL //
