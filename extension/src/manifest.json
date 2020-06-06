@@ -3,7 +3,7 @@
   "name": "Amazon Smile Redirect",
   "short_name": "Amazon Smile Redirect",
   "description": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!",
   "homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
   "icons": {
