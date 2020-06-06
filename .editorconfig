@@ -12,3 +12,6 @@ insert_final_newline = true
 [*.{js,scss,css}]
 indent_size = 2
 indent_style = spaces
+
+[*.md]
+trim_trailing_whitespace = false
