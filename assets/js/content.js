@@ -89,12 +89,12 @@ function fetchNavLines(extensionStatus) {
 
     for (let i = 0; i < navLines.length; i += 1) {
       if (
-        navLines[i].innerHTML.includes('Hello.') ||
-        navLines[i].innerHTML.includes('Hello,') ||
-        navLines[i].innerHTML.includes('Hallo!') ||
-        navLines[i].innerHTML.includes('Hallo,')
+        navLines[i].innerText.includes('Hello.') ||
+        navLines[i].innerText.includes('Hello,') ||
+        navLines[i].innerText.includes('Hallo!') ||
+        navLines[i].innerText.includes('Hallo,')
       ) {
-        navLineText = navLines[i].innerHTML;
+        navLineText = navLines[i].innerText;
 
         break;
       }
