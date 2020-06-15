@@ -2,6 +2,7 @@
 
 [Chrome Extension](https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg)  
 [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/amazon_smile_redirect/)  
+[Opera Extension](https://addons.opera.com/en/extensions/details/amazon-smile-redirect/)  
 [Userscript Home](https://openuserjs.org/scripts/mscarchilli/Amazon_Smile_Redirect)
 
 ## Description
