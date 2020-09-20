@@ -12,6 +12,9 @@ chrome.storage.local.get(['extensionStatus'], result => {
 
 // -------------------------- On Message //
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log('request', request);
+  console.log('sender', sender);
+  console.log('sendResponse', sendResponse);
   // Checking if user is logged out //
   if (request.logOutCheck) {
     const goToLogin = request.loggedOut;

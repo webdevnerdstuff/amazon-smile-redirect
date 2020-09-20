@@ -38,7 +38,7 @@ function isExcludedPage() {
 
 // ---------------------------------------------------- Checked if Logged Out //
 function loggedOut(navLineText) {
-  return navLineText === 'Hello. Sign in' || navLineText === 'Hello, Sign in' || navLineText === 'Hallo! Anmelden' || navLineText === '';
+  return navLineText === 'Hello. Sign in' || navLineText === 'Hello, Sign in' || navLineText === 'Hallo! Anmelden' || navLineText === 'Hallo, Anmelden' || navLineText === '';
 }
 
 // ---------------------------------------------------- Go To Page //
