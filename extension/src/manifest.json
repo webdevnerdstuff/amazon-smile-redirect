@@ -3,7 +3,7 @@
   "name": "Amazon Smile Redirect",
   "short_name": "Amazon Smile Redirect",
   "description": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!",
   "homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
   "icons": {
@@ -27,6 +27,11 @@
         "*://www.amazon.com/*",
         "*://www.amazon.co.uk/*",
         "*://www.amazon.de/*"
+      ],
+      "exclude_matches": [
+        "*://www.amazon.com/gp/video/watchparty/*",
+        "*://www.amazon.co.uk/gp/video/watchparty/*",
+        "*://www.amazon.de/gp/video/watchparty/*"
       ],
       "js": [
         "assets/js/content.min.js"
