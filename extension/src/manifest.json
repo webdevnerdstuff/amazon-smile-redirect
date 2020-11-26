@@ -28,10 +28,12 @@
         "*://www.amazon.co.uk/*",
         "*://www.amazon.de/*"
       ],
-      "exclude_matches": [
-        "*://www.amazon.com/gp/video/watchparty/*",
-        "*://www.amazon.co.uk/gp/video/watchparty/*",
-        "*://www.amazon.de/gp/video/watchparty/*"
+      "exclude_globs": [
+        "*business/register*",
+        "*ab_reg_biss_desktop*",
+        "*amzn_business_inv_website*",
+        "*b2b_reg_email_newcustomer*",
+        "*watchparty*"
       ],
       "js": [
         "assets/js/content.min.js"
