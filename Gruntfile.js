@@ -70,7 +70,10 @@ module.exports = grunt => {
       // ---------------------------------------------------- CLEAN //
       clean: {
         temp: {
-          src: ['_temp'],
+          src: [
+						'_temp/**/*',
+						'!_temp/.gitignore',
+					],
         },
         assets: {
           src: [
@@ -80,7 +83,10 @@ module.exports = grunt => {
           ],
         },
         dist: {
-          src: ['dist'],
+          src: [
+						'dist/**/*',
+						'!dist/.gitignore',
+					],
         },
       },
       // ---------------------------------------------------- COPY //
@@ -291,16 +297,6 @@ module.exports = grunt => {
           ],
         },
       },
-      // ---------------------------------------------------- EXTENSION CRX //
-      crx: {
-        mySignedExtension: {
-          src: 'extension/src/**/*',
-          dest: 'dist/asr.crx',
-        },
-        options: {
-          privateKey: 'amazon-smile-redirect.pem',
-        },
-      },
     });
 
     // ---------------------------------------------------- WATCH EVENTS JS/SCSS //
@@ -371,7 +367,7 @@ module.exports = grunt => {
     ]);
 
     if (grunt.option('env') === 'build') {
-      grunt.task.run(['compress', 'crx']);
+      grunt.task.run(['compress']);
     }
 
     return true;
