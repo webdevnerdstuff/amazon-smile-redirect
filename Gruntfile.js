@@ -281,6 +281,12 @@ module.exports = grunt => {
               expand: true,
               cwd: '.',
               src: [
+                '_temp',
+                '!_temp/**/*',
+                '!_temp/.gitignore',
+                'dist',
+                '!dist/**/*',
+                '!dist/.gitignore',
                 'assets/**',
                 'extension/**',
                 '.babelrc',
