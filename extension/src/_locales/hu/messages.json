@@ -25,7 +25,7 @@
 		"message": "Változat"
 	},
 	"nav__enabled": {
-		"message": "Bekapcsol",
+		"message": "Bekapcsolva",
 		"description": "Navigation Text for: Enabled"
 	},
 	"nav__about": {
