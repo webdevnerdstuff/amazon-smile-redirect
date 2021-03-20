@@ -1,0 +1,75 @@
+{
+	"appName": {
+		"message": "Amazon Smile Redirect",
+		"description": "The title of the application, displayed in the web store."
+	},
+	"appShortName": {
+		"message": "ASR"
+	},
+	"appDesc": {
+		"message": "Diese Erweiterung leitet Sie automatisch von Amazon.com zur entsprechenden Amazon Smile-Seite weiter.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Hasen ... viele, viele Hasen!"
+	},
+	"enabled": {
+		"message": "Aktiviert",
+		"description": "Used for navigation Extension Status: Enabled"
+	},
+	"disabled": {
+		"message": "Behindert",
+		"description": "Used for navigation Extension Status: Disabled"
+	},
+	"version": {
+		"message": "Ausführung"
+	},
+	"nav__enabled": {
+		"message": "Aktiviert",
+		"description": "Navigation Text for: Enabled"
+	},
+	"nav__about": {
+		"message": "Über Amazon Smile Redirect",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Entwickler-Website",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Support-Erweiterung",
+		"description": "Navigation Text for: Support this Extension"
+	},
+	"about__intro": {
+		"message": "Helfen Sie dabei, Geld für Ihren bevorzugten gemeinnützigen Verein zu spenden, indem Sie Ihre Amazon-Artikel über kaufen <a href=\"http://smile.amazon.de\" target=\"_blank\">Amazon Smile</a>",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Überblick:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Diese Erweiterung leitet Sie automatisch zur entsprechenden Seite smile.amazon.com weiter, sodass Sie nie daran denken müssen, zuerst zu smile.amazon.com zu wechseln. Damit Ihr Einkauf zählt, müssen Sie Amazon Smile durchlaufen.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Unterstützte Sites:",
+		"description": "About page Supported Site header"
+	},
+	"about__supportedSitesParagraph": {
+		"message": "amazon.com<br \/> amazon.co.uk<br \/> amazon.de",
+		"description": "About page Supported Site text"
+	},
+	"about__legalInformationHeader": {
+		"message": "Rechtsinformation:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile und das AmazonSmile-Logo sind Marken von Amazon.com, Inc. oder seinen verbundenen Unternehmen. <br \/> Die Erweiterung wurde nicht von Amazon erstellt oder unterstützt.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Alle Rechte vorbehalten",
+		"description": "About page copyright All Rights Reserved"
+	}
+}
