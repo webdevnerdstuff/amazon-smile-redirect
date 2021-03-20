@@ -7,7 +7,7 @@
 		"message": "ASR"
 	},
 	"appDesc": {
-		"message": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com.",
+		"message": "This extension automatically redirects you to the corresponding AmazonSmile page from Amazon.com.",
 		"description": "The description of the application, displayed in the web store."
 	},
 	"appAuthor": {
@@ -41,7 +41,7 @@
 		"description": "Navigation Text for: Support this Extension"
 	},
 	"about__intro": {
-		"message": "Help donate money to your favorite non-profit by purchasing your Amazon items through <a href=\"http://smile.amazon.com\" target=\"_blank\">Amazon Smile</a>",
+		"message": "Help your favorite non-profit by purchasing your Amazon items through <a href=\"http://smile.amazon.com\" target=\"_blank\">AmazonSmile</a>",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {
@@ -49,7 +49,7 @@
 		"description": "About page Overview header"
 	},
 	"about__overviewParagraph": {
-		"message": "This Extension will automatically redirect you to the corresponding smile.amazon.com page so you will never need to remember to go to smile.amazon.com first. In order for your purchase to count you must go through Amazon Smile.",
+		"message": "This Extension will automatically redirect you to the corresponding AmazonSmile page, so you will never need to remember to go to AmazonSmile first. In order for your non-profit to benefit from your purchase, you must complete your purchase through AmazonSmile.",
 		"description": "About page Overview text"
 	},
 	"about__supportedSitesHeader": {
