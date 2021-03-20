@@ -1,10 +1,10 @@
 {
 	"manifest_version": 2,
-	"name": "Amazon Smile Redirect",
-	"short_name": "Amazon Smile Redirect",
-	"description": "This extension automatically redirects you to the corresponding Amazon Smile page from Amazon.com",
+	"name": "__MSG_appName__",
+	"short_name": "__MSG_appShortName__",
+	"description": "__MSG_appDesc__",
 	"version": "2.0.12",
-	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!",
+	"author": "__MSG_appAuthor",
 	"homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
 	"icons": {
 		"16": "assets/images/icon16.png",
@@ -48,5 +48,6 @@
 			"128": "assets/images/icon128.png"
 		},
 		"default_popup": "pages/popup.html"
-	}
+	},
+	"default_locale": "en"
 }
