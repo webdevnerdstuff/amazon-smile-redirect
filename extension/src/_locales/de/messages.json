@@ -7,7 +7,7 @@
 		"message": "ASR"
 	},
 	"appDesc": {
-		"message": "Diese Erweiterung leitet Sie automatisch von Amazon.com zur entsprechenden Amazon Smile-Seite weiter.",
+		"message": "Diese Erweiterung leitet Sie automatisch von Amazon.com zur entsprechenden AmazonSmile-Seite weiter.",
 		"description": "The description of the application, displayed in the web store."
 	},
 	"appAuthor": {
@@ -41,7 +41,7 @@
 		"description": "Navigation Text for: Support this Extension"
 	},
 	"about__intro": {
-		"message": "Helfen Sie dabei, Geld für Ihren bevorzugten gemeinnützigen Verein zu spenden, indem Sie Ihre Amazon-Artikel über kaufen <a href=\"http://smile.amazon.de\" target=\"_blank\">Amazon Smile</a>",
+		"message": "Helfen Sie Ihrem bevorzugten gemeinnützigen Verein, indem Sie Ihre Amazon-Artikel über <a href=\"http://smile.amazon.com\" target=\"_blank\">AmazonSmile</a> kaufen",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {
@@ -49,7 +49,7 @@
 		"description": "About page Overview header"
 	},
 	"about__overviewParagraph": {
-		"message": "Diese Erweiterung leitet Sie automatisch zur entsprechenden Seite smile.amazon.com weiter, sodass Sie nie daran denken müssen, zuerst zu smile.amazon.com zu wechseln. Damit Ihr Einkauf zählt, müssen Sie Amazon Smile durchlaufen.",
+		"message": "Diese Erweiterung leitet Sie automatisch zur entsprechenden AmazonSmile-Seite weiter, sodass Sie nie daran denken müssen, zuerst zu AmazonSmile zu wechseln. Damit Ihr gemeinnütziger Verein von Ihrem Kauf profitieren kann, müssen Sie Ihren Kauf über AmazonSmile abschließen.",
 		"description": "About page Overview text"
 	},
 	"about__supportedSitesHeader": {
