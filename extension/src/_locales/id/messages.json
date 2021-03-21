@@ -1,60 +1,60 @@
 {
 	"appDesc": {
-		"message": "Denna tillägg omdirigerar dig automatiskt till motsvarande AmazonSmile-sida från Amazon.com.",
+		"message": "Ekstensi ini secara otomatis mengarahkan Anda ke halaman AmazonSmile yang sesuai dari Amazon.com.",
 		"description": "The description of the application, displayed in the web store."
 	},
 	"appAuthor": {
-		"message": "WebDevNerdStuff & Kaniner ... massor av massor av kaniner!"
+		"message": "WebDevNerdStuff & Kelinci ... banyak sekali kelinci!"
 	},
 	"version": {
-		"message": "Version"
+		"message": "Versi: kapan"
 	},
 	"nav__enabled": {
-		"message": "På",
+		"message": "Di",
 		"description": "Navigation Text for: Enabled/On"
 	},
 	"nav__disabled": {
-		"message": "Av",
+		"message": "Mati",
 		"description": "Navigation Text for: Disabled/Off"
 	},
 	"nav__about": {
-		"message": "Om förlängning",
+		"message": "Tentang Ekstensi",
 		"description": "Navigation Text for: About Amazon Smile Redirect"
 	},
 	"nav__developerWebsite": {
-		"message": "Utvecklarens webbplats",
+		"message": "Situs Pengembang",
 		"description": "Navigation Text for: Developer Website"
 	},
 	"nav__supportExtension": {
-		"message": "Supportförlängning",
+		"message": "Ekstensi Dukungan",
 		"description": "Navigation Text for: Support Extension"
 	},
 	"about__intro": {
-		"message": "Hjälp din favorit ideella genom att köpa dina Amazon-objekt via AmazonSmile",
+		"message": "Bantu organisasi nirlaba favorit Anda dengan membeli item Amazon Anda melalui AmazonSmile",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {
-		"message": "Översikt:",
+		"message": "Gambaran:",
 		"description": "About page Overview header"
 	},
 	"about__overviewParagraph": {
-		"message": "Det här tillägget omdirigerar dig automatiskt till motsvarande AmazonSmile-sida, så du behöver aldrig komma ihåg att gå till AmazonSmile först. För att din ideella organisation ska kunna dra nytta av ditt köp måste du slutföra ditt köp via AmazonSmile.",
+		"message": "Ekstensi ini akan secara otomatis mengarahkan Anda ke halaman AmazonSmile yang sesuai, jadi Anda tidak perlu ingat untuk pergi ke AmazonSmile terlebih dahulu. Agar organisasi nirlaba Anda mendapatkan keuntungan dari pembelian Anda, Anda harus menyelesaikan pembelian Anda melalui AmazonSmile.",
 		"description": "About page Overview text"
 	},
 	"about__supportedSitesHeader": {
-		"message": "Stödda webbplatser:",
+		"message": "Situs yang Didukung:",
 		"description": "About page Supported Site header"
 	},
 	"about__legalInformationHeader": {
-		"message": "Juridisk information:",
+		"message": "Informasi Hukum:",
 		"description": "About page Legal Information header"
 	},
 	"about__legalInformationParagraph": {
-		"message": "AmazonSmile och AmazonSmile-logotypen är varumärken som tillhör Amazon.com, Inc. eller dess dotterbolag. Tillägget skapades eller godkändes inte av Amazon.",
+		"message": "AmazonSmile dan logo AmazonSmile adalah merek dagang dari Amazon.com, Inc. atau afiliasinya. Ekstensi tidak dibuat atau didukung oleh Amazon.",
 		"description": "About page Legal Information text"
 	},
 	"about__allRightsReserved": {
-		"message": "Alla rättigheter förbehållna",
+		"message": "Seluruh hak cipta",
 		"description": "About page copyright All Rights Reserved"
 	}
 }

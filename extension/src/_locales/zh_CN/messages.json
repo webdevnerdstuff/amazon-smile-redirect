@@ -1,60 +1,60 @@
 {
 	"appDesc": {
-		"message": "Denna tillägg omdirigerar dig automatiskt till motsvarande AmazonSmile-sida från Amazon.com.",
+		"message": "该扩展程序会自动将您从Amazon.com重定向到相应的AmazonSmile页面。",
 		"description": "The description of the application, displayed in the web store."
 	},
 	"appAuthor": {
-		"message": "WebDevNerdStuff & Kaniner ... massor av massor av kaniner!"
+		"message": "WebDevNerdStuff & 兔子...很多兔子！"
 	},
 	"version": {
-		"message": "Version"
+		"message": "版本"
 	},
 	"nav__enabled": {
-		"message": "På",
+		"message": "在",
 		"description": "Navigation Text for: Enabled/On"
 	},
 	"nav__disabled": {
-		"message": "Av",
+		"message": "离开",
 		"description": "Navigation Text for: Disabled/Off"
 	},
 	"nav__about": {
-		"message": "Om förlängning",
+		"message": "关于扩展",
 		"description": "Navigation Text for: About Amazon Smile Redirect"
 	},
 	"nav__developerWebsite": {
-		"message": "Utvecklarens webbplats",
+		"message": "开发者网站",
 		"description": "Navigation Text for: Developer Website"
 	},
 	"nav__supportExtension": {
-		"message": "Supportförlängning",
+		"message": "支持扩展",
 		"description": "Navigation Text for: Support Extension"
 	},
 	"about__intro": {
-		"message": "Hjälp din favorit ideella genom att köpa dina Amazon-objekt via AmazonSmile",
+		"message": "通过AmazonSmile购买亚马逊商品来帮助您最喜欢的非营利组织",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {
-		"message": "Översikt:",
+		"message": "概述：",
 		"description": "About page Overview header"
 	},
 	"about__overviewParagraph": {
-		"message": "Det här tillägget omdirigerar dig automatiskt till motsvarande AmazonSmile-sida, så du behöver aldrig komma ihåg att gå till AmazonSmile först. För att din ideella organisation ska kunna dra nytta av ditt köp måste du slutföra ditt köp via AmazonSmile.",
+		"message": "该扩展程序将自动将您重定向到相应的AmazonSmile页面，因此您无需记住先进入AmazonSmile。为了使您的非营利组织从购买中受益，您必须通过AmazonSmile完成购买。",
 		"description": "About page Overview text"
 	},
 	"about__supportedSitesHeader": {
-		"message": "Stödda webbplatser:",
+		"message": "支持的站点：",
 		"description": "About page Supported Site header"
 	},
 	"about__legalInformationHeader": {
-		"message": "Juridisk information:",
+		"message": "法律信息：",
 		"description": "About page Legal Information header"
 	},
 	"about__legalInformationParagraph": {
-		"message": "AmazonSmile och AmazonSmile-logotypen är varumärken som tillhör Amazon.com, Inc. eller dess dotterbolag. Tillägget skapades eller godkändes inte av Amazon.",
+		"message": "AmazonSmile和AmazonSmile徽标是Amazon.com，Inc.或其附属公司的商标。该扩展不是由Amazon创建或认可的。",
 		"description": "About page Legal Information text"
 	},
 	"about__allRightsReserved": {
-		"message": "Alla rättigheter förbehållna",
+		"message": "版权所有",
 		"description": "About page copyright All Rights Reserved"
 	}
 }
