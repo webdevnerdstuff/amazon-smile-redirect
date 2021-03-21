@@ -1,72 +1,60 @@
 {
-	"appName": {
-		"message": "Amazon Smile Redirect",
-		"description": "The title of the application, displayed in the web store."
-	},
 	"appDesc": {
-		"message": "This extension automatically redirects you to the corresponding AmazonSmile page from Amazon.com.",
+		"message": "",
 		"description": "The description of the application, displayed in the web store."
 	},
 	"appAuthor": {
-		"message": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!"
-	},
-	"enabled": {
-		"message": "Enabled",
-		"description": "Used for navigation Extension Status: Enabled"
-	},
-	"disabled": {
-		"message": "Disabled",
-		"description": "Used for navigation Extension Status: Disabled"
+		"message": ""
 	},
 	"version": {
-		"message": "Version"
+		"message": ""
 	},
 	"nav__enabled": {
-		"message": "Enabled",
-		"description": "Navigation Text for: Enabled"
+		"message": "",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "",
+		"description": "Navigation Text for: Disabled/Off"
 	},
 	"nav__about": {
-		"message": "About Amazon Smile Redirect",
+		"message": "",
 		"description": "Navigation Text for: About Amazon Smile Redirect"
 	},
 	"nav__developerWebsite": {
-		"message": "Developer Website",
+		"message": "",
 		"description": "Navigation Text for: Developer Website"
 	},
 	"nav__supportExtension": {
-		"message": "Support this Extension",
-		"description": "Navigation Text for: Support this Extension"
+		"message": "",
+		"description": "Navigation Text for: Support Extension"
 	},
 	"about__intro": {
-		"message": "Help your favorite non-profit by purchasing your Amazon items through AmazonSmile",
+		"message": "",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {
-		"message": "Overview:",
+		"message": "",
 		"description": "About page Overview header"
 	},
 	"about__overviewParagraph": {
-		"message": "This Extension will automatically redirect you to the corresponding AmazonSmile page, so you will never need to remember to go to AmazonSmile first. In order for your non-profit to benefit from your purchase, you must complete your purchase through AmazonSmile.",
+		"message": "",
 		"description": "About page Overview text"
 	},
 	"about__supportedSitesHeader": {
-		"message": "Supported Sites:",
+		"message": "",
 		"description": "About page Supported Site header"
 	},
-	"about__supportedSitesParagraph": {
-		"message": "amazon.com<br \/> amazon.co.uk<br \/> amazon.de",
-		"description": "About page Supported Site text"
-	},
 	"about__legalInformationHeader": {
-		"message": "Legal Information:",
+		"message": "",
 		"description": "About page Legal Information header"
 	},
 	"about__legalInformationParagraph": {
-		"message": "AmazonSmile and the AmazonSmile logo are trademarks of Amazon.com, Inc. or its affiliates.<br \/> The extension was not created or endorsed by Amazon.",
+		"message": "",
 		"description": "About page Legal Information text"
 	},
 	"about__allRightsReserved": {
-		"message": "All Rights Reserved",
+		"message": "",
 		"description": "About page copyright All Rights Reserved"
 	}
 }
