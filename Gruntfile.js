@@ -234,7 +234,6 @@ module.exports = grunt => {
 			// ---------------------------------------------------- WATCH //
 			watch: {
 				options: {
-					livereload: grunt.option('livereload') || false,
 					spawn: false,
 				},
 				javascript: {
@@ -406,14 +405,12 @@ module.exports = grunt => {
 	// Run Watch Task //
 	grunt.registerTask('default', 'Default Task', () => {
 		grunt.option('env', 'default');
-		grunt.option('livereload', grunt.option('livereload') !== false || false);
 		grunt.task.run('init');
 	});
 
 	// Build all assets and run Watch Task //
 	grunt.registerTask('dev', 'Dev Environment', () => {
 		grunt.option('env', 'dev');
-		grunt.option('livereload', grunt.option('livereload') !== false || false);
 		grunt.task.run('init');
 	});
 
