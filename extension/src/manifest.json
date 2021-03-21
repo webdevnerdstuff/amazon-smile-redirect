@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "__MSG_appName__",
-	"short_name": "__MSG_appShortName__",
+	"short_name": "ASR",
 	"description": "__MSG_appDesc__",
-	"version": "2.0.12",
+	"version": "2.0.14",
 	"author": "__MSG_appAuthor",
 	"homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
 	"icons": {
