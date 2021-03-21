@@ -38,7 +38,7 @@
 		"description": "Navigation Text for: Support this Extension"
 	},
 	"about__intro": {
-		"message": "Segítsen kedvenc non-profit szervezetének azáltal, hogy megvásárolja az Amazon termékeit az <a href=\"http://smile.amazon.com\" target=\"_blank\">AmazonSmile</a> szolgáltatáson keresztül.",
+		"message": "Segítsen kedvenc non-profit szervezetének azáltal, hogy megvásárolja az Amazon termékeit az AmazonSmile szolgáltatáson keresztül.",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {

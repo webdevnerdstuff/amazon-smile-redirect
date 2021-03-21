@@ -38,7 +38,7 @@
 		"description": "Navigation Text for: Support this Extension"
 	},
 	"about__intro": {
-		"message": "Help your favorite non-profit by purchasing your Amazon items through <a href=\"http://smile.amazon.com\" target=\"_blank\">AmazonSmile</a>",
+		"message": "Help your favorite non-profit by purchasing your Amazon items through AmazonSmile",
 		"description": "About page intro"
 	},
 	"about__overviewHeader": {
