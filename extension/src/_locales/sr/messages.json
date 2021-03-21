@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "Ово проширење вас аутоматски преусмерава на одговарајућу АмазонСмиле страницу са Амазон.цом.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Зечице ... пуно, пуно зеко!"
+	},
+	"version": {
+		"message": "Верзија"
+	},
+	"nav__enabled": {
+		"message": "на",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Ван",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "О продужењу",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Веб локација за програмере",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Суппорт Ектенсион",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Помозите својој омиљеној непрофитној организацији купујући своје Амазон предмете путем АмазонСмиле-а",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Преглед:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Ово проширење ће вас аутоматски преусмерити на одговарајућу АмазонСмиле страницу, тако да никада нећете морати да се сетите да прво одете на АмазонСмиле. Да би ваша непрофитна организација имала користи од ваше куповине, морате је довршити путем АмазонСмиле-а.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Подржане локације:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Правне информације:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "АмазонСмиле и логотип АмазонСмиле заштитни су знаци компаније Амазон.цом, Инц. или њених повезаних компанија. Проширење није креирао нити одобрио Амазон.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Сва права задржана",
+		"description": "About page copyright All Rights Reserved"
+	}
+}
