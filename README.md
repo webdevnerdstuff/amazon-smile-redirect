@@ -7,11 +7,11 @@
 
 ## Description
 
-Help donate money to your favorite non-profit by purchasing your Amazon items through [smile.amazon.com](https://smile.amazon.com).
+Help your favorite non-profit by purchasing your Amazon items through AmazonSmile. [smile.amazon.com](https://smile.amazon.com).
 
 ## Overview
 
-This Extension will automatically redirect you to the corresponding smile.amazon.com page so you will never need to remember to go to smile.amazon.com first. In order for your purchase to count you must go through [smile.amazon.com](https://smile.amazon.com).
+This Extension will automatically redirect you to the corresponding AmazonSmile page, so you will never need to remember to go to AmazonSmile first. In order for your non-profit to benefit from your purchase, you must complete your purchase through [smile.amazon.com](https://smile.amazon.com).
 
 ## Supported Sites
 
