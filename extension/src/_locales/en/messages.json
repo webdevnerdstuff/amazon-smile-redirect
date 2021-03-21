@@ -1,8 +1,4 @@
 {
-	"appName": {
-		"message": "Amazon Smile Redirect",
-		"description": "The title of the application, displayed in the web store."
-	},
 	"appDesc": {
 		"message": "This extension automatically redirects you to the corresponding AmazonSmile page from Amazon.com.",
 		"description": "The description of the application, displayed in the web store."
@@ -10,20 +6,16 @@
 	"appAuthor": {
 		"message": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!"
 	},
-	"enabled": {
-		"message": "Enabled",
-		"description": "Used for navigation Extension Status: Enabled"
-	},
-	"disabled": {
-		"message": "Disabled",
-		"description": "Used for navigation Extension Status: Disabled"
-	},
 	"version": {
 		"message": "Version"
 	},
 	"nav__enabled": {
 		"message": "Enabled",
-		"description": "Navigation Text for: Enabled"
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Disabled",
+		"description": "Navigation Text for: Disabled/Off"
 	},
 	"nav__about": {
 		"message": "About Amazon Smile Redirect",
@@ -35,7 +27,7 @@
 	},
 	"nav__supportExtension": {
 		"message": "Support this Extension",
-		"description": "Navigation Text for: Support this Extension"
+		"description": "Navigation Text for: Support Extension"
 	},
 	"about__intro": {
 		"message": "Help your favorite non-profit by purchasing your Amazon items through AmazonSmile.",

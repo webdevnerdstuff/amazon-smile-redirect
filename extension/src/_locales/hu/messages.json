@@ -1,8 +1,4 @@
 {
-	"appName": {
-		"message": "Amazon Smile Redirect",
-		"description": "The title of the application, displayed in the web store."
-	},
 	"appDesc": {
 		"message": "Ez a kiterjesztés automatikusan átirányít az Amazon.com-nak megfelelő Amazon Smile oldalára.",
 		"description": "The description of the application, displayed in the web store."
@@ -10,20 +6,16 @@
 	"appAuthor": {
 		"message": "WebDevNerdStuff & Nyuszik ... sok-sok nyuszi!"
 	},
-	"enabled": {
-		"message": "Bekapcsolva",
-		"description": "Used for navigation Extension Status: Enabled"
-	},
-	"disabled": {
-		"message": "Kikapcsolva",
-		"description": "Used for navigation Extension Status: Disabled"
-	},
 	"version": {
 		"message": "Változat"
 	},
 	"nav__enabled": {
 		"message": "Bekapcsolva",
-		"description": "Navigation Text for: Enabled"
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Kikapcsolva",
+		"description": "Navigation Text for: Disabled/Off"
 	},
 	"nav__about": {
 		"message": "A kiterjesztésről",
@@ -35,7 +27,7 @@
 	},
 	"nav__supportExtension": {
 		"message": "Támogassa ezt a kiterjesztést",
-		"description": "Navigation Text for: Support this Extension"
+		"description": "Navigation Text for: Support Extension"
 	},
 	"about__intro": {
 		"message": "Segítsen kedvenc non-profit szervezetének azáltal, hogy megvásárolja az Amazon termékeit az AmazonSmile szolgáltatáson keresztül.",
@@ -52,10 +44,6 @@
 	"about__supportedSitesHeader": {
 		"message": "Támogatott Weboldalak:",
 		"description": "About page Supported Site header"
-	},
-	"about__supportedSitesParagraph": {
-		"message": "amazon.com<br \/> amazon.co.uk<br \/> amazon.de",
-		"description": "About page Supported Site text"
 	},
 	"about__legalInformationHeader": {
 		"message": "Jogi Információk:",

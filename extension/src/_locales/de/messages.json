@@ -1,8 +1,4 @@
 {
-	"appName": {
-		"message": "Amazon Smile Redirect",
-		"description": "The title of the application, displayed in the web store."
-	},
 	"appDesc": {
 		"message": "Diese Erweiterung leitet Sie automatisch von Amazon.com zur entsprechenden AmazonSmile-Seite weiter.",
 		"description": "The description of the application, displayed in the web store."
@@ -10,20 +6,16 @@
 	"appAuthor": {
 		"message": "WebDevNerdStuff & Hasen ... viele, viele Hasen!"
 	},
-	"enabled": {
-		"message": "Aktiviert",
-		"description": "Used for navigation Extension Status: Enabled"
-	},
-	"disabled": {
-		"message": "Behindert",
-		"description": "Used for navigation Extension Status: Disabled"
-	},
 	"version": {
 		"message": "Ausführung"
 	},
 	"nav__enabled": {
 		"message": "Aktiviert",
-		"description": "Navigation Text for: Enabled"
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Behindert",
+		"description": "Navigation Text for: Disabled/Off"
 	},
 	"nav__about": {
 		"message": "Über Amazon Smile Redirect",
@@ -35,7 +27,7 @@
 	},
 	"nav__supportExtension": {
 		"message": "Support-Erweiterung",
-		"description": "Navigation Text for: Support this Extension"
+		"description": "Navigation Text for: Support Extension"
 	},
 	"about__intro": {
 		"message": "Helfen Sie Ihrem bevorzugten gemeinnützigen Verein, indem Sie Ihre Amazon-Artikel über AmazonSmile kaufen.",
@@ -52,10 +44,6 @@
 	"about__supportedSitesHeader": {
 		"message": "Unterstützte Sites:",
 		"description": "About page Supported Site header"
-	},
-	"about__supportedSitesParagraph": {
-		"message": "amazon.com<br \/> amazon.co.uk<br \/> amazon.de",
-		"description": "About page Supported Site text"
 	},
 	"about__legalInformationHeader": {
 		"message": "Rechtsinformation:",
