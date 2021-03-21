@@ -3,9 +3,6 @@
 		"message": "Amazon Smile Redirect",
 		"description": "The title of the application, displayed in the web store."
 	},
-	"appShortName": {
-		"message": "ASR"
-	},
 	"appDesc": {
 		"message": "This extension automatically redirects you to the corresponding AmazonSmile page from Amazon.com.",
 		"description": "The description of the application, displayed in the web store."

@@ -3,9 +3,6 @@
 		"message": "Amazon Smile Redirect",
 		"description": "The title of the application, displayed in the web store."
 	},
-	"appShortName": {
-		"message": "ASR"
-	},
 	"appDesc": {
 		"message": "Diese Erweiterung leitet Sie automatisch von Amazon.com zur entsprechenden AmazonSmile-Seite weiter.",
 		"description": "The description of the application, displayed in the web store."
