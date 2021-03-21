@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "Questa estensione ti reindirizza automaticamente alla pagina AmazonSmile corrispondente da Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Conigli ... tanti, tanti coniglietti!"
+	},
+	"version": {
+		"message": "Versione"
+	},
+	"nav__enabled": {
+		"message": "Su",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Off",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "Informazioni sull'estensione",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Sito web per sviluppatori",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Supporta questa estensione",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Aiuta la tua organizzazione non profit preferita acquistando i tuoi articoli Amazon tramite AmazonSmile",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Panoramica:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Questa estensione ti reindirizzerà automaticamente alla pagina AmazonSmile corrispondente, quindi non dovrai mai ricordarti di andare prima su AmazonSmile. Affinché la tua organizzazione non profit possa beneficiare del tuo acquisto, devi completare l'acquisto tramite AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Siti supportati:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Informazione legale:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile e il logo AmazonSmile sono marchi di Amazon.com, Inc. o delle sue affiliate. L'estensione non è stata creata o approvata da Amazon.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Tutti i diritti riservati",
+		"description": "About page copyright All Rights Reserved"
+	}
+}
