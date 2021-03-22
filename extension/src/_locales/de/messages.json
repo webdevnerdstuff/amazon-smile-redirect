@@ -7,10 +7,10 @@
 		"message": "WebDevNerdStuff & Hasen ... viele, viele Hasen!"
 	},
 	"version": {
-		"message": "Ausführung"
+		"message": "Auf"
 	},
 	"nav__enabled": {
-		"message": "Aktiviert",
+		"message": "Aus",
 		"description": "Navigation Text for: Enabled/On"
 	},
 	"nav__disabled": {
