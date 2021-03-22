@@ -19,6 +19,10 @@ amazon.com
 amazon.co.uk  
 amazon.de
 
+## Supported Languages
+
+Full list of [supported languages](https://github.com/webdevnerdstuff/amazon-smile-redirect/tree/master/extension/src/_locales)
+
 ## Do you track my data?
 
 No. This extension does not collect any user data.
