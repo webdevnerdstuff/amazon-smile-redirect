@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "סיומת זו מפנה אותך אוטומטית לדף המקביל של AmazonSmile מ- Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & ארנבות ... המון המון ארנבות!"
+	},
+	"version": {
+		"message": "גִרְסָה"
+	},
+	"nav__enabled": {
+		"message": "עַל",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "כבוי",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "על הרחבה",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "אתר מפתח",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "הרחבת תמיכה",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "עזור לעמותות המועדפות עליך על ידי רכישת פריטי אמזון שלך באמצעות AmazonSmile",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "סקירה כללית:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "סיומת זו תפנה אותך אוטומטית לדף המקביל של AmazonSmile, כך שלעולם לא תצטרך לזכור לעבור תחילה ל- AmazonSmile. על מנת שהמלכ\"ר שלך יהנה מהרכישה שלך, עליך להשלים את הרכישה באמצעות AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "אתרים נתמכים:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "מידע משפטי:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile והלוגו של AmazonSmile הם סימנים מסחריים של Amazon.com, Inc. או שלוחותיה. התוסף לא נוצר או אושר על ידי אמזון.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "כל הזכויות שמורות",
+		"description": "About page copyright All Rights Reserved"
+	}
+}

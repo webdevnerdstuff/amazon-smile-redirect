@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "این برنامه داخلی به طور خودکار شما را به صفحه AmazonSmile مربوطه از Amazon.com هدایت می کند.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & اسم حیوان دست اموز ... تعداد زیادی اسم حیوان دست اموز!"
+	},
+	"version": {
+		"message": "نسخه"
+	},
+	"nav__enabled": {
+		"message": "بر",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "خاموش",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "درباره Extension",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "وب سایت توسعه دهنده",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "افزونه پشتیبانی",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "با خرید اقلام آمازون خود از طریق AmazonSmile به غیرانتفاعی مورد علاقه خود کمک کنید",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "بررسی اجمالی:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "این برنامه افزودنی به طور خودکار شما را به صفحه مربوطه AmazonSmile هدایت می کند ، بنابراین هرگز نیازی نخواهید داشت که ابتدا به AmazonSmile بروید. برای اینکه سود غیر انتفاعی شما از خرید شما بهره مند شود ، باید خرید خود را از طریق AmazonSmile انجام دهید.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "سایت های پشتیبانی شده:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "اطلاعات حقوقی:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile و آرم AmazonSmile علائم تجاری Amazon.com، Inc یا شرکت های وابسته به آن هستند. برنامه افزودنی توسط آمازون ایجاد نشده یا تأیید نشده است.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "کلیه حقوق محفوظ است",
+		"description": "About page copyright All Rights Reserved"
+	}
+}
