@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "Tiện ích mở rộng này tự động chuyển hướng bạn đến trang AmazonSmile tương ứng từ Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Thỏ ... rất nhiều và rất nhiều thỏ!"
+	},
+	"version": {
+		"message": "Phiên bản"
+	},
+	"nav__enabled": {
+		"message": "Trên",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Tắt",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "Giới thiệu về Tiện ích mở rộng",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Trang web của nhà phát triển",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Hỗ trợ mở rộng",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Giúp tổ chức phi lợi nhuận yêu thích của bạn bằng cách mua các mặt hàng trên Amazon của bạn thông qua AmazonSmile",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Tổng quat:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Tiện ích mở rộng này sẽ tự động chuyển hướng bạn đến trang AmazonSmile tương ứng, vì vậy bạn sẽ không bao giờ cần phải nhớ truy cập AmazonSmile trước. Để tổ chức phi lợi nhuận của bạn được hưởng lợi từ việc mua hàng của bạn, bạn phải hoàn tất việc mua hàng của mình thông qua AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Các trang web được hỗ trợ:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Thông tin hợp pháp:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile và biểu trưng AmazonSmile là thương hiệu của Amazon.com, Inc. hoặc các chi nhánh của nó. Tiện ích mở rộng không được tạo hoặc xác nhận bởi Amazon.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Đã đăng ký Bản quyền",
+		"description": "About page copyright All Rights Reserved"
+	}
+}

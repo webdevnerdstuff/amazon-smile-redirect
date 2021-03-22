@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "يقوم هذا الامتداد بإعادة توجيهك تلقائيًا إلى صفحة AmazonSmile المقابلة من Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & الأرانب ... الكثير والكثير من الأرانب!"
+	},
+	"version": {
+		"message": "الإصدار"
+	},
+	"nav__enabled": {
+		"message": "تشغيل",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "عن",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "حول التمديد",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "موقع المطور",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "تمديد الدعم",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "ساعد مؤسستك غير الربحية المفضلة عن طريق شراء سلعك من أمازون من خلال AmazonSmile",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "ملخص:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "سيعيد هذا الامتداد توجيهك تلقائيًا إلى صفحة AmazonSmile المقابلة ، لذلك لن تحتاج أبدًا إلى تذكر الذهاب إلى AmazonSmile أولاً. لكي تستفيد مؤسستك غير الربحية من مشترياتك ، يجب عليك إكمال عملية الشراء من خلال AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "المواقع المدعومة:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "المعلومات القانونية:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile وشعار AmazonSmile علامتان تجاريتان لشركة Amazon.com، Inc. أو الشركات التابعة لها. لم يتم إنشاء الامتداد أو المصادقة عليه من قبل أمازون.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "كل الحقوق محفوظة",
+		"description": "About page copyright All Rights Reserved"
+	}
+}

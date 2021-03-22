@@ -1,19 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <title>Amazon Smile Redirect</title>
+  <title data-locale="appName">Amazon Smile Redirect</title>
   <link href="../assets/css/main.min.css" rel="stylesheet">
 </head>
+
 <body id="asr-popup">
   <ul>
-    <li id="toggle-status" data-status="enabled"><i class="enabled fa-fw fas fa-check"></i> Enabled</li>
-    <li class="external" data-type="amazonSmile"><i class="orange fa-fw fab fa-amazon"></i>  Amazon Smile</li>
-    <li class="external" data-type="about"><i class="fa-fw fas fa-info"></i> About Amazon Smile Redirect</li>
-    <li class="external" data-type="devSite"><i class="fa-fw fas fa-code"></i> Developer Website</li>
-    <li class="external" data-type="donate"><i class="fa-fw far fa-heart"></i> Support this Extension</li>
+    <li id="toggle-status" data-status="enabled"><i class="enabled fa-fw fas fa-check"></i> <span data-locale="nav__enabled">Enabled</span></li>
+    <li class="external" data-type="amazonSmile"><i class="orange fa-fw fab fa-amazon"></i> AmazonSmile</li>
+    <li class="external" data-type="about"><i class="fa-fw fas fa-info"></i> <span data-locale="nav__about">About Amazon Smile Redirect</span></li>
+    <li class="external" data-type="devSite"><i class="fa-fw fas fa-code"></i> <span data-locale="nav__developerWebsite">Developer Website</span></li>
+    <li class="external" data-type="donate"><i class="fa-fw far fa-heart"></i> <span data-locale="nav__supportExtension">Support this Extension</span></li>
   </ul>
 
   <script type="text/javascript" src="../assets/vendor/fontawesome/js/all.min.js"></script>
+  <script type="text/javascript" src="../assets/js/locale.min.js"></script>
   <script type="text/javascript" src="../assets/js/popup.min.js"></script>
 </body>
+
 </html>

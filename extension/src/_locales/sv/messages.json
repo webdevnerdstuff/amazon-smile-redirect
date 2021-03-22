@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "Denna tillägg omdirigerar dig automatiskt till motsvarande AmazonSmile-sida från Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Kaniner ... massor av massor av kaniner!"
+	},
+	"version": {
+		"message": "Version"
+	},
+	"nav__enabled": {
+		"message": "På",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Av",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "Om förlängning",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Utvecklarens webbplats",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Supportförlängning",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Hjälp din favorit ideella genom att köpa dina Amazon-objekt via AmazonSmile",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Översikt:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Det här tillägget omdirigerar dig automatiskt till motsvarande AmazonSmile-sida, så du behöver aldrig komma ihåg att gå till AmazonSmile först. För att din ideella organisation ska kunna dra nytta av ditt köp måste du slutföra ditt köp via AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Stödda webbplatser:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Juridisk information:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile och AmazonSmile-logotypen är varumärken som tillhör Amazon.com, Inc. eller dess dotterbolag. Tillägget skapades eller godkändes inte av Amazon.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Alla rättigheter förbehållna",
+		"description": "About page copyright All Rights Reserved"
+	}
+}

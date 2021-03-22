@@ -1,0 +1,60 @@
+{
+	"appDesc": {
+		"message": "See laiendus suunab teid automaatselt Amazon.com-i vastavale AmazonSmile'i lehele.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Jänkud ... palju-palju jäneseid!"
+	},
+	"version": {
+		"message": "Versioon"
+	},
+	"nav__enabled": {
+		"message": "Peal",
+		"description": "Navigation Text for: Enabled/On"
+	},
+	"nav__disabled": {
+		"message": "Väljas",
+		"description": "Navigation Text for: Disabled/Off"
+	},
+	"nav__about": {
+		"message": "Laienduse kohta",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Arendaja veebisait",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Toe pikendamine",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Aidake oma lemmik mittetulundusühingut, ostes oma Amazoni esemeid AmazonSmile'i kaudu",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Ülevaade:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "See laiendus suunab teid automaatselt vastavale AmazonSmile'i lehele, nii et teil pole kunagi vaja meeles pidada, et peate kõigepealt AmazonSmile'i minema. Selleks, et teie mittetulundusühing saaks ostust kasu saada, peate ostu lõpule viima AmazonSmile'i kaudu.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Toetatud saidid:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Juriidiline teave:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile ja AmazonSmile'i logo on Amazon.com, Inc. või tema sidusettevõtete kaubamärgid. Amazon ei loonud ega kinnitanud laiendust.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Kõik õigused kaitstud",
+		"description": "About page copyright All Rights Reserved"
+	}
+}
