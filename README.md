@@ -21,7 +21,7 @@ amazon.de
 
 ## Supported Languages
 
-Full list of [supported languages](https://github.com/webdevnerdstuff/amazon-smile-redirect/tree/master/extension/src/_locales)
+Full list of [supported languages](https://github.com/webdevnerdstuff/amazon-smile-redirect/tree/master/extension/src/_locales#readme)
 
 ## Do you track my data?
 
