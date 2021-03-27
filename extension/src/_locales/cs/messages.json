@@ -1,60 +1,60 @@
 {
-	"appDesc": {
-		"message": "Toto rozšíření vás automaticky přesměruje na odpovídající stránku AmazonSmile z Amazon.com.",
-		"description": "The description of the application, displayed in the web store."
-	},
-	"appAuthor": {
-		"message": "WebDevNerdStuff & Zajíčci ... spousta a zajíčci!"
-	},
-	"version": {
-		"message": "Verze"
-	},
-	"nav__enabled": {
-		"message": "Na",
-		"description": "Navigation Text for: Enabled/On"
-	},
-	"nav__disabled": {
-		"message": "Vypnuto",
-		"description": "Navigation Text for: Disabled/Off"
-	},
-	"nav__about": {
-		"message": "O rozšíření",
-		"description": "Navigation Text for: About Amazon Smile Redirect"
-	},
-	"nav__developerWebsite": {
-		"message": "Web vývojáře",
-		"description": "Navigation Text for: Developer Website"
-	},
-	"nav__supportExtension": {
-		"message": "Podpora rozšíření",
-		"description": "Navigation Text for: Support Extension"
-	},
-	"about__intro": {
-		"message": "Pomozte své oblíbené neziskové organizaci nákupem položek Amazon prostřednictvím AmazonSmile",
-		"description": "About page intro"
-	},
-	"about__overviewHeader": {
-		"message": "Přehled",
-		"description": "About page Overview header"
-	},
-	"about__overviewParagraph": {
-		"message": "Toto rozšíření vás automaticky přesměruje na příslušnou stránku AmazonSmile, takže si nikdy nebudete muset pamatovat, že nejdříve přejdete na AmazonSmile. Aby vaše nezisková organizace mohla těžit z vašeho nákupu, musíte dokončit svůj nákup prostřednictvím AmazonSmile.",
-		"description": "About page Overview text"
-	},
-	"about__supportedSitesHeader": {
-		"message": "Podporované weby:",
-		"description": "About page Supported Site header"
-	},
-	"about__legalInformationHeader": {
-		"message": "Legální informace",
-		"description": "About page Legal Information header"
-	},
-	"about__legalInformationParagraph": {
-		"message": "AmazonSmile a logo AmazonSmile jsou ochranné známky společnosti Amazon.com, Inc. nebo jejích přidružených společností. Rozšíření nebylo vytvořeno ani schváleno společností Amazon.",
-		"description": "About page Legal Information text"
-	},
-	"about__allRightsReserved": {
-		"message": "Všechna práva vyhrazena",
-		"description": "About page copyright All Rights Reserved"
-	}
+  "appDesc": {
+    "message": "Toto rozšíření vás automaticky přesměruje na odpovídající stránku AmazonSmile z Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Zajíčci ... spousta a zajíčci!"
+  },
+  "version": {
+    "message": "Verze"
+  },
+  "nav__on": {
+    "message": "Na",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Vypnuto",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__about": {
+    "message": "O rozšíření",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Web vývojáře",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Podpora rozšíření",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Pomozte své oblíbené neziskové organizaci nákupem položek Amazon prostřednictvím AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Přehled",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Toto rozšíření vás automaticky přesměruje na příslušnou stránku AmazonSmile, takže si nikdy nebudete muset pamatovat, že nejdříve přejdete na AmazonSmile. Aby vaše nezisková organizace mohla těžit z vašeho nákupu, musíte dokončit svůj nákup prostřednictvím AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Podporované weby:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Legální informace",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile a logo AmazonSmile jsou ochranné známky společnosti Amazon.com, Inc. nebo jejích přidružených společností. Rozšíření nebylo vytvořeno ani schváleno společností Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Všechna práva vyhrazena",
+    "description": "About page copyright All Rights Reserved"
+  }
 }

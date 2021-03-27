@@ -1,60 +1,60 @@
 {
-	"appDesc": {
-		"message": "ส่วนขยายนี้จะเปลี่ยนเส้นทางคุณไปยังหน้า AmazonSmile ที่เกี่ยวข้องจาก Amazon.com โดยอัตโนมัติ",
-		"description": "The description of the application, displayed in the web store."
-	},
-	"appAuthor": {
-		"message": "WebDevNerdStuff & กระต่าย ... กระต่ายเยอะมาก!"
-	},
-	"version": {
-		"message": "เวอร์ชัน"
-	},
-	"nav__enabled": {
-		"message": "บน",
-		"description": "Navigation Text for: Enabled/On"
-	},
-	"nav__disabled": {
-		"message": "ปิด",
-		"description": "Navigation Text for: Disabled/Off"
-	},
-	"nav__about": {
-		"message": "เกี่ยวกับส่วนขยาย",
-		"description": "Navigation Text for: About Amazon Smile Redirect"
-	},
-	"nav__developerWebsite": {
-		"message": "เว็บไซต์ของนักพัฒนา",
-		"description": "Navigation Text for: Developer Website"
-	},
-	"nav__supportExtension": {
-		"message": "ส่วนขยายการสนับสนุน",
-		"description": "Navigation Text for: Support Extension"
-	},
-	"about__intro": {
-		"message": "ช่วยองค์กรไม่แสวงหาผลกำไรที่คุณชื่นชอบด้วยการซื้อสินค้า Amazon ของคุณผ่าน AmazonSmile",
-		"description": "About page intro"
-	},
-	"about__overviewHeader": {
-		"message": "ภาพรวม:",
-		"description": "About page Overview header"
-	},
-	"about__overviewParagraph": {
-		"message": "ส่วนขยายนี้จะเปลี่ยนเส้นทางคุณไปยังหน้า AmazonSmile ที่เกี่ยวข้องโดยอัตโนมัติดังนั้นคุณจะไม่ต้องจำไว้ว่าต้องไปที่ AmazonSmile ก่อน เพื่อให้องค์กรไม่แสวงหาผลกำไรของคุณได้รับประโยชน์จากการซื้อของคุณคุณต้องดำเนินการสั่งซื้อผ่าน AmazonSmile",
-		"description": "About page Overview text"
-	},
-	"about__supportedSitesHeader": {
-		"message": "ไซต์ที่รองรับ:",
-		"description": "About page Supported Site header"
-	},
-	"about__legalInformationHeader": {
-		"message": "ข้อมูลทางกฎหมาย:",
-		"description": "About page Legal Information header"
-	},
-	"about__legalInformationParagraph": {
-		"message": "AmazonSmile และโลโก้ AmazonSmile เป็นเครื่องหมายการค้าของ Amazon.com, Inc. หรือ บริษัท ในเครือ ส่วนขยายไม่ได้สร้างหรือรับรองโดย Amazon",
-		"description": "About page Legal Information text"
-	},
-	"about__allRightsReserved": {
-		"message": "สงวนลิขสิทธิ์",
-		"description": "About page copyright All Rights Reserved"
-	}
+  "appDesc": {
+    "message": "ส่วนขยายนี้จะเปลี่ยนเส้นทางคุณไปยังหน้า AmazonSmile ที่เกี่ยวข้องจาก Amazon.com โดยอัตโนมัติ",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & กระต่าย ... กระต่ายเยอะมาก!"
+  },
+  "version": {
+    "message": "เวอร์ชัน"
+  },
+  "nav__on": {
+    "message": "บน",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "ปิด",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__about": {
+    "message": "เกี่ยวกับส่วนขยาย",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "เว็บไซต์ของนักพัฒนา",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "ส่วนขยายการสนับสนุน",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "ช่วยองค์กรไม่แสวงหาผลกำไรที่คุณชื่นชอบด้วยการซื้อสินค้า Amazon ของคุณผ่าน AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "ภาพรวม:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "ส่วนขยายนี้จะเปลี่ยนเส้นทางคุณไปยังหน้า AmazonSmile ที่เกี่ยวข้องโดยอัตโนมัติดังนั้นคุณจะไม่ต้องจำไว้ว่าต้องไปที่ AmazonSmile ก่อน เพื่อให้องค์กรไม่แสวงหาผลกำไรของคุณได้รับประโยชน์จากการซื้อของคุณคุณต้องดำเนินการสั่งซื้อผ่าน AmazonSmile",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "ไซต์ที่รองรับ:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "ข้อมูลทางกฎหมาย:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile และโลโก้ AmazonSmile เป็นเครื่องหมายการค้าของ Amazon.com, Inc. หรือ บริษัท ในเครือ ส่วนขยายไม่ได้สร้างหรือรับรองโดย Amazon",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "สงวนลิขสิทธิ์",
+    "description": "About page copyright All Rights Reserved"
+  }
 }
