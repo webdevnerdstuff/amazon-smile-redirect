@@ -9,11 +9,11 @@ function setElementsStatus(extensionStatus) {
 
 	if (typeof extensionStatus === 'undefined' || extensionStatus === 'enabled') {
 		statusIcon.setAttribute('class', 'enabled fa-fw fas fa-check');
-		statusText = ` ${chrome.i18n.getMessage('nav__enabled')}`;
+		statusText = ` ${chrome.i18n.getMessage('nav__on')}`;
 	}
 	else {
 		statusIcon.setAttribute('class', 'fa-fw fas fa-times');
-		statusText = ` ${chrome.i18n.getMessage('nav__disabled')}`;
+		statusText = ` ${chrome.i18n.getMessage('nav__off')}`;
 	}
 
 	toggleButton.appendChild(statusIcon);
