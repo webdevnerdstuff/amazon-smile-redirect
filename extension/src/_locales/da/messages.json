@@ -30,7 +30,7 @@
     "description": "Navigation Text for: Support Extension"
   },
   "about__intro": {
-    "message": "Hjælp din yndlings nonprofit ved at købe dine Amazon-varer via AmazonSmile",
+    "message": "Hjælp din yndlings nonprofit ved at købe dine Amazon-varer via AmazonSmile.",
     "description": "About page intro"
   },
   "about__overviewHeader": {
@@ -54,7 +54,7 @@
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {
-    "message": "Alle rettigheder forbeholdes",
+    "message": "Alle rettigheder forbeholdes.",
     "description": "About page copyright All Rights Reserved"
   }
 }

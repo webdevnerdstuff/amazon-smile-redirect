@@ -30,7 +30,7 @@
     "description": "Navigation Text for: Support Extension"
   },
   "about__intro": {
-    "message": "Ayude a su organización sin fines de lucro favorita comprando sus artículos de Amazon a través de AmazonSmile",
+    "message": "Ayude a su organización sin fines de lucro favorita comprando sus artículos de Amazon a través de AmazonSmile.",
     "description": "About page intro"
   },
   "about__overviewHeader": {
@@ -54,7 +54,7 @@
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {
-    "message": "Reservados todos los derechos",
+    "message": "Reservados todos los derechos.",
     "description": "About page copyright All Rights Reserved"
   }
 }

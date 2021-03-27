@@ -54,7 +54,7 @@
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {
-    "message": "Все права защищены",
+    "message": "Все права защищены.",
     "description": "About page copyright All Rights Reserved"
   }
 }
