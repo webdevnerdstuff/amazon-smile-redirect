@@ -50,7 +50,7 @@
     "description": "About page Legal Information header"
   },
   "about__legalInformationParagraph": {
-    "message": "AmazonSmile und das AmazonSmile-Logo sind Marken von Amazon.com, Inc. oder seinen verbundenen Unternehmen. <br \/> Die Erweiterung wurde nicht von Amazon erstellt oder unterstützt.",
+    "message": "AmazonSmile und das AmazonSmile-Logo sind Marken von Amazon.com, Inc. oder seinen verbundenen Unternehmen. Die Erweiterung wurde nicht von Amazon erstellt oder unterstützt.",
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {

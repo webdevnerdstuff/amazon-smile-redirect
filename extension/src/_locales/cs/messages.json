@@ -30,11 +30,11 @@
     "description": "Navigation Text for: Support Extension"
   },
   "about__intro": {
-    "message": "Pomozte své oblíbené neziskové organizaci nákupem položek Amazon prostřednictvím AmazonSmile",
+    "message": "Pomozte své oblíbené neziskové organizaci nákupem položek Amazon prostřednictvím AmazonSmile.",
     "description": "About page intro"
   },
   "about__overviewHeader": {
-    "message": "Přehled",
+    "message": "Přehled:",
     "description": "About page Overview header"
   },
   "about__overviewParagraph": {
@@ -46,7 +46,7 @@
     "description": "About page Supported Site header"
   },
   "about__legalInformationHeader": {
-    "message": "Legální informace",
+    "message": "Legální informace:",
     "description": "About page Legal Information header"
   },
   "about__legalInformationParagraph": {
@@ -54,7 +54,7 @@
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {
-    "message": "Všechna práva vyhrazena",
+    "message": "Všechna práva vyhrazena.",
     "description": "About page copyright All Rights Reserved"
   }
 }

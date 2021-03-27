@@ -30,7 +30,7 @@
     "description": "Navigation Text for: Support Extension"
   },
   "about__intro": {
-    "message": "Помогнете на любимата си организация с нестопанска цел, като закупите вашите елементи от Amazon чрез AmazonSmile",
+    "message": "Помогнете на любимата си организация с нестопанска цел, като закупите вашите елементи от Amazon чрез AmazonSmile.",
     "description": "About page intro"
   },
   "about__overviewHeader": {
@@ -54,7 +54,7 @@
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {
-    "message": "Всички права запазени",
+    "message": "Всички права запазени.",
     "description": "About page copyright All Rights Reserved"
   }
 }

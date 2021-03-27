@@ -1,53 +1,53 @@
 {
-	"manifest_version": 2,
-	"name": "Amazon Smile Redirect",
-	"short_name": "ASR",
-	"description": "__MSG_appDesc__",
-	"version": "2.0.14",
-	"author": "__MSG_appAuthor",
-	"homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
-	"icons": {
-		"16": "assets/images/icon16.png",
-		"48": "assets/images/icon48.png",
-		"128": "assets/images/icon128.png"
-	},
-	"permissions": [
-		"activeTab",
-		"storage"
-	],
-	"background": {
-		"scripts": [
-			"assets/js/background.min.js"
-		],
-		"persistent": true
-	},
-	"content_scripts": [
-		{
-			"matches": [
-				"*://www.amazon.com/*",
-				"*://www.amazon.co.uk/*",
-				"*://www.amazon.de/*"
-			],
-			"exclude_globs": [
-				"*business/register*",
-				"*ab_reg_biss_desktop*",
-				"*amzn_business_inv_website*",
-				"*b2b_reg_email_newcustomer*",
-				"*watchparty*"
-			],
-			"js": [
-				"assets/js/content.min.js"
-			],
-			"run_at": "document_idle"
-		}
-	],
-	"browser_action": {
-		"default_icon": {
-			"16": "assets/images/icon16.png",
-			"48": "assets/images/icon48.png",
-			"128": "assets/images/icon128.png"
-		},
-		"default_popup": "pages/popup.html"
-	},
-	"default_locale": "en"
+  "manifest_version": 2,
+  "name": "Amazon Smile Redirect",
+  "short_name": "ASR",
+  "description": "__MSG_appDesc__",
+  "version": "2.1.0",
+  "author": "__MSG_appAuthor",
+  "homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "assets/js/background.min.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.amazon.com/*",
+        "*://www.amazon.co.uk/*",
+        "*://www.amazon.de/*"
+      ],
+      "exclude_globs": [
+        "*business/register*",
+        "*ab_reg_biss_desktop*",
+        "*amzn_business_inv_website*",
+        "*b2b_reg_email_newcustomer*",
+        "*watchparty*"
+      ],
+      "js": [
+        "assets/js/content.min.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon48.png",
+      "128": "assets/images/icon128.png"
+    },
+    "default_popup": "pages/popup.html"
+  },
+  "default_locale": "en"
 }

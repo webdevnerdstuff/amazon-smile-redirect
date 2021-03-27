@@ -50,11 +50,11 @@
     "description": "About page Legal Information header"
   },
   "about__legalInformationParagraph": {
-    "message": "Az AmazonSmile és az AmazonSmile logó az Amazon.com, Inc. vagy leányvállalatainak védjegyei.<br \/> A bővítményt nem az Amazon hozta létre.",
+    "message": "Az AmazonSmile és az AmazonSmile logó az Amazon.com, Inc. vagy leányvállalatainak védjegyei. A bővítményt nem az Amazon hozta létre.",
     "description": "About page Legal Information text"
   },
   "about__allRightsReserved": {
-    "message": "Minden Jog Fenntartva",
+    "message": "Minden Jog Fenntartva.",
     "description": "About page copyright All Rights Reserved"
   }
 }
