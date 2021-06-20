@@ -420,7 +420,7 @@ module.exports = grunt => {
 		grunt.task.run('init');
 	});
 
-	// Build all assets w/CRX //
+	// Build all assets for Firefox //
 	grunt.registerTask('build-firefox', 'Build Task for Firefox', () => {
 		grunt.option('env', 'build-firefox');
 		grunt.task.run('init');
