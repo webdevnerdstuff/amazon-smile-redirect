@@ -7,14 +7,14 @@
     "message": "WebDevNerdStuff & Hasen ... viele, viele Hasen!"
   },
   "version": {
-    "message": "Auf"
+    "message": "Version"
   },
   "nav__on": {
-    "message": "Aus",
+    "message": "Aktiviert",
     "description": "Navigation Text for:On"
   },
   "nav__off": {
-    "message": "Behindert",
+    "message": "Deaktiviert",
     "description": "Navigation Text for:Off"
   },
   "nav__about": {
@@ -42,7 +42,7 @@
     "description": "About page Overview text"
   },
   "about__supportedSitesHeader": {
-    "message": "Unterstützte Sites:",
+    "message": "Unterstützte Webseiten:",
     "description": "About page Supported Site header"
   },
   "about__legalInformationHeader": {
