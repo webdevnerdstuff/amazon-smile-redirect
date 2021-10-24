@@ -24,6 +24,7 @@ function isExcludedPage() {
     'videodirect.amazon.',
     'www.acx.',
     'www.audible.',
+    'ap/mfa',
   ];
   let exclude = false;
 
@@ -82,7 +83,6 @@ function fetchNavLines(extensionStatus) {
   if (extensionStatus === 'disabled') {
     return false;
   }
-
 
   if (navTools) {
     navLines = navTools.getElementsByClassName('nav-line-1') || '';
