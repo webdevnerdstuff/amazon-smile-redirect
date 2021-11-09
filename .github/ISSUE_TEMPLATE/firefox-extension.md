@@ -26,6 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **Desktop (please complete the following information):**
  - OS: [e.g. Mac, Windows]
  - Firefox Version [e.g. 22]
+ - Extension Version (click extension icon and select "About Amazon Smile Redirect")
 
 **Additional context**
 Add any other context about the problem here.
