@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Šis paplašinājums automātiski novirza jūs uz attiecīgo AmazonSmile lapu no Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Zaķi ... daudz, daudz zaķu!"
+  },
+  "version": {
+    "message": "Versija"
+  },
+  "nav__on": {
+    "message": "Ieslēgts",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Izslēgts",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Pāradresēt tikai tad, kad esat pieteicies",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "Par paplašināšanu",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Izstrādātāja vietne",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Atbalsta paplašināšana",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Palīdziet savai iecienītajai bezpeļņas organizācijai, iegādājoties savus Amazon priekšmetus, izmantojot AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Pārskats:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Šis paplašinājums automātiski novirzīs jūs uz atbilstošo AmazonSmile lapu, tāpēc jums nekad nevajadzēs atcerēties vispirms doties uz AmazonSmile. Lai bezpeļņas organizācija gūtu labumu no pirkuma, pirkums jāpabeidz, izmantojot AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Atbalstītās vietnes:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Juridiskā informācija:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile un AmazonSmile logotips ir Amazon.com, Inc. vai tā filiāļu preču zīmes. Amazon nav izveidojis vai apstiprinājis paplašinājumu.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Visas tiesības aizsargātas",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

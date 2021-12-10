@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Ugani huu unakuelekeza moja kwa moja kwenye ukurasa unaofanana wa AmazonSmile kutoka Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Sungura ... bunnies nyingi!"
+  },
+  "version": {
+    "message": "Toleo"
+  },
+  "nav__on": {
+    "message": "Washa",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Imezimwa",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Elekeza kwingine tu wakati umeingia",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "Kuhusu Ugani",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Tovuti ya Msanidi Programu",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Kusaidia Ugani",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Saidia mapato yako unayopenda kwa kununua vitu vyako vya Amazon kupitia AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Maelezo ya jumla:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Ugani huu utakuelekeza moja kwa moja kwenye ukurasa unaofanana wa AmazonSmile, kwa hivyo hautahitaji kukumbuka kwenda AmazonSmile kwanza. Ili faida yako isifaidi kutokana na ununuzi wako, lazima ukamilishe ununuzi wako kupitia AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Tovuti zinazoungwa mkono:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Habari za kisheria:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile na nembo ya AmazonSmile ni alama za biashara za Amazon.com, Inc au washirika wake. Ugani haukuundwa au kupitishwa na Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Haki zote zimehifadhiwa",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

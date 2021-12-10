@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Bu uzantı, sizi otomatik olarak Amazon.com'daki ilgili AmazonSmile sayfasına yönlendirir.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Tavşanlar ... bir sürü tavşan!"
+  },
+  "version": {
+    "message": "Versiyon"
+  },
+  "nav__on": {
+    "message": "Açık",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Kapalı",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Yalnızca oturum açıldığında yeniden yönlendir",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "Uzantı Hakkında",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Geliştirici Web Sitesi",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Destek Uzantısı",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Amazon ürünlerinizi AmazonSmile aracılığıyla satın alarak en sevdiğiniz kar amacı gütmeyen kuruluşa yardımcı olun",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Genel Bakış:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Bu Uzantı sizi otomatik olarak ilgili AmazonSmile sayfasına yönlendirir, böylece ilk önce AmazonSmile'a gitmeyi hatırlamanıza asla gerek kalmaz. Kâr amacı gütmeyen kuruluşunuzun satın alma işleminizden yararlanabilmesi için satın alma işleminizi AmazonSmile aracılığıyla tamamlamanız gerekir.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Desteklenen Siteler:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Yasal bilgi:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile ve AmazonSmile logosu, Amazon.com, Inc. veya iştiraklerinin ticari markalarıdır. Uzantı, Amazon tarafından oluşturulmamış veya onaylanmamıştır.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Her hakkı saklıdır",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

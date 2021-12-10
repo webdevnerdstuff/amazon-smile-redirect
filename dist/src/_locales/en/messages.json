@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "This Extension will automatically redirect you to the corresponding AmazonSmile page from Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!"
+  },
+  "version": {
+    "message": "Version"
+  },
+  "nav__on": {
+    "message": "On",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Off",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Redirect only when logged in",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "About Amazon Smile Redirect",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Developer Website",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Support this Extension",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Help your favorite non-profit by purchasing your Amazon items through AmazonSmile.",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Overview:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "This Extension will automatically redirect you to the corresponding AmazonSmile page, so you will never need to remember to go to AmazonSmile first. In order for your non-profit to benefit from your purchase, you must complete your purchase through AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Supported Sites:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Legal Information:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile and the AmazonSmile logo are trademarks of Amazon.com, Inc. or its affiliates. The extension was not created or endorsed by Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "All Rights Reserved",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

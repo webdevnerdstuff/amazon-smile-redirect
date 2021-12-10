@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Denne utvidelsen omdirigerer deg automatisk til den tilsvarende AmazonSmile-siden fra Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Kaniner ... mange og mange kaniner!"
+  },
+  "version": {
+    "message": "Versjon"
+  },
+  "nav__on": {
+    "message": "På",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Av",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Omdiriger kun når du er pålogget",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "Om utvidelse",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Nettsted for utvikler",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Støtteutvidelse",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Hjelp din favoritt ideelle organisasjon ved å kjøpe dine Amazon-varer via AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Oversikt:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Denne utvidelsen omdirigerer deg automatisk til den tilsvarende AmazonSmile-siden, så du trenger aldri å huske å gå til AmazonSmile først. For at din ideelle organisasjon skal kunne dra nytte av kjøpet ditt, må du fullføre kjøpet ditt via AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Nettsteder som støttes:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Juridisk informasjon:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile og AmazonSmile-logoen er varemerker for Amazon.com, Inc. eller dets tilknyttede selskaper. Utvidelsen ble ikke opprettet eller godkjent av Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Alle rettigheter forbeholdt",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

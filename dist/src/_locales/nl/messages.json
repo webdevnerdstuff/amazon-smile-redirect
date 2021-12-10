@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Deze extensie leidt je automatisch door naar de corresponderende AmazonSmile-pagina van Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Konijntjes ... heel veel konijntjes!"
+  },
+  "version": {
+    "message": "Versie"
+  },
+  "nav__on": {
+    "message": "Aan",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Uit",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Alleen doorverwijzen wanneer ingelogd",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "Over extensie",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Website voor ontwikkelaars",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Ondersteuning extensie",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Help je favoriete non-profitorganisatie door je Amazon-items te kopen via AmazonSmile.",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Overzicht:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Deze extensie zal je automatisch doorverwijzen naar de corresponderende AmazonSmile-pagina, dus je hoeft nooit te onthouden om eerst naar AmazonSmile te gaan. Om ervoor te zorgen dat uw non-profitorganisatie kan profiteren van uw aankoop, moet u uw aankoop voltooien via AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Ondersteunde sites:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Legale informatie:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile en het AmazonSmile-logo zijn handelsmerken van Amazon.com, Inc. of haar dochterondernemingen. De extensie is niet gemaakt of goedgekeurd door Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Alle rechten voorbehouden.",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

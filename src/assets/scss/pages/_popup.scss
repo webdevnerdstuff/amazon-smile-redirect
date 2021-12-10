@@ -1,0 +1,57 @@
+// ------------------------------------------------------ popup.html //
+#asr-popup {
+	font-size: 14px;
+	margin: 0;
+	min-width: 18em;
+
+	.orange {
+		color: $orange;
+	}
+
+	ul,
+	li,
+	p,
+	img {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		display: grid;
+		grid-template-rows: auto;
+		list-style-type: none;
+
+		li {
+			background-color: $white;
+			cursor: pointer;
+			padding: 7px;
+			transition: background-color .25s ease;
+
+			&:hover {
+				background-color: $list-hover;
+			}
+
+			&.disabled {
+				color: $disabled;
+			}
+		}
+
+		.fa-fw {
+			margin-right: 5px;
+		}
+
+		.fa-check {
+			color: $green;
+		}
+
+		.fa-info {
+			color: $blue;
+		}
+
+		.fa-times,
+		.fa-heart {
+			color: $red;
+		}
+	}
+}

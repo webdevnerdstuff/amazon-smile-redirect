@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Ta razširitev vas samodejno preusmeri na ustrezno stran AmazonSmile s spletnega mesta Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Zajčki ... veliko, veliko zajčkov!"
+  },
+  "version": {
+    "message": "Različica"
+  },
+  "nav__on": {
+    "message": "Vklopljeno",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Izklopljeno",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Preusmerite samo, ko ste prijavljeni",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "O podaljšku",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Spletno mesto za razvijalce",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Podaljšanje razširitve",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Pomagajte svoji najljubši neprofitni organizaciji z nakupom svojih izdelkov Amazon prek storitve AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Pregled:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Ta razširitev vas bo samodejno preusmerila na ustrezno stran AmazonSmile, zato vam nikoli ne bo treba zapomniti, da najprej obiščete AmazonSmile. Če želite, da vaša neprofitna organizacija izkoristi vaš nakup, morate dokončati nakup prek AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Podprta spletna mesta:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Pravne informacije:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile in logotip AmazonSmile sta blagovni znamki družbe Amazon.com, Inc. ali njenih podružnic. Razširitve ni ustvaril ali odobril Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Vse pravice pridržane",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

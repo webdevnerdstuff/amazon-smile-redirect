@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Sambungan ini secara automatik mengarahkan anda ke halaman AmazonSmile yang sesuai dari Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Bunnies ... banyak dan banyak kelinci!"
+  },
+  "version": {
+    "message": "Versi"
+  },
+  "nav__on": {
+    "message": "Dihidupkan",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Mati",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Ubah hala hanya apabila log masuk",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "Mengenai Pelanjutan",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Laman Web Pembangun",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Sambungan Sokongan",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Bantu bukan keuntungan kegemaran anda dengan membeli barang Amazon anda melalui AmazonSmile",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Gambaran keseluruhan:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Sambungan ini secara automatik akan mengarahkan anda ke halaman AmazonSmile yang sesuai, jadi anda tidak perlu ingat untuk pergi ke AmazonSmile terlebih dahulu. Agar bukan keuntungan anda mendapat keuntungan dari pembelian anda, anda mesti menyelesaikan pembelian anda melalui AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Laman web yang disokong:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Maklumat Undang-undang:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile dan logo AmazonSmile adalah tanda dagang Amazon.com, Inc. atau sekutunya. Sambungan itu tidak dibuat atau disokong oleh Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Hak cipta terpelihara",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

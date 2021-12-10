@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "Cette extension vous redirige automatiquement vers la page AmazonSmile correspondante d'Amazon.com.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & Des lapins ... des tas de lapins!"
+  },
+  "version": {
+    "message": "Version"
+  },
+  "nav__on": {
+    "message": "Activé",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "Désactivé",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "Rediriger uniquement lorsque vous êtes connecté",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "À propos de l'extension",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "Site Web du développeur",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "Soutenir cette extension",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "Aidez votre organisation à but non lucratif préférée en achetant vos articles Amazon via AmazonSmile.",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "Aperçu:",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "Cette extension vous redirigera automatiquement vers la page AmazonSmile correspondante, vous n'aurez donc jamais besoin de vous rappeler d'aller d'abord sur AmazonSmile. Pour que votre organisation à but non lucratif puisse bénéficier de votre achat, vous devez finaliser votre achat via AmazonSmile.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "Sites pris en charge:",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "Information légale:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile et le logo AmazonSmile sont des marques commerciales d'Amazon.com, Inc. ou de ses filiales. L'extension n'a pas été créée ou approuvée par Amazon.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "Tous les droits sont réservés.",
+    "description": "About page copyright All Rights Reserved"
+  }
+}

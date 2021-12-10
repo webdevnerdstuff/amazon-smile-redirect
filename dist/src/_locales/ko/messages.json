@@ -1,0 +1,64 @@
+{
+  "appDesc": {
+    "message": "이 확장 프로그램은 Amazon.com에서 해당 AmazonSmile 페이지로 자동 리디렉션합니다.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "appAuthor": {
+    "message": "WebDevNerdStuff & 토끼들 ... 많은 토끼들!"
+  },
+  "version": {
+    "message": "버전"
+  },
+  "nav__on": {
+    "message": "의 위에",
+    "description": "Navigation Text for:On"
+  },
+  "nav__off": {
+    "message": "떨어져서",
+    "description": "Navigation Text for:Off"
+  },
+  "nav__only_logged_in": {
+    "message": "로그인한 경우에만 리디렉션",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
+  "nav__about": {
+    "message": "확장 정보",
+    "description": "Navigation Text for: About Amazon Smile Redirect"
+  },
+  "nav__developerWebsite": {
+    "message": "개발자 웹 사이트",
+    "description": "Navigation Text for: Developer Website"
+  },
+  "nav__supportExtension": {
+    "message": "지원 확장",
+    "description": "Navigation Text for: Support Extension"
+  },
+  "about__intro": {
+    "message": "AmazonSmile을 통해 Amazon 아이템을 구매하여 좋아하는 비영리 단체를 도와주세요.",
+    "description": "About page intro"
+  },
+  "about__overviewHeader": {
+    "message": "개요 :",
+    "description": "About page Overview header"
+  },
+  "about__overviewParagraph": {
+    "message": "이 확장 기능은 해당 AmazonSmile 페이지로 자동 리디렉션되므로 먼저 AmazonSmile로 이동하는 것을 기억할 필요가 없습니다. 비영리 단체가 구매로부터 혜택을 받으려면 AmazonSmile을 통해 구매를 완료해야합니다.",
+    "description": "About page Overview text"
+  },
+  "about__supportedSitesHeader": {
+    "message": "지원 사이트 :",
+    "description": "About page Supported Site header"
+  },
+  "about__legalInformationHeader": {
+    "message": "법률 정보:",
+    "description": "About page Legal Information header"
+  },
+  "about__legalInformationParagraph": {
+    "message": "AmazonSmile 및 AmazonSmile 로고는 Amazon.com, Inc. 또는 그 계열사의 상표입니다. 확장 프로그램은 Amazon에서 만들거나 보증하지 않았습니다.",
+    "description": "About page Legal Information text"
+  },
+  "about__allRightsReserved": {
+    "message": "판권 소유",
+    "description": "About page copyright All Rights Reserved"
+  }
+}
