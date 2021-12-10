@@ -17,6 +17,10 @@
     "message": "बंद",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "लॉग इन होने पर ही रीडायरेक्ट करें",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "एक्सटेंशन के बारे में",
     "description": "Navigation Text for: About Amazon Smile Redirect"

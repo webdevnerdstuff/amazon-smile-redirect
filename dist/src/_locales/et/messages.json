@@ -17,6 +17,10 @@
     "message": "Väljas",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Suuna ümber ainult siis, kui oled sisse logitud",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Laienduse kohta",
     "description": "Navigation Text for: About Amazon Smile Redirect"

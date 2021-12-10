@@ -17,6 +17,10 @@
     "message": "Patay na",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "I-redirect lang kapag naka-log in",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Tungkol sa Extension",
     "description": "Navigation Text for: About Amazon Smile Redirect"

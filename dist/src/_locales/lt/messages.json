@@ -17,6 +17,10 @@
     "message": "Išjungta",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Peradresuoti tik prisijungus",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Apie pratęsimą",
     "description": "Navigation Text for: About Amazon Smile Redirect"

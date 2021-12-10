@@ -17,6 +17,10 @@
     "message": "خاموش",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "تغییر مسیر فقط زمانی که وارد شوید",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "درباره Extension",
     "description": "Navigation Text for: About Amazon Smile Redirect"

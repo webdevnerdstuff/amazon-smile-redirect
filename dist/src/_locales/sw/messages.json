@@ -17,6 +17,10 @@
     "message": "Imezimwa",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Elekeza kwingine tu wakati umeingia",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Kuhusu Ugani",
     "description": "Navigation Text for: About Amazon Smile Redirect"

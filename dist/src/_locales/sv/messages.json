@@ -17,6 +17,10 @@
     "message": "Av",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Omdirigera endast när du är inloggad",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Om förlängning",
     "description": "Navigation Text for: About Amazon Smile Redirect"

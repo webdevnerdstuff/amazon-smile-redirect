@@ -17,6 +17,10 @@
     "message": "離開",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "僅在登錄時重定向",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "關於擴展",
     "description": "Navigation Text for: About Amazon Smile Redirect"

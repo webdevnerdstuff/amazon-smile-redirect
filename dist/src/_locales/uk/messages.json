@@ -17,6 +17,10 @@
     "message": "Вимкнено",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Переспрямування лише після входу",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Про розширення",
     "description": "Navigation Text for: About Amazon Smile Redirect"

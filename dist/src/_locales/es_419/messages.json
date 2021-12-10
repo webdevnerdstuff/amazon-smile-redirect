@@ -17,6 +17,10 @@
     "message": "Apagado",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Redirigir solo cuando inicie sesión",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Acerca de la extensión",
     "description": "Navigation Text for: About Amazon Smile Redirect"

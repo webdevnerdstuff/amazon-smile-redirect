@@ -17,6 +17,10 @@
     "message": "Isključeno",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Preusmjeravanje samo kada ste prijavljeni",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "O produženju",
     "description": "Navigation Text for: About Amazon Smile Redirect"

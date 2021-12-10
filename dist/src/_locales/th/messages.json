@@ -17,6 +17,10 @@
     "message": "ปิด",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "เปลี่ยนเส้นทางเมื่อเข้าสู่ระบบเท่านั้น",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "เกี่ยวกับส่วนขยาย",
     "description": "Navigation Text for: About Amazon Smile Redirect"

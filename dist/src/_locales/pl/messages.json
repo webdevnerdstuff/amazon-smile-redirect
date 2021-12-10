@@ -17,6 +17,10 @@
     "message": "Poza",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Przekieruj tylko po zalogowaniu",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "O rozszerzeniu",
     "description": "Navigation Text for: About Amazon Smile Redirect"

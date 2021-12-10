@@ -17,6 +17,10 @@
     "message": "オフ",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "ログイン時にのみリダイレクトする",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "拡張について",
     "description": "Navigation Text for: About Amazon Smile Redirect"

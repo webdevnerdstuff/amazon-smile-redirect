@@ -17,6 +17,10 @@
     "message": "떨어져서",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "로그인한 경우에만 리디렉션",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "확장 정보",
     "description": "Navigation Text for: About Amazon Smile Redirect"

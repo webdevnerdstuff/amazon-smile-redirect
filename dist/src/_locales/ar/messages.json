@@ -17,6 +17,10 @@
     "message": "عن",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "إعادة التوجيه فقط عند تسجيل الدخول",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "حول التمديد",
     "description": "Navigation Text for: About Amazon Smile Redirect"

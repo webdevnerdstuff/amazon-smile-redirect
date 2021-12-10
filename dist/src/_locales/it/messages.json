@@ -17,6 +17,10 @@
     "message": "Off",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Reindirizza solo dopo aver effettuato l'accesso",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Informazioni sull'estensione",
     "description": "Navigation Text for: About Amazon Smile Redirect"

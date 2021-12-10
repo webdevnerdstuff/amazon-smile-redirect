@@ -17,6 +17,10 @@
     "message": "Deaktiviert",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Weiterleitung nur wenn eingeloggt",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Über Amazon Smile Redirect",
     "description": "Navigation Text for: About Amazon Smile Redirect"

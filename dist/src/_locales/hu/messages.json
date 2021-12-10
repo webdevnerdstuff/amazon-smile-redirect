@@ -17,6 +17,10 @@
     "message": "Kikapcsolva",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Átirányítás csak bejelentkezéskor",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "A kiterjesztésről",
     "description": "Navigation Text for: About Amazon Smile Redirect"

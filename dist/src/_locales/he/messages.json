@@ -17,6 +17,10 @@
     "message": "כבוי",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "הפנה מחדש רק כאשר אתה מחובר",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "על הרחבה",
     "description": "Navigation Text for: About Amazon Smile Redirect"

@@ -17,6 +17,10 @@
     "message": "Μακριά από",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Ανακατεύθυνση μόνο όταν είστε συνδεδεμένοι",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Σχετικά με την επέκταση",
     "description": "Navigation Text for: About Amazon Smile Redirect"

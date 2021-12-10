@@ -17,6 +17,10 @@
     "message": "Mati",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Redirect hanya saat login",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Tentang Ekstensi",
     "description": "Navigation Text for: About Amazon Smile Redirect"

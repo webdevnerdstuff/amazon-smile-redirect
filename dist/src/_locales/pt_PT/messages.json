@@ -17,6 +17,10 @@
     "message": "Desligada",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Redirecionar apenas quando estiver conectado",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Sobre a extensão",
     "description": "Navigation Text for: About Amazon Smile Redirect"

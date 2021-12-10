@@ -17,6 +17,10 @@
     "message": "Vinossa",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Uudelleenohjaus vain sisäänkirjautuneena",
+    "description": "Navigation Text for:Redirect only when logged in"
+  },
   "nav__about": {
     "message": "Tietoja laajennuksesta",
     "description": "Navigation Text for: About Amazon Smile Redirect"
