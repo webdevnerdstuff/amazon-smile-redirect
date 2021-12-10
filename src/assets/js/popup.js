@@ -3,7 +3,6 @@ const toggleOnlyWhenLoggedInStatusStatusButton = document.getElementById('toggle
 
 // ---------------------------------------------------- Set Elements Status  //
 function setElementsStatus(btn, status, translationKey = ['nav__on', 'nav__off']) {
-  console.log({ btn, status, translationKey });
   const statusIcon = document.createElement('i');
   const selectedBtn = btn;
   let statusText = '';
@@ -14,9 +13,11 @@ function setElementsStatus(btn, status, translationKey = ['nav__on', 'nav__off']
     statusIcon.setAttribute('class', 'enabled fa-fw fas fa-check');
     statusText = chrome.i18n.getMessage(translationKey[0]);
     statusText = ` ${statusText}`;
+    selectedBtn.setAttribute('class', 'enabled');
   }
   else {
     statusIcon.setAttribute('class', 'fa-fw fas fa-times');
+    selectedBtn.setAttribute('class', 'disabled');
 
     const translationKeyName = translationKey.length === 2 ? translationKey[1] : translationKey[0];
 

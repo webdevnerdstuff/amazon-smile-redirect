@@ -31,6 +31,10 @@
 			&:hover {
 				background-color: $list-hover;
 			}
+
+			&.disabled {
+				color: $disabled;
+			}
 		}
 
 		.fa-fw {
