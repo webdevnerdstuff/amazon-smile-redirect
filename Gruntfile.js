@@ -4,7 +4,6 @@ const sass = require('node-sass');
 module.exports = grunt => {
 	require('load-grunt-tasks')(grunt);
 
-
 	// ---------------------------------------------------- REQUIRE PAGE SCRIPTS FILE - DONE //
 	let env;
 
@@ -56,8 +55,8 @@ module.exports = grunt => {
 				map = {
 					inline: false,
 					sourcesContent: true,
-					prev: 'extension/src/assets/css/main.min.css.map',
-					annotation: 'extension/src/assets/css/',
+					prev: 'dist/src/assets/css/main.min.css.map',
+					annotation: 'dist/src/assets/css/',
 				};
 			}
 
@@ -77,15 +76,15 @@ module.exports = grunt => {
 				},
 				assets: {
 					src: [
-						'extension/src/assets/js',
-						'extension/src/assets/css',
-						'extension/src/assets/vendor',
+						'dist/src/assets/js',
+						'dist/src/assets/css',
+						'dist/src/assets/vendor',
 					],
 				},
-				dist: {
+				published: {
 					src: [
-						'dist/**/*',
-						'!dist/.gitignore',
+						'published/**/*',
+						'!published/.gitignore',
 					],
 				},
 			},
@@ -97,7 +96,7 @@ module.exports = grunt => {
 							expand: true,
 							cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts/',
 							src: '**',
-							dest: 'extension/src/assets/vendor/fontawesome/',
+							dest: 'dist/src/assets/vendor/fontawesome/',
 						},
 					],
 				},
@@ -107,7 +106,7 @@ module.exports = grunt => {
 							expand: true,
 							cwd: 'node_modules/@fortawesome/fontawesome-free/js/',
 							src: 'all.min.js',
-							dest: 'extension/src/assets/vendor/fontawesome/js/',
+							dest: 'dist/src/assets/vendor/fontawesome/js/',
 						},
 					],
 				},
@@ -127,10 +126,10 @@ module.exports = grunt => {
 				},
 				all: {
 					expand: true,
-					cwd: 'assets/js/',
+					cwd: 'src/assets/js/',
 					src: ['**/*.js'],
 					ext: '.min.js',
-					dest: '_temp/assets/js',
+					dest: '_temp/js',
 				},
 			},
 			// ---------------------------------------------------- ESLINT - DONE //
@@ -158,10 +157,10 @@ module.exports = grunt => {
 					files: [
 						{
 							expand: true,
-							cwd: './_temp/assets/js',
+							cwd: './_temp/js',
 							src: '**/*.js',
 							ext: '.min.js',
-							dest: 'extension/src/assets/js',
+							dest: 'dist/src/assets/js',
 						},
 					],
 				},
@@ -187,15 +186,15 @@ module.exports = grunt => {
 						precision: 10,
 						sourceMap: grunt.option('sourceMaps') || false,
 						sourceMapContents: grunt.option('sourceMaps') || false,
-						outFile: 'extension/src/assets/css/main.min.css.map',
+						outFile: 'dist/src/assets/css/main.min.css.map',
 						outputStyle: grunt.option('sourceMaps') ? 'expanded' : 'compressed',
 					},
 					files: [
 						{
 							expand: true,
-							cwd: 'assets/scss',
+							cwd: 'src/assets/scss',
 							src: 'main.scss',
-							dest: 'extension/src/assets/css',
+							dest: 'dist/src/assets/css',
 							ext: '.min.css',
 						},
 					],
@@ -212,8 +211,8 @@ module.exports = grunt => {
 					syntax: '',
 				},
 				all: [
-					'assets/scss/**/*.scss',
-					'assets/vendor/**/*.scss',
+					'src/assets/scss/**/*.scss',
+					'src/vendor/**/*.scss',
 				],
 				newerFiles: ['<%= filePath %>'],
 			},
@@ -228,7 +227,7 @@ module.exports = grunt => {
 					map: postCssMap(),
 				},
 				dist: {
-					src: 'extension/src/assets/css/main.min.css',
+					src: 'dist/src/assets/css/main.min.css',
 				},
 			},
 			// ---------------------------------------------------- WATCH //
@@ -237,22 +236,22 @@ module.exports = grunt => {
 					spawn: false,
 				},
 				javascript: {
-					files: ['assets/js/**/*.js'],
+					files: ['src/assets/js/**/*.js'],
 				},
 				scss: {
-					files: ['assets/**/*.scss'],
+					files: ['src/**/*.scss'],
 				},
 			},
 			// ---------------------------------------------------- EXTENSION ZIPS //
 			compress: {
 				chrome_ext: {
 					options: {
-						archive: 'dist/chrome_extension.zip',
+						archive: 'published/chrome_extension.zip',
 					},
 					files: [
 						{
 							expand: true,
-							cwd: 'extension/',
+							cwd: 'dist/',
 							src: ['**'],
 							dest: '/',
 						},
@@ -260,12 +259,12 @@ module.exports = grunt => {
 				},
 				firefox_ext: {
 					options: {
-						archive: 'dist/firefox_extension.zip',
+						archive: 'published/firefox_extension.zip',
 					},
 					files: [
 						{
 							expand: true,
-							cwd: 'extension/src',
+							cwd: 'dist/src',
 							src: ['**'],
 							dest: '/',
 						},
@@ -273,7 +272,7 @@ module.exports = grunt => {
 				},
 				firefox_source_code: {
 					options: {
-						archive: 'dist/firefox_source_code.zip',
+						archive: 'published/firefox_source_code.zip',
 					},
 					files: [
 						{
@@ -283,11 +282,11 @@ module.exports = grunt => {
 								'_temp',
 								'!_temp/**/*',
 								'!_temp/.gitignore',
-								'assets/**',
-								'dist',
-								'!dist/**/*',
-								'!dist/.gitignore',
-								'extension/**',
+								'src/**',
+								'published',
+								'!published/**/*',
+								'!published/.gitignore',
+								'dist/**',
 								'docs/firefox/README.md',
 								'.babelrc',
 								'.browserslistrc',
@@ -307,8 +306,8 @@ module.exports = grunt => {
 			// ---------------------------------------------------- EXTENSION CRX //
 			crx: {
 				mySignedExtension: {
-					src: 'extension/src/**/*',
-					dest: 'dist/asr.crx',
+					src: 'dist/src/**/*',
+					dest: 'published/asr.crx',
 				},
 				options: {
 					privateKey: 'amazon-smile-redirect.pem',
@@ -325,7 +324,7 @@ module.exports = grunt => {
 
 			// Run JS Tasks //
 			if (fileInfo.ext === '.js' && task !== 'javascript_plugins') {
-				const newFilePath = `extension/src/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
+				const newFilePath = `dist/${fileInfo.dir}/${fileInfo.name}.min${fileInfo.ext}`;
 
 				grunt.config.set('tempFile', newFilePath);
 				grunt.config.set('outgoingFile', newFilePath);

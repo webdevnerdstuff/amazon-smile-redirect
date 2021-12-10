@@ -51,10 +51,6 @@ uploads/logs
 
 # Assets #
 ##########
-extension/src/assets/css
-extension/src/assets/js
-extension/src/assets/vendor
-
-
-
-
+dist/src/assets/css
+dist/src/assets/js
+dist/src/assets/vendor
