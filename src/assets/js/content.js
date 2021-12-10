@@ -1,5 +1,5 @@
 // ---------------------------------------------------- Get Storage //
-chrome.runtime.sendMessage({ getExtensionStatus: true }, response => {
+chrome.runtime.sendMessage({ getExtensionStatus: true, getOnlyWhenLoggedInStatus: true }, response => {
   const extensionStatus = response.extensionStatus;
   fetchNavLines(extensionStatus);
 
@@ -43,13 +43,13 @@ function loggedOut(navLineText) {
 }
 
 // ---------------------------------------------------- Go To Page //
-function goToPage(navLineText, domainExtension, goToLogin) {
+function goToPage(navLineText, domainExtension, goToLogin, onlyWhenLoggedInStatus) {
   if (!isExcludedPage()) {
     if (!loggedOut(navLineText) && !goToLogin) {
       // Redirect user to corresponding page on Amazon Smile //
       window.location.replace(`https://smile.amazon.${domainExtension}${window.location.pathname}${location.search}`);
     }
-    else {
+    else if (onlyWhenLoggedInStatus !== 'enabled') {
       // Redirect user to login page with return_to URL //
       const redirectURL = encodeURIComponent(`https://smile.amazon.${domainExtension}${window.location.pathname}`);
       const redirectSearch = encodeURIComponent(location.search);
@@ -102,7 +102,7 @@ function fetchNavLines(extensionStatus) {
   }
 
   chrome.runtime.sendMessage({ logOutCheck: true, loggedOut: loggedOut(navLineText) }, response => {
-    goToPage(navLineText, domainExtension, response.goToLogin);
+    goToPage(navLineText, domainExtension, response.goToLogin, response.onlyWhenLoggedInStatus);
   });
 
   return false;

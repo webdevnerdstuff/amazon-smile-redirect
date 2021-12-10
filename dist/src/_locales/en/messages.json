@@ -17,6 +17,10 @@
     "message": "Off",
     "description": "Navigation Text for:Off"
   },
+  "nav__only_logged_in": {
+    "message": "Only when logged in",
+    "description": "Navigation Text for:Only when logged in"
+  },
   "nav__about": {
     "message": "About Amazon Smile Redirect",
     "description": "Navigation Text for: About Amazon Smile Redirect"

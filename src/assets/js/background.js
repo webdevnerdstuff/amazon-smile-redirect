@@ -1,11 +1,12 @@
 let extensionStatus;
+let onlyWhenLoggedInStatus;
 
 // ---------------------------------------------------- Runtime //
-// -------------------------- Get Set Storage //
-chrome.storage.local.get(['extensionStatus'], result => {
+chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus'], result => {
   extensionStatus = result.extensionStatus || 'enabled';
+  onlyWhenLoggedInStatus = result.onlyWhenLoggedInStatus || 'disabled';
 
-  chrome.storage.local.set({ extensionStatus }, () => { });
+  chrome.storage.local.set({ extensionStatus, onlyWhenLoggedInStatus }, () => { });
 
   updateIcon();
 });
@@ -16,20 +17,32 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.logOutCheck) {
     const goToLogin = request.loggedOut;
 
-    sendResponse({ extensionStatus, goToLogin });
+    sendResponse({ extensionStatus, goToLogin, onlyWhenLoggedInStatus });
     return false;
   }
 
-  // Get Extension Status //
+  // Get Extension 'Status' //
   if (request.getExtensionStatus) {
     sendResponse({ extensionStatus });
     return false;
   }
 
-  // Toggle Status //
+  // Toggle 'Status' //
   if (request.toggleStatus) {
-    const status = updateStatus(extensionStatus);
-    sendResponse({ extensionStatus: status });
+    const statusA = updateStatus(extensionStatus);
+    sendResponse({ extensionStatus: statusA });
+  }
+
+  // Get Extension 'Only When Logged In' //
+  if (request.getOnlyWhenLoggedInStatus) {
+    sendResponse({ onlyWhenLoggedInStatus });
+    return false;
+  }
+
+  // Toggle 'Only When Logged In' //
+  if (request.onlyWhenLoggedInToggleStatus) {
+    const statusB = updateOnlyWhenLoggedIn(onlyWhenLoggedInStatus);
+    sendResponse({ onlyWhenLoggedInStatus: statusB });
   }
 
   return false;
@@ -60,7 +73,7 @@ function updateIcon() {
   return false;
 }
 
-// ---------------------------------------------------- Update Status //
+// ---------------------------------------------------- Update 'Status' //
 function updateStatus() {
   extensionStatus = extensionStatus === 'enabled' ? 'disabled' : 'enabled';
 
@@ -69,4 +82,13 @@ function updateStatus() {
   updateIcon();
 
   return extensionStatus;
+}
+
+// ---------------------------------------------------- Update 'Only When Logged In' //
+function updateOnlyWhenLoggedIn() {
+  onlyWhenLoggedInStatus = onlyWhenLoggedInStatus === 'disabled' ? 'enabled' : 'disabled';
+
+  chrome.storage.local.set({ onlyWhenLoggedInStatus }, () => { });
+
+  return onlyWhenLoggedInStatus;
 }
