@@ -3,7 +3,7 @@
   "name": "Amazon Smile Redirect",
   "short_name": "ASR",
   "description": "__MSG_appDesc__",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "author": "__MSG_appAuthor",
   "homepage_url": "https://github.com/webdevnerdstuff/amazon-smile-redirect",
   "icons": {
