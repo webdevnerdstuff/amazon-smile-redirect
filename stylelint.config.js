@@ -73,9 +73,9 @@ module.exports =
     'color-no-hex': null,
 
     // Function
-    'function-blacklist': [],
+    'function-disallowed-list': [],
     'function-url-no-scheme-relative': true,
-    'function-url-scheme-blacklist': [],
+    'function-url-scheme-disallowed-list': [],
     'function-url-scheme-whitelist': null,
     'function-whitelist': null,
 
@@ -89,7 +89,7 @@ module.exports =
     'time-min-milliseconds': 100,
 
     // Unit
-    'unit-blacklist': [],
+    'unit-disallowed-list': [],
     'unit-whitelist': null,
 
     // Shorthand property
@@ -102,16 +102,16 @@ module.exports =
     'custom-property-pattern': '',
 
     // Property
-    'property-blacklist': [],
+    'property-disallowed-list': [],
     'property-no-vendor-prefix': true,
     'property-whitelist': null,
 
     // Declaration
     'declaration-block-no-redundant-longhand-properties': true,
     'declaration-no-important': null,
-    'declaration-property-unit-blacklist': {},
+    'declaration-property-unit-disallowed-list': {},
     'declaration-property-unit-whitelist': null,
-    'declaration-property-value-blacklist': {
+    'declaration-property-value-disallowed-list': {
       border: ['none'],
       'border-top': ['none'],
       'border-right': ['none'],
@@ -124,7 +124,7 @@ module.exports =
     'declaration-block-single-line-max-declarations': 1,
 
     // Selector
-    'selector-attribute-operator-blacklist': [],
+    'selector-attribute-operator-disallowed-list': [],
     'selector-attribute-operator-whitelist': null,
     'selector-class-pattern': [
       '^[a-z0-9\\-]+$',
@@ -133,7 +133,7 @@ module.exports =
           'Selector should be written in lowercase with hyphens (selector-class-pattern)',
       },
     ],
-    'selector-combinator-blacklist': [],
+    'selector-combinator-disallowed-list': [],
     'selector-combinator-whitelist': null,
     'selector-id-pattern': '',
     'selector-max-attribute': 1,
@@ -147,15 +147,15 @@ module.exports =
     'selector-max-type': null,
     'selector-max-universal': 2,
     'selector-nested-pattern': '',
-    'selector-no-qualifying-type': true,
+    'selector-no-qualifying-type': null,
     'selector-no-vendor-prefix': true,
-    'selector-pseudo-class-blacklist': [],
+    'selector-pseudo-class-disallowed-list': [],
     'selector-pseudo-class-whitelist': null,
-    'selector-pseudo-element-blacklist': [],
+    'selector-pseudo-element-disallowed-list': [],
     'selector-pseudo-element-whitelist': null,
 
     // Media feature
-    'media-feature-name-blacklist': [],
+    'media-feature-name-disallowed-list': [],
     'media-feature-name-no-vendor-prefix': true,
     'media-feature-name-value-whitelist': null,
     'media-feature-name-whitelist': null,
@@ -164,13 +164,13 @@ module.exports =
     'custom-media-pattern': '',
 
     // At-rule
-    'at-rule-blacklist': [],
+    'at-rule-disallowed-list': [],
     'at-rule-no-vendor-prefix': true,
-    'at-rule-property-requirelist': {},
+    'at-rule-property-required-list': {},
     'at-rule-whitelist': null,
 
     // Comment
-    'comment-word-blacklist': [],
+    'comment-word-disallowed-list': [],
 
     // General / Sheet
     'max-nesting-depth': 7,
@@ -324,7 +324,6 @@ module.exports =
     'no-missing-end-of-source-newline': true,
     'no-empty-first-line': true,
     'unicode-bom': 'never',
-
 
     // ------------------------------------------------------ SCSS
 
