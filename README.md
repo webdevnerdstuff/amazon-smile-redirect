@@ -34,4 +34,4 @@ I believe in full transparency so the source code for the extension is Open Sour
 AmazonSmile and the AmazonSmile logo are trademarks of Amazon.com, Inc. or its affiliates.  
 The extension was not created or endorsed by Amazon.
 
-© 2020 Amazon Smile Redirect. All Rights Reserved.
+
