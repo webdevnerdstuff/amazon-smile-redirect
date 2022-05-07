@@ -20,6 +20,8 @@ function isExcludedPage() {
     'kdp.amazon.',
     'music.amazon.',
     'payments.amazon.',
+    'photos.amazon.',
+    'amazon.com/photos',
     'read.amazon.',
     'videodirect.amazon.',
     'www.acx.',
