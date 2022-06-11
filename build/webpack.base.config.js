@@ -132,14 +132,20 @@ module.exports = {
 		about: path.resolve(__dirname, '../src/assets/js/about.js'),
 		background: path.resolve(__dirname, '../src/assets/js/background.js'),
 		content: path.resolve(__dirname, '../src/assets/js/content.js'),
+		icons: path.resolve(__dirname, '../src/assets/js/icons.js'),
 		locale: path.resolve(__dirname, '../src/assets/js/locale.js'),
-		popup: path.resolve(__dirname, '../src/assets/scss/main.scss'),
+		popup: path.resolve(__dirname, '../src/assets/js/popup.js'),
+		main: path.resolve(__dirname, '../src/assets/scss/main.scss'),
 	},
 	output: {
 		filename: 'js/[name].min.js',
 		// library: packageJson.name,
-		libraryTarget: 'commonjs',
+		// libraryTarget: 'commonjs',
 		path: path.resolve(__dirname, `../${distDir}/src/assets`),
+	},
+	watchOptions: {
+		poll: true,
+		ignored: /node_modules/
 	},
 	// Resolve done //
 	resolve: {
