@@ -56,19 +56,19 @@ const jsRule = {
 const copyConfig = {
 	patterns: [
 		{
-			from: "src/assets/images",
+			from: path.resolve(__dirname, `../src/assets/images`),
 			to: path.resolve(__dirname, `../${distDir}/src/assets/images`),
 		},
 		{
-			from: "src/_locales",
+			from: path.resolve(__dirname, `../src/_locales`),
 			to: path.resolve(__dirname, `../${distDir}/src/_locales`),
 		},
 		{
-			from: "src/pages",
+			from: path.resolve(__dirname, `../src/pages`),
 			to: path.resolve(__dirname, `../${distDir}/src/pages`),
 		},
 		{
-			from: "src/manifest.json",
+			from: path.resolve(__dirname, `../src/manifest.json`),
 			to: path.resolve(__dirname, `../${distDir}/src`),
 		},
 	],
@@ -100,6 +100,9 @@ const cleanOptions = {
 	cleanOnceBeforeBuildPatterns: [
 		'**/*.js',
 		'**/*.css',
+		'**/*.png',
+		'**/*.json',
+		'**/*.html',
 	],
 };
 
