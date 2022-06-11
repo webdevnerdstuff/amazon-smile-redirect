@@ -1,17 +1,24 @@
-# EditorConfig http://EditorConfig.org
 root = true
 
 [*]
-indent_style = spaces
-end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = lf
 insert_final_newline = true
-
-# JS, SCSS, CSS
-[*.{js,scss,css}]
-indent_size = 2
-indent_style = spaces
+indent_style = tab
+trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+indent_size = 2
+indent_style = space
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.{js}]
+indent_size = 2
+indent_style = tab
+
+[*.{scss,css}]
+indent_size = 2
+indent_style = space

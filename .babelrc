@@ -1,13 +1,11 @@
 {
+  "plugins": ["@babel/syntax-dynamic-import"],
   "presets": [
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": ["last 2 versions", "safari >= 7", "ie >= 8"]
-        }
+        "modules": false
       }
     ]
-  ],
-  "ignore": ["node_modules/"]
+  ]
 }

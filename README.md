@@ -1,9 +1,9 @@
 # Amazon Smile Redirect
 
-![Chrome](src/images/chrome-icon.png) [Chrome Extension](https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg)  
-![Firefox](src/images/firefox-icon.png) [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/amazon_smile_redirect/)  
-![Opera](src/images/opera-icon.png) [Opera Extension](https://addons.opera.com/en/extensions/details/amazon-smile-redirect/)  
-![Edge](src/images/edge-icon.png) [Microsoft Edge Add-On](https://microsoftedge.microsoft.com/addons/detail/amazon-smile-redirect/ojfbbnlijdmckaehmhlnjgmpnbhjjibn)  
+![Chrome](src/assets/images/chrome-icon.png) [Chrome Extension](https://chrome.google.com/webstore/detail/amazon-smile-redirect/ejglonclnjogoiegggjjcpapffbnangg)  
+![Firefox](src/assets/images/firefox-icon.png) [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/amazon_smile_redirect/)  
+![Opera](src/assets/images/opera-icon.png) [Opera Extension](https://addons.opera.com/en/extensions/details/amazon-smile-redirect/)  
+![Edge](src/assets/images/edge-icon.png) [Microsoft Edge Add-On](https://microsoftedge.microsoft.com/addons/detail/amazon-smile-redirect/ojfbbnlijdmckaehmhlnjgmpnbhjjibn)  
 
 ## Description
 
