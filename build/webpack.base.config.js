@@ -1,6 +1,7 @@
 const path = require('path');
 const sass = require('sass');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const packageJson = require('../package.json');
 
@@ -49,23 +50,26 @@ const jsRule = {
 
 /*
  |--------------------------------------------------------------------------
- | File Loader Rule
+ | Copy Plugin Config
  |--------------------------------------------------------------------------
  */
-const fileRule = {
-	rules: [
+const copyConfig = {
+	patterns: [
 		{
-			test: /\.(png|jpe?g|gif)$/i,
-			use: [
-				{
-					loader: 'file-loader',
-					options: {
-						name: path.resolve(__dirname, `../${distDir}/assets/images/[name].[ext]`),
-						outputPath: 'images',
-						esModule: false,
-					},
-				},
-			],
+			from: "src/assets/images",
+			to: path.resolve(__dirname, `../${distDir}/src/assets/images`),
+		},
+		{
+			from: "src/_locales",
+			to: path.resolve(__dirname, `../${distDir}/src/_locales`),
+		},
+		{
+			from: "src/pages",
+			to: path.resolve(__dirname, `../${distDir}/src/pages`),
+		},
+		{
+			from: "src/manifest.json",
+			to: path.resolve(__dirname, `../${distDir}/src`),
 		},
 	],
 };
@@ -106,6 +110,7 @@ const cleanOptions = {
  */
 const plugins = [
 	new CleanWebpackPlugin(cleanOptions),
+	new CopyPlugin(copyConfig),
 	new MiniCssExtractPlugin({
 		// Options similar to the same options in webpackOptions.output
 		// both options are optional
@@ -139,7 +144,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			fileRule,
 			jsRule,
 			stylesRule,
 			svgRule,
