@@ -4,10 +4,6 @@
 	margin: 0;
 	min-width: 18em;
 
-	.orange {
-		color: $orange;
-	}
-
 	ul,
 	li,
 	p,
@@ -18,9 +14,9 @@
 	}
 
 	ul {
-		display: grid;
-		grid-template-rows: auto;
+    grid-template-rows: auto;
 		list-style-type: none;
+		display: grid;
 
 		li {
 			background-color: $white;
@@ -37,21 +33,44 @@
 			}
 		}
 
-		.fa-fw {
+		.same-width {
 			margin-right: 5px;
 		}
 
-		.fa-check {
-			color: $green;
-		}
+    .icon {
+      &--inline {
+        display: inline-block;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -.125em;
 
-		.fa-info {
-			color: $blue;
-		}
+        &--sw {
+          width: 1.25em;
+        }
+      }
 
-		.fa-times,
-		.fa-heart {
-			color: $red;
-		}
+      &--sw {
+        text-align: center;
+        width: 1.25em;
+      }
+
+      &--amazon {
+        color: $orange;
+      }
+
+      &--check {
+        color: $green;
+      }
+
+      &--info {
+        color: $blue;
+      }
+
+      &--times,
+      &--heart,
+      &--bug {
+        color: $red;
+      }
+    }
 	}
 }

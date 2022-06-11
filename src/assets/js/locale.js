@@ -1,4 +1,4 @@
-document.querySelectorAll('[data-locale]').forEach(elm => {
+document.querySelectorAll('[data-locale]').forEach((elm) => {
 	const newElement = document.createElement(`${elm.nodeName}`);
 	newElement.innerHTML = chrome.i18n.getMessage(elm.dataset.locale);
 
