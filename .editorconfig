@@ -12,10 +12,15 @@ trim_trailing_whitespace = false
 indent_size = 2
 indent_style = space
 
+[*.json]
+insert_final_newline = false
+trim_trailing_whitespace = false
+indent_size = 4
+
 [*.{yml,yaml}]
 indent_size = 2
 
-[*.{js}]
+[*.js]
 indent_size = 2
 indent_style = tab
 
