@@ -1,8 +1,10 @@
 const TerserPlugin = require('terser-webpack-plugin');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const base = require('./webpack.base.config');
 const packageJson = require('../package.json');
+const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -35,6 +37,24 @@ const banner = `${packageName}
 
 /*
 |--------------------------------------------------------------------------
+| ZIP files
+|--------------------------------------------------------------------------
+*/
+const chromeZip = {
+	events: {
+		onEnd: {
+			archive: [
+				{
+					source:  path.resolve(__dirname, '../dist'),
+					destination: path.resolve(__dirname, '../published/chrome_extensions.zip'),
+				},
+			],
+		},
+	},
+}
+
+/*
+|--------------------------------------------------------------------------
 | Export
 |--------------------------------------------------------------------------
 */
@@ -57,5 +77,6 @@ module.exports = merge(base, {
 		new webpack.BannerPlugin({
 			banner,
 		}),
+		new FileManagerPlugin(chromeZip),
 	],
 });
