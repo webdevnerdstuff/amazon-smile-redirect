@@ -3,9 +3,12 @@ const sass = require('sass');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const popupIcons = require(path.resolve(__dirname, `../src/assets/json/icons.json`));
 // const packageJson = require('../package.json');
 
 const environment = process.env.NODE_ENV;
+const isDev = environment === 'development';
 const distDir = 'dist';
 
 /*
@@ -64,10 +67,6 @@ const copyConfig = {
 			to: path.resolve(__dirname, `../${distDir}/src/_locales`),
 		},
 		{
-			from: path.resolve(__dirname, `../src/pages`),
-			to: path.resolve(__dirname, `../${distDir}/src/pages`),
-		},
-		{
 			from: path.resolve(__dirname, `../src/manifest.json`),
 			to: path.resolve(__dirname, `../${distDir}/src`),
 		},
@@ -86,6 +85,49 @@ const svgRule = {
 			loader: 'svg-inline-loader',
 		},
 	],
+};
+
+/*
+ |--------------------------------------------------------------------------
+ | HtmlWebpackPlugin Options
+ |--------------------------------------------------------------------------
+ */
+const aboutHtml = path.resolve(__dirname, '../src/pages/about.html');
+const popupHtml = path.resolve(__dirname, '../src/pages/popup.html');
+
+const aboutConfig = {
+	template: aboutHtml,
+	inject: false,
+	minify: false,
+	// minify: !isDev,
+	scriptLoading: 'defer',
+	filename: 'pages/about.html',
+	files: {
+		head: {
+			css: '../assets/css/main.min.css',
+		},
+		body: {
+			js: ['../assets/js/about.min.js', '../assets/js/locale.min.js']
+		},
+	},
+};
+
+const popupConfig = {
+	template: popupHtml,
+	inject: false,
+	minify: false,
+	// minify: !isDev,
+	scriptLoading: 'defer',
+	filename: 'pages/popup.html',
+	files: {
+		head: {
+			css: '../assets/css/main.min.css',
+		},
+		body: {
+			js: ['../assets/js/popup.min.js', '../assets/js/locale.min.js']
+		},
+		icons: popupIcons,
+	},
 };
 
 /*
@@ -115,10 +157,10 @@ const plugins = [
 	new CleanWebpackPlugin(cleanOptions),
 	new CopyPlugin(copyConfig),
 	new MiniCssExtractPlugin({
-		// Options similar to the same options in webpackOptions.output
-		// both options are optional
-		filename: 'css/main.min.css',
+		filename: 'assets/css/main.min.css',
 	}),
+	new HtmlWebpackPlugin(aboutConfig),
+	new HtmlWebpackPlugin(popupConfig),
 ];
 
 /*
@@ -132,16 +174,13 @@ module.exports = {
 		about: path.resolve(__dirname, '../src/assets/js/about.js'),
 		background: path.resolve(__dirname, '../src/assets/js/background.js'),
 		content: path.resolve(__dirname, '../src/assets/js/content.js'),
-		icons: path.resolve(__dirname, '../src/assets/js/icons.js'),
 		locale: path.resolve(__dirname, '../src/assets/js/locale.js'),
 		popup: path.resolve(__dirname, '../src/assets/js/popup.js'),
 		main: path.resolve(__dirname, '../src/assets/scss/main.scss'),
 	},
 	output: {
-		filename: 'js/[name].min.js',
-		// library: packageJson.name,
-		// libraryTarget: 'commonjs',
-		path: path.resolve(__dirname, `../${distDir}/src/assets`),
+		filename: 'assets/js/[name].min.js',
+		path: path.resolve(__dirname, `../${distDir}/src`),
 	},
 	watchOptions: {
 		poll: true,
@@ -149,7 +188,7 @@ module.exports = {
 	},
 	// Resolve done //
 	resolve: {
-		extensions: ['.js'],
+		extensions: ['.js', '.scss', '.css'],
 	},
 	module: {
 		rules: [
