@@ -1,4 +1,4 @@
-import icons from './icons';
+const icons = require('../json/icons.json');
 
 const toggleExtensionStatusButton = document.getElementById('toggle-status');
 const toggleOnlyWhenLoggedInStatusStatusButton = document.getElementById('toggle-only-logged-in-status');
