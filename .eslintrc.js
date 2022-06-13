@@ -9,12 +9,9 @@ module.exports = {
 		'eslint:recommended',
 	],
 	globals: {
-		$: true,
-		baseUrl: true,
 		chrome: true,
 		location: true,
 	},
-	ignorePatterns: ['build'],
 	parser: '@babel/eslint-parser',
 	parserOptions: {
 		ecmaVersion: 12,
