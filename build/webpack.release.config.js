@@ -1,10 +1,12 @@
-const TerserPlugin = require('terser-webpack-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
-const webpack = require('webpack');
-const { merge } = require('webpack-merge');
 const base = require('./webpack.base.config');
 const packageJson = require('../package.json');
 const path = require('path');
+const webpack = require('webpack');
+const CopyPlugin = require("copy-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { merge } = require('webpack-merge');
 
 /*
  |--------------------------------------------------------------------------
@@ -37,21 +39,110 @@ const banner = `${packageName}
 
 /*
 |--------------------------------------------------------------------------
+| Copy Plugin Config
+|--------------------------------------------------------------------------
+*/
+const copyConfig = {
+	patterns: [
+		{
+			from: path.resolve(__dirname, `../build`),
+			to: path.resolve(__dirname, `../zip-build/build`),
+		},
+		{
+			from: path.resolve(__dirname, `../docs/firefox`),
+			to: path.resolve(__dirname, `../zip-build/docs/firefox`),
+		},
+		{
+			from: path.resolve(__dirname, `../src`),
+			to: path.resolve(__dirname, `../zip-build/src`),
+		},
+		{
+			from: path.resolve(__dirname, `../.*`),
+			to: path.resolve(__dirname, `../zip-build`),
+		},
+		{
+			from: path.resolve(__dirname, `../*.js`),
+			to: path.resolve(__dirname, `../zip-build`),
+		},
+		{
+			from: path.resolve(__dirname, `../*.json`),
+			to: path.resolve(__dirname, `../zip-build`),
+		},
+		{
+			from: path.resolve(__dirname, `../*.yaml`),
+			to: path.resolve(__dirname, `../zip-build`),
+		},
+	],
+};
+
+/*
+|--------------------------------------------------------------------------
 | ZIP files
 |--------------------------------------------------------------------------
 */
-const chromeZip = {
+const chromiumZip = {
 	events: {
 		onEnd: {
 			archive: [
 				{
-					source:  path.resolve(__dirname, '../dist'),
-					destination: path.resolve(__dirname, '../published/chrome_extensions.zip'),
+					source: path.resolve(__dirname, '../dist'),
+					destination: path.resolve(__dirname, '../published/chromium_extension.zip'),
 				},
 			],
 		},
 	},
 }
+
+const firefoxZip = {
+	events: {
+		onEnd: {
+			archive: [
+				{
+					source: path.resolve(__dirname, '../dist/src'),
+					destination: path.resolve(__dirname, '../published/firefox_extension.zip'),
+				},
+			],
+		},
+	},
+}
+
+const firefoxSourceCodeZip = {
+	events: {
+		onEnd: [
+			{
+				archive: [
+					{
+						source: path.resolve(__dirname, '../zip-build'),
+						destination: path.resolve(__dirname, '../published/firefox_source_code.zip'),
+						options: {
+							globOptions: {
+								dot: true,
+							},
+							gzip: true,
+						},
+					},
+				],
+			},
+			{
+				delete: [path.join(__dirname, '../zip-build')],
+			},
+		],
+	},
+}
+
+/*
+ |--------------------------------------------------------------------------
+ | Clean Options
+ |--------------------------------------------------------------------------
+ */
+const cleanPublishedOptions = {
+	cleanOnceBeforeBuildPatterns: [
+		path.join(__dirname, '../published'),
+	],
+	dry: false,
+	verbose: false,
+};
+
 
 /*
 |--------------------------------------------------------------------------
@@ -67,16 +158,14 @@ module.exports = merge(base, {
 			}),
 		],
 	},
-	// * Add if needed //
-	// performance: {
-	// 	hints: false,
-	// 	maxEntrypointSize: 512000,
-	// 	maxAssetSize: 512000,
-	// },
 	plugins: [
+		new CleanWebpackPlugin(cleanPublishedOptions),
 		new webpack.BannerPlugin({
 			banner,
 		}),
-		new FileManagerPlugin(chromeZip),
+		new CopyPlugin(copyConfig),
+		new FileManagerPlugin(chromiumZip),
+		new FileManagerPlugin(firefoxZip),
+		new FileManagerPlugin(firefoxSourceCodeZip),
 	],
 });
