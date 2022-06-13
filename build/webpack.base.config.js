@@ -99,7 +99,7 @@ const aboutConfig = {
 	template: aboutHtml,
 	inject: false,
 	minify: false,
-	// minify: !isDev,
+	minify: !isDev,
 	scriptLoading: 'defer',
 	filename: 'pages/about.html',
 	files: {
@@ -116,7 +116,7 @@ const popupConfig = {
 	template: popupHtml,
 	inject: false,
 	minify: false,
-	// minify: !isDev,
+	minify: !isDev,
 	scriptLoading: 'defer',
 	filename: 'pages/popup.html',
 	files: {
@@ -136,15 +136,10 @@ const popupConfig = {
  |--------------------------------------------------------------------------
  */
 const cleanOptions = {
-	root: distDir,
 	dry: false,
 	verbose: false,
 	cleanOnceBeforeBuildPatterns: [
-		'**/*.js',
-		'**/*.css',
-		'**/*.png',
-		'**/*.json',
-		'**/*.html',
+		path.join(__dirname, '../dist'),
 	],
 };
 
