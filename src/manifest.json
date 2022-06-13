@@ -19,7 +19,9 @@
 		"service_worker": "assets/js/background.min.js"
 	},
 	"host_permissions": [
-		"<all_urls>"
+		"*://www.amazon.com/*",
+		"*://www.amazon.co.uk/*",
+		"*://www.amazon.de/*"
 	],
 	"content_scripts": [
 		{
