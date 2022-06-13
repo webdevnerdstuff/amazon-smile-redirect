@@ -24,6 +24,7 @@ specifiers:
   mini-css-extract-plugin: ^2.6.0
   postcss: ^8.4.14
   postcss-loader: ^7.0.0
+  postcss-scss: ^4.0.4
   prettier: ^2.6.2
   sass: ^1.52.3
   sass-loader: ^13.0.0
@@ -60,6 +61,7 @@ devDependencies:
   mini-css-extract-plugin: 2.6.0_webpack@5.73.0
   postcss: 8.4.14
   postcss-loader: 7.0.0_mepnsno3xmng6eyses4tepu7bu
+  postcss-scss: 4.0.4_postcss@8.4.14
   prettier: 2.6.2
   sass: 1.52.3
   sass-loader: 13.0.0_sass@1.52.3+webpack@5.73.0
@@ -4131,6 +4133,15 @@ packages:
 
   /postcss-safe-parser/6.0.0_postcss@8.4.14:
     resolution: {integrity: sha512-FARHN8pwH+WiS2OPCxJI8FuRJpTVnn6ZNFiqAM2aeW2LwTHWWmWgIyKC6cUo0L8aeKiF/14MNvnpls6R2PBeMQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.3.3
+    dependencies:
+      postcss: 8.4.14
+    dev: true
+
+  /postcss-scss/4.0.4_postcss@8.4.14:
+    resolution: {integrity: sha512-aBBbVyzA8b3hUL0MGrpydxxXKXFZc5Eqva0Q3V9qsBOLEMsjb6w49WfpsoWzpEgcqJGW4t7Rio8WXVU9Gd8vWg==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.3.3
