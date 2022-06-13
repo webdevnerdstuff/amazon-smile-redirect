@@ -13,82 +13,62 @@ chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus'], (result)
 
 // -------------------------- On Message //
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+	let response = {};
+	let status;
+
 	// Checking if user is logged out //
 	if (request.logOutCheck) {
 		const goToLogin = request.loggedOut;
-
-		sendResponse({ extensionStatus, goToLogin, onlyWhenLoggedInStatus });
-		return false;
+		response = { extensionStatus, goToLogin, onlyWhenLoggedInStatus };
 	}
 
-	// Get Extension 'Status' //
-	if (request.getExtensionStatus) {
-		sendResponse({ extensionStatus });
-		return false;
+	// Get Extension Options //
+	if (request.getExtensionOptions) {
+		response = { extensionStatus, onlyWhenLoggedInStatus };
 	}
 
 	// Toggle 'Status' //
 	if (request.toggleStatus) {
-		const statusA = updateStatus(extensionStatus);
-		sendResponse({ extensionStatus: statusA });
-	}
-
-	// Get Extension 'Only When Logged In' //
-	if (request.getOnlyWhenLoggedInStatus) {
-		sendResponse({ onlyWhenLoggedInStatus });
-		return false;
+		status = updateOptions('extensionStatus', extensionStatus);
+		response = { extensionStatus: status };
 	}
 
 	// Toggle 'Only When Logged In' //
 	if (request.onlyWhenLoggedInToggleStatus) {
-		const statusB = updateOnlyWhenLoggedIn(onlyWhenLoggedInStatus);
-		sendResponse({ onlyWhenLoggedInStatus: statusB });
+		status = updateOptions('onlyWhenLoggedInStatus', onlyWhenLoggedInStatus);
+		response = { onlyWhenLoggedInStatus: status };
 	}
 
+	sendResponse(response);
 	return false;
 });
 
 // ---------------------------------------------------- Update Popup Status Icon //
 function updateIcon() {
-	if (extensionStatus === 'disabled') {
-		chrome.action.setIcon({
-			path: {
-				16: '/assets/images/icon-disabled16.png',
-				48: '/assets/images/icon-disabled48.png',
-				128: '/assets/images/icon-disabled128.png',
-			},
-		});
-
-		return false;
-	}
+	const iconStatus = extensionStatus === 'disabled' ? '-disabled' : '';
 
 	chrome.action.setIcon({
 		path: {
-			16: '/assets/images/icon16.png',
-			48: '/assets/images/icon48.png',
-			128: '/assets/images/icon128.png',
+			16: `/assets/images/icon${iconStatus}16.png`,
+			48: `/assets/images/icon${iconStatus}48.png`,
+			128: `/assets/images/icon${iconStatus}128.png`,
 		},
 	});
-
-	return false;
 }
 
-// ---------------------------------------------------- Update 'Status' //
-function updateStatus() {
-	extensionStatus = extensionStatus === 'enabled' ? 'disabled' : 'enabled';
+// ---------------------------------------------------- Update Options //
+const updateOptions = (key, val) => {
+	const status = val === 'enabled' ? 'disabled' : 'enabled';
 
-	chrome.storage.local.set({ extensionStatus }, () => { });
+	if (key === 'extensionStatus') {
+		extensionStatus = status;
+		updateIcon();
+	}
+	else if (key === 'onlyWhenLoggedInStatus') {
+		onlyWhenLoggedInStatus = status;
+	}
 
-	updateIcon();
+	chrome.storage.local.set({ [key]: status }, () => { });
 
-	return extensionStatus;
-}
-
-// ---------------------------------------------------- Update 'Only When Logged In' //
-function updateOnlyWhenLoggedIn() {
-	onlyWhenLoggedInStatus = onlyWhenLoggedInStatus === 'disabled' ? 'enabled' : 'disabled';
-
-	chrome.storage.local.set({ onlyWhenLoggedInStatus }, () => { });
-
-	return onlyWhenLoggedInStatus;
-}
+	return status;
+};

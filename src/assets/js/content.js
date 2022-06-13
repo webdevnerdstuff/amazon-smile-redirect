@@ -1,5 +1,5 @@
 // ---------------------------------------------------- Get Storage //
-chrome.runtime.sendMessage({ getExtensionStatus: true, getOnlyWhenLoggedInStatus: true }, (response) => {
+chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
 	const extensionStatus = response.extensionStatus;
 	fetchNavLines(extensionStatus);
 
@@ -92,9 +92,9 @@ function fetchNavLines(extensionStatus) {
 		for (let i = 0; i < navLines.length; i += 1) {
 			if (
 				navLines[i].innerText.includes('Hello.') ||
-        navLines[i].innerText.includes('Hello,') ||
-        navLines[i].innerText.includes('Hallo!') ||
-        navLines[i].innerText.includes('Hallo,')
+				navLines[i].innerText.includes('Hello,') ||
+				navLines[i].innerText.includes('Hallo!') ||
+				navLines[i].innerText.includes('Hallo,')
 			) {
 				navLineText = navLines[i].innerText;
 
