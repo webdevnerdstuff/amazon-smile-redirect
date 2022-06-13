@@ -11,31 +11,27 @@
 <body id="asr-popup">
   <ul>
     <li id="toggle-status">
-			<%= htmlWebpackPlugin.options.files.icons.check %> <span data-locale="nav__on">On</span>
+      <%= htmlWebpackPlugin.options.files.icons.check %><span data-locale="nav__on">On</span>
     </li>
 
-    <li id="toggle-only-logged-in-status">
-			<%= htmlWebpackPlugin.options.files.icons.times %> <span data-locale="nav__only_logged_in">Only when logged in</span>
+    <li id="toggle-only-logged-in-status" data-locale-key="nav__only_logged_in">
+      <%= htmlWebpackPlugin.options.files.icons.times %><span data-locale="nav__only_logged_in">Only when logged in</span>
     </li>
 
     <li class="external" data-type="amazonSmile">
-      <%= htmlWebpackPlugin.options.files.icons.amazon %> AmazonSmile
+      <%= htmlWebpackPlugin.options.files.icons.amazon %>AmazonSmile
     </li>
 
     <li class="external" data-type="about">
-      <%= htmlWebpackPlugin.options.files.icons.info %> <span data-locale="nav__about">About Amazon Smile Redirect</span>
+      <%= htmlWebpackPlugin.options.files.icons.info %><span data-locale="nav__about">About Amazon Smile Redirect</span>
     </li>
 
     <li class="external" data-type="devSite">
-      <%= htmlWebpackPlugin.options.files.icons.code %> <span data-locale="nav__developerWebsite">Developer Website</span>
-    </li>
-
-    <li class="external" data-type="support">
-      <%= htmlWebpackPlugin.options.files.icons.bug %> <span>Report Issues</span>
+      <%= htmlWebpackPlugin.options.files.icons.code %><span data-locale="nav__developerWebsite">Developer Website</span>
     </li>
 
     <li class="external" data-type="donate">
-      <%= htmlWebpackPlugin.options.files.icons.heart %> <span data-locale="nav__supportExtension">Support this Extension</span>
+      <%= htmlWebpackPlugin.options.files.icons.heart %><span data-locale="nav__supportExtension">Support this Extension</span>
     </li>
   </ul>
 
