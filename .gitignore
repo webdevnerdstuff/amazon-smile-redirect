@@ -51,8 +51,6 @@ uploads/logs
 
 # Assets #
 ##########
-dist/src/assets/css
-dist/src/assets/js
-dist/src/assets/vendor
-
+dist
 published
+zip-build
