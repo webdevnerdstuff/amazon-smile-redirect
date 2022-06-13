@@ -1,16 +1,26 @@
 // ------------------------------------------------------ about.html //
 #asr-about {
-	font-size: 13px;
-	line-height: 19px;
+	font-size: 1em;
 
 	header {
 		align-items: center;
 		border-bottom: 1px solid $black;
 		display: flex;
 		padding-bottom: 10px;
+
+		.icon {
+			display: block;
+			margin-right: 10px;
+			width: 50px;
+		}
+
+		.version {
+			font-size: .7em;
+		}
 	}
 
 	section {
+		font-size: .7em;
 		padding: 20px 0;
 	}
 
@@ -28,19 +38,9 @@
 		}
 	}
 
-	.icon {
-		display: block;
-		margin-right: 10px;
-		width: 50px;
-	}
-
 	.title {
-		font-size: 16px;
+		font-size: .9em;
 		font-weight: bold;
-	}
-
-	.version {
-		font-size: 12px;
 	}
 
 	.disclaimer {

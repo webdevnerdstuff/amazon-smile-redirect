@@ -1,27 +1,29 @@
 // ------------------------------------------------------ popup.html //
 #asr-popup {
-	font-size: 14px;
+	background-color: $white;
+	font-size: .9em;
 	margin: 0;
-	min-width: 18em;
+	min-width: 19em;
+	padding: .5em;
 
 	ul,
 	li,
-	p,
-	img {
+	p {
 		border: 0;
 		margin: 0;
 		padding: 0;
 	}
 
 	ul {
-    grid-template-rows: auto;
+		display: flex;
+		flex-direction: column;
+		gap: .3em;
 		list-style-type: none;
-		display: grid;
 
 		li {
-			background-color: $white;
+			border-radius: 4px;
 			cursor: pointer;
-			padding: 7px;
+			padding: 10px 7px;
 			transition: background-color .25s ease;
 
 			&:hover {
@@ -33,44 +35,37 @@
 			}
 		}
 
-		.same-width {
-			margin-right: 5px;
+		.icon {
+			&--inline {
+				display: inline-block;
+				height: 1em;
+				overflow: visible;
+				vertical-align: -.125em;
+			}
+
+			&--sw {
+				margin-right: .4em;
+				text-align: center;
+				width: 1.25em;
+			}
+
+			&--amazon {
+				color: $orange;
+			}
+
+			&--check {
+				color: $green;
+			}
+
+			&--info {
+				color: $blue;
+			}
+
+			&--times,
+			&--heart,
+			&--bug {
+				color: $red;
+			}
 		}
-
-    .icon {
-      &--inline {
-        display: inline-block;
-        height: 1em;
-        overflow: visible;
-        vertical-align: -.125em;
-
-        &--sw {
-          width: 1.25em;
-        }
-      }
-
-      &--sw {
-        text-align: center;
-        width: 1.25em;
-      }
-
-      &--amazon {
-        color: $orange;
-      }
-
-      &--check {
-        color: $green;
-      }
-
-      &--info {
-        color: $blue;
-      }
-
-      &--times,
-      &--heart,
-      &--bug {
-        color: $red;
-      }
-    }
 	}
 }
