@@ -28,11 +28,13 @@ const eslintOptions = {
  |--------------------------------------------------------------------------
  */
 const stylelintOptions = {
-	customSyntax: 'postcss-html',
 	ignoreFiles: [
-		'./node_modules/**/*.vue',
+		'./node_modules/**/*.*',
 	],
-	files: ['./src/**/*.vue'],
+	customSyntax: 'postcss-scss',
+	files: [
+		path.join(__dirname, '../src/assets/scss/**/*.scss'),
+	],
 	fix: true,
 };
 
