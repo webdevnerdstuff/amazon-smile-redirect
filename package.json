@@ -1,6 +1,6 @@
 {
   "name": "amazon-smile-redirect",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Amazon Smile Redirect",
   "main": "Gruntfile.js",
   "scripts": {
