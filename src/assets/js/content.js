@@ -1,3 +1,5 @@
+const excludeSites = require('../json/excluded-sites.json');
+
 // ---------------------------------------------------- Get Storage //
 chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
 	const extensionStatus = response.extensionStatus;
@@ -9,25 +11,10 @@ chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
 // ---------------------------------------------------- Check for Excluded Pages //
 function isExcludedPage() {
 	const href = window.location.href;
-	const excludeSites = [
-		'advertising.amazon.',
-		'affiliate-program.amazon.',
-		'alexa.amazon.',
-		'amzn_photos_web_us',
-		'aws.amazon.',
-		'developer.amazon.',
-		'ignite.amazon.',
-		'kdp.amazon.',
-		'music.amazon.',
-		'payments.amazon.',
-		'photos.amazon.',
-		'amazon.com/photos',
-		'read.amazon.',
-		'videodirect.amazon.',
-		'www.acx.',
-		'www.audible.',
-		'ap/mfa',
-	];
+
+	console.log(JSON.stringify({excludeSites}));
+
+
 	let exclude = false;
 
 	Object.values(excludeSites).forEach((elm) => {
