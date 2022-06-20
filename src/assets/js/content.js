@@ -1,4 +1,4 @@
-const excludeSites = require('../json/excluded-sites.json');
+const config = require('../json/config.json');
 
 // ---------------------------------------------------- Get Storage //
 chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
@@ -11,13 +11,9 @@ chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
 // ---------------------------------------------------- Check for Excluded Pages //
 function isExcludedPage() {
 	const href = window.location.href;
-
-	console.log(JSON.stringify({excludeSites}));
-
-
 	let exclude = false;
 
-	Object.values(excludeSites).forEach((elm) => {
+	Object.values(config.excludedSites).forEach((elm) => {
 		if (href.includes(elm)) {
 			exclude = true;
 		}

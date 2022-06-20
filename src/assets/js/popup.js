@@ -1,4 +1,4 @@
-const icons = require('../json/icons.json');
+const config = require('../json/config.json');
 
 const statusBtn = document.getElementById('toggle-status');
 const whenLoggedInBtn = document.getElementById('toggle-only-logged-in-status');
@@ -17,14 +17,14 @@ const appendIcon = (id, svgIcon) => {
 const setElementsStatus = (btn, status) => {
 	const selectedBtn = btn;
 	let btnClass = 'disabled';
-	let svgIcon = icons.times;
+	let svgIcon = config.icons.times;
 	let translationKeyName = 'nav__off';
 
 	selectedBtn.textContent = '';
 
 	if (typeof status === 'undefined' || status === 'enabled') {
 		btnClass = 'enabled';
-		svgIcon = icons.check;
+		svgIcon = config.icons.check;
 		translationKeyName = 'nav__on';
 	}
 
@@ -60,14 +60,6 @@ whenLoggedInBtn.addEventListener('click', () => {
 });
 
 // ---------------------------------------------------- External Links //
-const externalLinks = {
-	about: 'about.html',
-	amazonSmile: 'https://smile.amazon.com/',
-	devSite: 'https://github.com/webdevnerdstuff/amazon-smile-redirect',
-	donate: 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=webdevnerdstuff%40gmail.com&item_name=Amazon+Smile+Redirect&currency_code=USD&source=url',
-	support: 'https://github.com/webdevnerdstuff/amazon-smile-redirect/issues',
-};
-
 window.onload = () => {
 	const menuLinks = document.getElementsByClassName('external');
 
@@ -76,7 +68,7 @@ window.onload = () => {
 		const type = link.getAttribute('data-type');
 
 		externalLink.onclick = () => {
-			window.open(externalLinks[type], '_blank');
+			window.open(config.externalLinks[type], '_blank');
 		};
 	});
 };
