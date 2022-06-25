@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const popupIcons = require(path.resolve(__dirname, `../src/assets/json/icons.json`));
+const config = require(path.resolve(__dirname, `../src/assets/json/config.json`));
 // const packageJson = require('../package.json');
 
 const environment = process.env.NODE_ENV;
@@ -126,7 +126,7 @@ const popupConfig = {
 		body: {
 			js: ['../assets/js/popup.min.js', '../assets/js/locale.min.js']
 		},
-		icons: popupIcons,
+		icons: config.icons,
 	},
 };
 
