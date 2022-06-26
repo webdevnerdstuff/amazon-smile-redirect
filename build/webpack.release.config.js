@@ -8,6 +8,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { merge } = require('webpack-merge');
 
+const zipBuildDir = '../zip-build';
+
+// TODO: Need to delete the main.js.min from css before zip files created //
+
 /*
  |--------------------------------------------------------------------------
  | Banner
@@ -42,38 +46,23 @@ const banner = `${packageName}
 | Copy Plugin Config
 |--------------------------------------------------------------------------
 */
-const copyConfig = {
-	patterns: [
-		{
-			from: path.resolve(__dirname, `../build`),
-			to: path.resolve(__dirname, `../zip-build/build`),
-		},
-		{
-			from: path.resolve(__dirname, `../docs/firefox`),
-			to: path.resolve(__dirname, `../zip-build/docs/firefox`),
-		},
-		{
-			from: path.resolve(__dirname, `../src`),
-			to: path.resolve(__dirname, `../zip-build/src`),
-		},
-		{
-			from: path.resolve(__dirname, `../.*`),
-			to: path.resolve(__dirname, `../zip-build`),
-		},
-		{
-			from: path.resolve(__dirname, `../*.js`),
-			to: path.resolve(__dirname, `../zip-build`),
-		},
-		{
-			from: path.resolve(__dirname, `../*.json`),
-			to: path.resolve(__dirname, `../zip-build`),
-		},
-		{
-			from: path.resolve(__dirname, `../*.yaml`),
-			to: path.resolve(__dirname, `../zip-build`),
-		},
-	],
+const buildCopyPatterns = (paths) => {
+	const results = [];
+
+	paths.forEach(dir => {
+		const outputDir = dir.includes('*') ? '' : dir;
+
+		results.push({
+			from: path.resolve(__dirname, `../${dir}`),
+			to: path.resolve(__dirname, `${zipBuildDir}/${outputDir}`),
+		})
+	});
+
+	return results;
 };
+
+const copyPatterns = buildCopyPatterns(['build', 'docs/firefox', 'src', '.*', '*.js', '*.json', '*.yaml']);
+const copyConfig = { patterns: copyPatterns };
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +74,7 @@ const chromiumZip = {
 		onEnd: {
 			archive: [
 				{
-					source: path.resolve(__dirname, '../dist'),
+					source: path.resolve(__dirname, '../dist/v3'),
 					destination: path.resolve(__dirname, '../published/chromium_extension.zip'),
 				},
 			],
@@ -98,7 +87,7 @@ const firefoxZip = {
 		onEnd: {
 			archive: [
 				{
-					source: path.resolve(__dirname, '../dist/src'),
+					source: path.resolve(__dirname, '../dist/v2/src'),
 					destination: path.resolve(__dirname, '../published/firefox_extension.zip'),
 				},
 			],
@@ -112,7 +101,7 @@ const firefoxSourceCodeZip = {
 			{
 				archive: [
 					{
-						source: path.resolve(__dirname, '../zip-build'),
+						source: path.resolve(__dirname, zipBuildDir),
 						destination: path.resolve(__dirname, '../published/firefox_source_code.zip'),
 						options: {
 							globOptions: {
@@ -124,7 +113,7 @@ const firefoxSourceCodeZip = {
 				],
 			},
 			{
-				delete: [path.join(__dirname, '../zip-build')],
+				delete: [path.join(__dirname, zipBuildDir)],
 			},
 		],
 	},
