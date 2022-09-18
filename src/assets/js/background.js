@@ -1,12 +1,14 @@
 let extensionStatus;
 let onlyWhenLoggedInStatus;
+let onlyWhenCheckingOutStatus;
 
 // ---------------------------------------------------- Runtime //
-chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus'], (result) => {
+chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus', 'onlyWhenCheckingOutStatus'], (result) => {
 	extensionStatus = result.extensionStatus || 'enabled';
 	onlyWhenLoggedInStatus = result.onlyWhenLoggedInStatus || 'disabled';
+	onlyWhenCheckingOutStatus = result.onlyWhenCheckingOutStatus || 'disabled';
 
-	chrome.storage.local.set({ extensionStatus, onlyWhenLoggedInStatus }, () => { });
+	chrome.storage.local.set({ extensionStatus, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus }, () => { });
 
 	updateIcon();
 });
@@ -19,12 +21,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	// Checking if user is logged out //
 	if (request.logOutCheck) {
 		const goToLogin = request.loggedOut;
-		response = { extensionStatus, goToLogin, onlyWhenLoggedInStatus };
+		response = { extensionStatus, goToLogin, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus };
 	}
 
 	// Get Extension Options //
 	if (request.getExtensionOptions) {
-		response = { extensionStatus, onlyWhenLoggedInStatus };
+		response = { extensionStatus, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus };
 	}
 
 	// Toggle 'Status' //
@@ -37,6 +39,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.onlyWhenLoggedInToggleStatus) {
 		status = updateOptions('onlyWhenLoggedInStatus', onlyWhenLoggedInStatus);
 		response = { onlyWhenLoggedInStatus: status };
+	}
+
+	// Toggle 'Only When Checking Out' //
+	if (request.onlyWhenCheckingOutToggleStatus) {
+		status = updateOptions('onlyWhenCheckingOutStatus', onlyWhenCheckingOutStatus);
+		response = { onlyWhenCheckingOutStatus: status };
 	}
 
 	sendResponse(response);
@@ -66,6 +74,9 @@ const updateOptions = (key, val) => {
 	}
 	else if (key === 'onlyWhenLoggedInStatus') {
 		onlyWhenLoggedInStatus = status;
+	}
+	else if (key === 'onlyWhenCheckingOutStatus') {
+		onlyWhenCheckingOutStatus = status;
 	}
 
 	chrome.storage.local.set({ [key]: status }, () => { });

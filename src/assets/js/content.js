@@ -28,15 +28,28 @@ function loggedOut(navLineText) {
 }
 
 // ---------------------------------------------------- Go To Page //
-function goToPage(navLineText, domainExtension, goToLogin, onlyWhenLoggedInStatus) {
+function goToPage(navLineText, domainExtension, goToLogin, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus) {
 	if (!isExcludedPage()) {
-		if (!loggedOut(navLineText) && !goToLogin) {
+		const pathName = window.location.pathname;
+		let checkoutPage = false;
+
+		if (onlyWhenCheckingOutStatus === 'enabled') {
+			checkoutPage = true;
+		}
+
+		// Redirect if logged in, or on the checkout page //
+		if ((!loggedOut(navLineText) && !goToLogin) || checkoutPage) {
+			// Check if on page checkout is enabled, and if it is not the checkout page //
+			if (onlyWhenCheckingOutStatus === 'enabled' && !pathName.includes('gp/buy')) {
+				return false;
+			}
+
 			// Redirect user to corresponding page on Amazon Smile //
 			window.location.replace(`https://smile.amazon.${domainExtension}${window.location.pathname}${window.location.search}`);
 		}
 		else if (onlyWhenLoggedInStatus !== 'enabled') {
 			// Redirect user to login page with return_to URL //
-			const redirectURL = encodeURIComponent(`https://smile.amazon.${domainExtension}${window.location.pathname}`);
+			const redirectURL = encodeURIComponent(`https://smile.amazon.${domainExtension}${pathName}`);
 			const redirectSearch = encodeURIComponent(window.location.search);
 
 			if (window.location.hostname === 'www.amazon.com') {
@@ -56,6 +69,8 @@ function goToPage(navLineText, domainExtension, goToLogin, onlyWhenLoggedInStatu
 			}
 		}
 	}
+
+	return false;
 }
 
 // ---------------------------------------------------- Fetch Nav Lines //
@@ -87,7 +102,7 @@ function fetchNavLines(extensionStatus) {
 	}
 
 	chrome.runtime.sendMessage({ logOutCheck: true, loggedOut: loggedOut(navLineText) }, (response) => {
-		goToPage(navLineText, domainExtension, response.goToLogin, response.onlyWhenLoggedInStatus);
+		goToPage(navLineText, domainExtension, response.goToLogin, response.onlyWhenLoggedInStatus, response.onlyWhenCheckingOutStatus);
 	});
 
 	return false;

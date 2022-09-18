@@ -2,6 +2,7 @@ const config = require('../json/config.json');
 
 const statusBtn = document.getElementById('toggle-status');
 const whenLoggedInBtn = document.getElementById('toggle-only-logged-in-status');
+const whenCheckingOutBtn = document.getElementById('toggle-only-checking-out-status');
 
 // ----------------------------------------------------  Appends Icon to Button //
 const appendIcon = (id, svgIcon) => {
@@ -30,6 +31,10 @@ const setElementsStatus = (btn, status) => {
 
 	if (selectedBtn.getAttribute('data-locale-key') !== null) {
 		translationKeyName = 'nav__only_logged_in';
+
+		if (btn.id === 'toggle-only-checking-out-status') {
+			translationKeyName = 'nav__only_checking_out';
+		}
 	}
 
 	appendIcon(selectedBtn.id, svgIcon);
@@ -42,6 +47,7 @@ const setElementsStatus = (btn, status) => {
 chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
 	setElementsStatus(statusBtn, response.extensionStatus);
 	setElementsStatus(whenLoggedInBtn, response.onlyWhenLoggedInStatus);
+	setElementsStatus(whenCheckingOutBtn, response.onlyWhenCheckingOutStatus);
 });
 
 // ---------------------------------------------------- Status Toggles //
@@ -56,6 +62,13 @@ statusBtn.addEventListener('click', () => {
 whenLoggedInBtn.addEventListener('click', () => {
 	chrome.runtime.sendMessage({ onlyWhenLoggedInToggleStatus: true }, (response) => {
 		setElementsStatus(whenLoggedInBtn, response.onlyWhenLoggedInStatus);
+	});
+});
+
+// Only When Checking Out Status //
+whenCheckingOutBtn.addEventListener('click', () => {
+	chrome.runtime.sendMessage({ onlyWhenCheckingOutToggleStatus: true }, (response) => {
+		setElementsStatus(whenCheckingOutBtn, response.onlyWhenCheckingOutStatus);
 	});
 });
 
