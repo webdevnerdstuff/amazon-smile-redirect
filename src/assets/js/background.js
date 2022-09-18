@@ -1,3 +1,4 @@
+const manifest = chrome.runtime.getManifest();
 let extensionStatus;
 let onlyWhenLoggedInStatus;
 let onlyWhenCheckingOutStatus;
@@ -55,6 +56,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function updateIcon() {
 	const iconStatus = extensionStatus === 'disabled' ? '-disabled' : '';
 
+	// Check for Manifest V2 for compatibility //
+	if (manifest.manifest_version === 2) {
+		chrome.browserAction.setIcon({
+			path: {
+				16: 'assets/images/icon16.png',
+				48: 'assets/images/icon48.png',
+				128: 'assets/images/icon128.png',
+			},
+		});
+
+		return false;
+	}
+
 	chrome.action.setIcon({
 		path: {
 			16: `/assets/images/icon${iconStatus}16.png`,
@@ -62,6 +76,8 @@ function updateIcon() {
 			128: `/assets/images/icon${iconStatus}128.png`,
 		},
 	});
+
+	return false;
 }
 
 // ---------------------------------------------------- Update Options //
