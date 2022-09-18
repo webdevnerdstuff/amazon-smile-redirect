@@ -1,10 +1,11 @@
 const path = require('path');
 const sass = require('sass');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const config = require(path.resolve(__dirname, `../src/assets/json/config.json`));
+
+const config = require(path.resolve(__dirname, '../src/assets/json/config.json'));
 
 const environment = process.env.NODE_ENV;
 const isDev = environment === 'development';
@@ -58,8 +59,8 @@ const jsRule = {
 const buildCopyPatterns = (paths) => {
 	const results = [];
 
-	manifestVersions.forEach(version => {
-		paths.forEach(dir => {
+	manifestVersions.forEach((version) => {
+		paths.forEach((dir) => {
 			results.push(
 				{
 					from: path.resolve(__dirname, `../${dir}`),
@@ -73,7 +74,7 @@ const buildCopyPatterns = (paths) => {
 				from: path.resolve(__dirname, `../src/manifest.v${version}.json`),
 				to: path.resolve(__dirname, `../dist/v${version}/src/manifest.json`),
 			},
-		)
+		);
 	});
 
 	return results;
@@ -105,8 +106,8 @@ const svgRule = {
 const buildHtmlWebpackPlugin = (pages) => {
 	const results = [];
 
-	manifestVersions.forEach(version => {
-		pages.forEach(page => {
+	manifestVersions.forEach((version) => {
+		pages.forEach((page) => {
 			results.push(new HtmlWebpackPlugin({
 				template: path.resolve(__dirname, `../src/pages/${page}.html`),
 				filename: `v${version}/src/pages/${page}.html`,
@@ -118,7 +119,7 @@ const buildHtmlWebpackPlugin = (pages) => {
 						css: '../assets/css/main.min.css',
 					},
 					body: {
-						js: [`../assets/js/${page}.min.js`, '../assets/js/locale.min.js']
+						js: [`../assets/js/${page}.min.js`, '../assets/js/locale.min.js'],
 					},
 					icons: config.icons,
 				},
@@ -137,7 +138,7 @@ const buildHtmlWebpackPlugin = (pages) => {
 const buildCleanMainOptions = () => {
 	const results = [];
 
-	manifestVersions.forEach(version => {
+	manifestVersions.forEach((version) => {
 		results.push(path.join(__dirname, `../dist/v${version}/src/assets/css/main.min.js`));
 	});
 
@@ -153,11 +154,10 @@ const cleanOptions = {
 	cleanAfterEveryBuildPatterns: buildCleanMainOptions(),
 };
 
-
 const buildMiniCssExtractPlugin = () => {
 	const results = [];
 
-	manifestVersions.forEach(version => {
+	manifestVersions.forEach((version) => {
 		results.push(new MiniCssExtractPlugin({
 			filename: `v${version}/src/assets/css/main.min.css`,
 		}));
@@ -201,10 +201,10 @@ const buildWebpackEntries = () => {
 			locale: path.resolve(__dirname, '../src/assets/js/locale.js'),
 			popup: path.resolve(__dirname, '../src/assets/js/popup.js'),
 			main: path.resolve(__dirname, '../src/assets/scss/main.scss'),
-		}
+		},
 	};
 
-	manifestVersions.forEach(version => {
+	manifestVersions.forEach((version) => {
 		results[`v${version}/${assets.paths.about}`] = assets.files.about;
 		results[`v${version}/${assets.paths.background}`] = assets.files.background;
 		results[`v${version}/${assets.paths.content}`] = assets.files.content;
@@ -214,19 +214,18 @@ const buildWebpackEntries = () => {
 	});
 
 	return results;
-}
-
+};
 
 module.exports = {
 	mode: environment,
 	entry: buildWebpackEntries(),
 	output: {
 		filename: '[name].min.js',
-		path: path.resolve(__dirname, `../dist`),
+		path: path.resolve(__dirname, '../dist'),
 	},
 	watchOptions: {
 		poll: true,
-		ignored: /node_modules/
+		ignored: /node_modules/,
 	},
 	// Resolve done //
 	resolve: {

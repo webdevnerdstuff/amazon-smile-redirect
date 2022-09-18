@@ -1,5 +1,3 @@
-const base = require('./webpack.base.config');
-const packageJson = require('../package.json');
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
@@ -7,10 +5,10 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { merge } = require('webpack-merge');
+const packageJson = require('../package.json');
+const base = require('./webpack.base.config');
 
 const zipBuildDir = '../zip-build';
-
-// TODO: Need to delete the main.js.min from css before zip files created //
 
 /*
  |--------------------------------------------------------------------------
@@ -49,13 +47,13 @@ const banner = `${packageName}
 const buildCopyPatterns = (paths) => {
 	const results = [];
 
-	paths.forEach(dir => {
+	paths.forEach((dir) => {
 		const outputDir = dir.includes('*') ? '' : dir;
 
 		results.push({
 			from: path.resolve(__dirname, `../${dir}`),
 			to: path.resolve(__dirname, `${zipBuildDir}/${outputDir}`),
-		})
+		});
 	});
 
 	return results;
@@ -80,7 +78,7 @@ const chromiumZip = {
 			],
 		},
 	},
-}
+};
 
 const firefoxZip = {
 	events: {
@@ -93,7 +91,7 @@ const firefoxZip = {
 			],
 		},
 	},
-}
+};
 
 const firefoxSourceCodeZip = {
 	events: {
@@ -117,7 +115,7 @@ const firefoxSourceCodeZip = {
 			},
 		],
 	},
-}
+};
 
 /*
  |--------------------------------------------------------------------------
@@ -131,7 +129,6 @@ const cleanPublishedOptions = {
 	dry: false,
 	verbose: false,
 };
-
 
 /*
 |--------------------------------------------------------------------------
