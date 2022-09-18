@@ -1,64 +1,68 @@
 {
-  "appDesc": {
-    "message": "Това разширение автоматично ви пренасочва към съответната страница на AmazonSmile от Amazon.com.",
-    "description": "The description of the application, displayed in the web store."
-  },
-  "appAuthor": {
-    "message": "WebDevNerdStuff & Зайчета ... много, много зайчета!"
-  },
-  "version": {
-    "message": "Версия"
-  },
-  "nav__on": {
-    "message": "На",
-    "description": "Navigation Text for:On"
-  },
-  "nav__off": {
-    "message": "Изключено",
-    "description": "Navigation Text for:Off"
-  },
-  "nav__only_logged_in": {
-    "message": "Пренасочване само когато сте влезли",
-    "description": "Navigation Text for:Redirect only when logged in"
-  },
-  "nav__about": {
-    "message": "Относно разширението",
-    "description": "Navigation Text for: About Amazon Smile Redirect"
-  },
-  "nav__developerWebsite": {
-    "message": "Уебсайт за разработчици",
-    "description": "Navigation Text for: Developer Website"
-  },
-  "nav__supportExtension": {
-    "message": "Разширение за поддръжка",
-    "description": "Navigation Text for: Support Extension"
-  },
-  "about__intro": {
-    "message": "Помогнете на любимата си организация с нестопанска цел, като закупите вашите елементи от Amazon чрез AmazonSmile.",
-    "description": "About page intro"
-  },
-  "about__overviewHeader": {
-    "message": "Преглед:",
-    "description": "About page Overview header"
-  },
-  "about__overviewParagraph": {
-    "message": "Това разширение автоматично ще ви пренасочи към съответната страница на AmazonSmile, така че никога няма да се наложи да запомните първо да отидете на AmazonSmile. За да може вашата организация с нестопанска цел да се възползва от вашата покупка, трябва да завършите покупката си чрез AmazonSmile.",
-    "description": "About page Overview text"
-  },
-  "about__supportedSitesHeader": {
-    "message": "Поддържани сайтове:",
-    "description": "About page Supported Site header"
-  },
-  "about__legalInformationHeader": {
-    "message": "Правна информация:",
-    "description": "About page Legal Information header"
-  },
-  "about__legalInformationParagraph": {
-    "message": "AmazonSmile и логото на AmazonSmile са търговски марки на Amazon.com, Inc. или нейните филиали. Разширението не е създадено или одобрено от Amazon.",
-    "description": "About page Legal Information text"
-  },
-  "about__allRightsReserved": {
-    "message": "Всички права запазени.",
-    "description": "About page copyright All Rights Reserved"
-  }
+	"appDesc": {
+		"message": "Това разширение автоматично ви пренасочва към съответната страница на AmazonSmile от Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Зайчета ... много, много зайчета!"
+	},
+	"version": {
+		"message": "Версия"
+	},
+	"nav__on": {
+		"message": "На",
+		"description": "Navigation Text for:On"
+	},
+	"nav__off": {
+		"message": "Изключено",
+		"description": "Navigation Text for:Off"
+	},
+	"nav__only_logged_in": {
+		"message": "Пренасочване само когато сте влезли",
+		"description": "Navigation Text for:Redirect only when logged in"
+	},
+	"nav__only_checking_out": {
+		"message": "Пренасочване само при напускане",
+		"description": "Navigation Text for:Redirect only when checking out"
+	},
+	"nav__about": {
+		"message": "Относно разширението",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Уебсайт за разработчици",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Разширение за поддръжка",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Помогнете на любимата си организация с нестопанска цел, като закупите вашите елементи от Amazon чрез AmazonSmile.",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Преглед:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Това разширение автоматично ще ви пренасочи към съответната страница на AmazonSmile, така че никога няма да се наложи да запомните първо да отидете на AmazonSmile. За да може вашата организация с нестопанска цел да се възползва от вашата покупка, трябва да завършите покупката си чрез AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Поддържани сайтове:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Правна информация:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile и логото на AmazonSmile са търговски марки на Amazon.com, Inc. или нейните филиали. Разширението не е създадено или одобрено от Amazon.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Всички права запазени.",
+		"description": "About page copyright All Rights Reserved"
+	}
 }

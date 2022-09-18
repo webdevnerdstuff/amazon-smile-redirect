@@ -21,6 +21,10 @@
     "message": "Redirect only when logged in",
     "description": "Navigation Text for:Redirect only when logged in"
   },
+  "nav__only_checking_out": {
+    "message": "Redirect only when checking out",
+    "description": "Navigation Text for:Redirect only when checking out"
+  },
   "nav__about": {
     "message": "About Amazon Smile Redirect",
     "description": "Navigation Text for: About Amazon Smile Redirect"

@@ -1,64 +1,68 @@
 {
-  "appDesc": {
-    "message": "Denne udvidelse omdirigerer dig automatisk til den tilsvarende AmazonSmile-side fra Amazon.com.",
-    "description": "The description of the application, displayed in the web store."
-  },
-  "appAuthor": {
-    "message": "WebDevNerdStuff & Kaniner ... masser og masser af kaniner!"
-  },
-  "version": {
-    "message": "Version"
-  },
-  "nav__on": {
-    "message": "På",
-    "description": "Navigation Text for:On"
-  },
-  "nav__off": {
-    "message": "Af",
-    "description": "Navigation Text for:Off"
-  },
-  "nav__only_logged_in": {
-    "message": "Omdiriger kun, når du er logget ind",
-    "description": "Navigation Text for:Redirect only when logged in"
-  },
-  "nav__about": {
-    "message": "Om udvidelse",
-    "description": "Navigation Text for: About Amazon Smile Redirect"
-  },
-  "nav__developerWebsite": {
-    "message": "Udviklerwebsted",
-    "description": "Navigation Text for: Developer Website"
-  },
-  "nav__supportExtension": {
-    "message": "Support udvidelse",
-    "description": "Navigation Text for: Support Extension"
-  },
-  "about__intro": {
-    "message": "Hjælp din yndlings nonprofit ved at købe dine Amazon-varer via AmazonSmile.",
-    "description": "About page intro"
-  },
-  "about__overviewHeader": {
-    "message": "Oversigt:",
-    "description": "About page Overview header"
-  },
-  "about__overviewParagraph": {
-    "message": "Denne udvidelse omdirigerer dig automatisk til den tilsvarende AmazonSmile-side, så du behøver aldrig at huske at gå til AmazonSmile først. For at din non-profit kan drage fordel af dit køb, skal du gennemføre dit køb via AmazonSmile.",
-    "description": "About page Overview text"
-  },
-  "about__supportedSitesHeader": {
-    "message": "Understøttede websteder:",
-    "description": "About page Supported Site header"
-  },
-  "about__legalInformationHeader": {
-    "message": "Juridisk information:",
-    "description": "About page Legal Information header"
-  },
-  "about__legalInformationParagraph": {
-    "message": "AmazonSmile og AmazonSmile-logoet er varemærker tilhørende Amazon.com, Inc. eller dets tilknyttede selskaber. Udvidelsen blev ikke oprettet eller godkendt af Amazon.",
-    "description": "About page Legal Information text"
-  },
-  "about__allRightsReserved": {
-    "message": "Alle rettigheder forbeholdes.",
-    "description": "About page copyright All Rights Reserved"
-  }
+	"appDesc": {
+		"message": "Denne udvidelse omdirigerer dig automatisk til den tilsvarende AmazonSmile-side fra Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Kaniner ... masser og masser af kaniner!"
+	},
+	"version": {
+		"message": "Version"
+	},
+	"nav__on": {
+		"message": "På",
+		"description": "Navigation Text for:On"
+	},
+	"nav__off": {
+		"message": "Af",
+		"description": "Navigation Text for:Off"
+	},
+	"nav__only_logged_in": {
+		"message": "Omdiriger kun, når du er logget ind",
+		"description": "Navigation Text for:Redirect only when logged in"
+	},
+	"nav__only_checking_out": {
+		"message": "Omdiriger kun ved udtjekning",
+		"description": "Navigation Text for:Redirect only when checking out"
+	},
+	"nav__about": {
+		"message": "Om udvidelse",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Udviklerwebsted",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Support udvidelse",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Hjælp din yndlings nonprofit ved at købe dine Amazon-varer via AmazonSmile.",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Oversigt:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Denne udvidelse omdirigerer dig automatisk til den tilsvarende AmazonSmile-side, så du behøver aldrig at huske at gå til AmazonSmile først. For at din non-profit kan drage fordel af dit køb, skal du gennemføre dit køb via AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Understøttede websteder:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Juridisk information:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile og AmazonSmile-logoet er varemærker tilhørende Amazon.com, Inc. eller dets tilknyttede selskaber. Udvidelsen blev ikke oprettet eller godkendt af Amazon.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Alle rettigheder forbeholdes.",
+		"description": "About page copyright All Rights Reserved"
+	}
 }
