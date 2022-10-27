@@ -1,87 +1,87 @@
-const toggleExtensionStatusButton = document.getElementById('toggle-status');
-const toggleOnlyWhenLoggedInStatusStatusButton = document.getElementById('toggle-only-logged-in-status');
+const config = require('../json/config.json');
 
-// ---------------------------------------------------- Set Elements Status  //
-function setElementsStatus(btn, status, translationKey = ['nav__on', 'nav__off']) {
-  const statusIcon = document.createElement('i');
-  const selectedBtn = btn;
-  let statusText = '';
+const statusBtn = document.getElementById('toggle-status');
+const whenLoggedInBtn = document.getElementById('toggle-only-logged-in-status');
+const whenCheckingOutBtn = document.getElementById('toggle-only-checking-out-status');
 
-  selectedBtn.textContent = '';
+// ----------------------------------------------------  Appends Icon to Button //
+const appendIcon = (id, svgIcon) => {
+	const doc = new DOMParser().parseFromString(svgIcon, 'application/xml');
+	const el = document.getElementById(id);
 
-  if (typeof status === 'undefined' || status === 'enabled') {
-    statusIcon.setAttribute('class', 'enabled fa-fw fas fa-check');
-    statusText = chrome.i18n.getMessage(translationKey[0]);
-    statusText = ` ${statusText}`;
-    selectedBtn.setAttribute('class', 'enabled');
-  }
-  else {
-    statusIcon.setAttribute('class', 'fa-fw fas fa-times');
-    selectedBtn.setAttribute('class', 'disabled');
+	el.appendChild(
+		el.ownerDocument.importNode(doc.documentElement, true),
+	);
+};
 
-    const translationKeyName = translationKey.length === 2 ? translationKey[1] : translationKey[0];
+// ---------------------------------------------------- Set Elements Status //
+const setElementsStatus = (btn, status) => {
+	const selectedBtn = btn;
+	let btnClass = 'disabled';
+	let svgIcon = config.icons.times;
+	let translationKeyName = 'nav__off';
 
-    statusText = chrome.i18n.getMessage(translationKeyName);
-    statusText = ` ${statusText}`;
-  }
+	selectedBtn.textContent = '';
 
-  selectedBtn.appendChild(statusIcon);
-  selectedBtn.appendChild(document.createTextNode(statusText));
-}
+	if (typeof status === 'undefined' || status === 'enabled') {
+		btnClass = 'enabled';
+		svgIcon = config.icons.check;
+		translationKeyName = 'nav__on';
+	}
+
+	if (selectedBtn.getAttribute('data-locale-key') !== null) {
+		translationKeyName = 'nav__only_logged_in';
+
+		if (btn.id === 'toggle-only-checking-out-status') {
+			translationKeyName = 'nav__only_checking_out';
+		}
+	}
+
+	appendIcon(selectedBtn.id, svgIcon);
+
+	selectedBtn.setAttribute('class', btnClass);
+	selectedBtn.appendChild(document.createTextNode(chrome.i18n.getMessage(translationKeyName)));
+};
 
 // ---------------------------------------------------- Runtime SendMessage //
-chrome.runtime.sendMessage({ getExtensionStatus: true }, response => {
-  setElementsStatus(toggleExtensionStatusButton, response.extensionStatus);
+chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
+	setElementsStatus(statusBtn, response.extensionStatus);
+	setElementsStatus(whenLoggedInBtn, response.onlyWhenLoggedInStatus);
+	setElementsStatus(whenCheckingOutBtn, response.onlyWhenCheckingOutStatus);
 });
 
-chrome.runtime.sendMessage({ getOnlyWhenLoggedInStatus: true }, response => {
-  setElementsStatus(toggleOnlyWhenLoggedInStatusStatusButton, response.onlyWhenLoggedInStatus, ['nav__only_logged_in']);
-});
-
-// ---------------------------------------------------- Status Toggles  //
+// ---------------------------------------------------- Status Toggles //
 // Extension Status //
-toggleExtensionStatusButton.addEventListener('click', () => {
-  chrome.runtime.sendMessage({ toggleStatus: true }, response => {
-    setElementsStatus(toggleExtensionStatusButton, response.extensionStatus);
-  });
+statusBtn.addEventListener('click', () => {
+	chrome.runtime.sendMessage({ toggleStatus: true }, (response) => {
+		setElementsStatus(statusBtn, response.extensionStatus);
+	});
 });
 
 // Only When Logged In Status //
-toggleOnlyWhenLoggedInStatusStatusButton.addEventListener('click', () => {
-  chrome.runtime.sendMessage({ onlyWhenLoggedInToggleStatus: true }, response => {
-    setElementsStatus(toggleOnlyWhenLoggedInStatusStatusButton, response.onlyWhenLoggedInStatus, ['nav__only_logged_in']);
-  });
+whenLoggedInBtn.addEventListener('click', () => {
+	chrome.runtime.sendMessage({ onlyWhenLoggedInToggleStatus: true }, (response) => {
+		setElementsStatus(whenLoggedInBtn, response.onlyWhenLoggedInStatus);
+	});
+});
+
+// Only When Checking Out Status //
+whenCheckingOutBtn.addEventListener('click', () => {
+	chrome.runtime.sendMessage({ onlyWhenCheckingOutToggleStatus: true }, (response) => {
+		setElementsStatus(whenCheckingOutBtn, response.onlyWhenCheckingOutStatus);
+	});
 });
 
 // ---------------------------------------------------- External Links //
-window.onload = function() {
-  const externalLinks = document.getElementsByClassName('external');
+window.onload = () => {
+	const menuLinks = document.getElementsByClassName('external');
 
-  for (let i = 0; i < externalLinks.length; i += 1) {
-    const externalLink = externalLinks[i];
+	Object.values(menuLinks).forEach((link) => {
+		const externalLink = link;
+		const type = link.getAttribute('data-type');
 
-    externalLink.onclick = function() {
-      let url = '';
-      const type = this.getAttribute('data-type');
-
-      if (type === 'amazonSmile') {
-        url = 'https://smile.amazon.com/';
-      }
-      else if (type === 'about') {
-        url = 'about.html';
-      }
-      else if (type === 'devSite') {
-        url = 'https://webdevnerdstuff.com/';
-      }
-      else if (type === 'userScript') {
-        url = 'https://openuserjs.org/scripts/mscarchilli/Amazon_Smile_Redirect';
-      }
-      else if (type === 'donate') {
-        url =
-          'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=webdevnerdstuff%40gmail.com&item_name=Amazon+Smile+Redirect&currency_code=USD&source=url';
-      }
-
-      window.open(url, '_blank');
-    };
-  }
+		externalLink.onclick = () => {
+			window.open(config.externalLinks[type], '_blank');
+		};
+	});
 };

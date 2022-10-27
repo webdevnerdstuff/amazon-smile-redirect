@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "この拡張機能は、Amazon.comから対応するAmazonSmileページに自動的にリダイレクトします。",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & うさぎ...たくさんのうさぎ！"
+	},
+	"version": {
+		"message": "バージョン"
+	},
+	"nav__on": {
+		"message": "オン",
+		"description": "Navigation Text for:On"
+	},
+	"nav__off": {
+		"message": "オフ",
+		"description": "Navigation Text for:Off"
+	},
+	"nav__only_logged_in": {
+		"message": "ログイン時にのみリダイレクトする",
+		"description": "Navigation Text for:Redirect only when logged in"
+	},
+	"nav__only_checking_out": {
+		"message": "チェックアウト時にのみリダイレクト",
+		"description": "Navigation Text for:Redirect only when checking out"
+	},
+	"nav__about": {
+		"message": "拡張について",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "開発者のウェブサイト",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "サポート拡張",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "AmazonSmileを通じてAmazonの商品を購入して、お気に入りの非営利団体を支援しましょう",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "概要：",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "この拡張機能は、対応するAmazonSmileページに自動的にリダイレクトするため、最初にAmazonSmileに移動することを忘れないでください。非営利団体が購入の恩恵を受けるには、AmazonSmileを通じて購入を完了する必要があります。",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "サポートされているサイト：",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "法律情報：",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmileおよびAmazonSmileロゴは、Amazon.com、Inc。またはその関連会社の商標です。拡張機能は、Amazonによって作成または承認されていません。",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "全著作権所有",
+		"description": "About page copyright All Rights Reserved"
+	}
+}

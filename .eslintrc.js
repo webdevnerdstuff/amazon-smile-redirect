@@ -1,105 +1,77 @@
 module.exports = {
 	env: {
 		browser: true,
-		jquery: true,
 		es6: true,
+		node: true,
 	},
-	extends: 'airbnb-base',
+	extends: [
+		'airbnb-base',
+		'eslint:recommended',
+	],
 	globals: {
-		$: true,
-		_validator: true,
-		baseUrl: true,
-		jQuery: true,
-    moment: true,
-    onDateRangeChange: true,
+		chrome: true,
+		location: true,
 	},
+	parser: '@babel/eslint-parser',
 	parserOptions: {
-		ecmaFeatures: {
-			jsx: true,
-		},
-		ecmaVersion: 2018,
-		parser: 'babel-eslint',
+		ecmaVersion: 12,
+		parser: '@babel/eslint-parser',
+		requireConfigFile: false,
 		sourceType: 'module',
 	},
-	plugins: ['import'],
+	plugins: [
+		'import',
+		'@babel',
+	],
+	settings: {
+		'import/resolver': {
+			'babel-module': {},
+		},
+	},
 	rules: {
-		'arrow-parens': ['warn', 'as-needed'],
-		'brace-style': [0, 'stroustrup'],
-		'comma-dangle': [
-			'error',
-			{
-				arrays: 'always-multiline',
-				objects: 'always-multiline',
-			},
-		],
-		'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
+		'brace-style': ['error', 'stroustrup'],
 		'default-case': [
-			'error',
-			{
+			'error', {
 				commentPattern: '^skip\\sdefault',
 			},
 		],
-		'func-names': 0,
+		'func-names': ['error', 'never'],
 		'function-paren-newline': 0,
-		'global-require': 0,
+		'import/no-self-import': 0,
+		'import/no-extraneous-dependencies': 0,
 		'implicit-arrow-linebreak': ['warn', 'beside'],
-		indent: 0,
+		indent: [2, 'tab', { SwitchCase: 1 }],
+		'no-tabs': [0, { allowIndentationTabs: true }],
 		'linebreak-style': 0,
 		'max-len': 0,
-		'new-cap': 0,
-    'import/newline-after-import': 0,
-    'newline-per-chained-call': 0,
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
-    'no-continue': 0,
-		'no-debugger': 1,
 		'no-else-return': ['error', { allowElseIf: true }],
-		'no-loop-func': 0,
-		'no-mixed-operators': 0,
-		'no-nested-ternary': 0,
+		'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+		'no-debugger': 0,
 		'no-new': 0,
-		'no-param-reassign': [
-			'error',
-			{
-				props: true,
-				ignorePropertyModificationsFor: ['$', 'd', 'el', 'field', 'item', 'model'],
-			},
-    ],
-    'no-restricted-globals': 0,
-    'no-restricted-properties': 0,
-    'no-template-curly-in-string': 0,
-		'no-underscore-dangle': [
-			'error',
-			{
-				allow: [
-          '_countRemoveWrapper',
-          '_d',
-          '_data',
-          '_fade',
-          '_hoverState',
-          '_iDisplayLength',
-          '_restoreItemIfFading',
-          '_setFadeTimer',
-        ],
-				allowAfterThis: true,
-			},
-    ],
-    'no-unused-expressions': ["error", { "allowShortCircuit": true }],
-		'no-unused-vars': 0,
+		'no-unused-vars': 1,
 		'no-use-before-define': 0,
-		'no-undef': 0,
-		'no-new': 0,
-		'no-tabs': 0,
-		'object-curly-newline': [
-			'error',
-			{
-				ObjectPattern: { multiline: false },
+		'no-useless-escape': 0,
+		'no-param-reassign': [
+			'error', {
+				props: true,
+				ignorePropertyModificationsFor: ['field', 'model', 'el', 'item', 'state', 'Vue', 'vue'],
 			},
 		],
+		'no-underscore-dangle': [
+			'error', {
+				allow: ['_data'],
+				allowAfterThis: true,
+			},
+		],
+		'no-plusplus': [
+			'error', { allowForLoopAfterthoughts: true },
+		],
+		'object-curly-newline': ['error', {
+			ObjectPattern: { multiline: false },
+		}],
 		'operator-linebreak': ['error', 'after'],
-		'prefer-arrow-callback': ['error'],
 		'prefer-destructuring': [
-			'error',
-			{
+			'error', {
 				array: false,
 				object: false,
 			},
@@ -107,13 +79,17 @@ module.exports = {
 				enforceForRenamedProperties: false,
 			},
 		],
-		radix: 0,
-		'space-before-function-paren': [1, 'never'],
-		'vars-on-top': 0,
-	},
-	settings: {
-		'import/resolver': {
-			'babel-module': {},
-		},
+		'space-before-function-paren': ['error', {
+			anonymous: 'never',
+			named: 'never',
+			asyncArrow: 'never',
+		}],
+		'vue/html-closing-bracket-newline': 0,
+		'vue/html-indent': 0,
+		'vue/html-self-closing': 0,
+		'vue/max-attributes-per-line': 0,
+		'vue/no-template-shadow': 0,
+		'vue/no-v-html': 0,
+		'vue/singleline-html-element-content-newline': 0,
 	},
 };

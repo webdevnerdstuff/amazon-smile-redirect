@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Это расширение автоматически перенаправляет вас на соответствующую страницу AmazonSmile с Amazon.com.",
+		"description": "The description of the application, displayed in the web store."
+	},
+	"appAuthor": {
+		"message": "WebDevNerdStuff & Кролики ... много-много кроликов!"
+	},
+	"version": {
+		"message": "Версия"
+	},
+	"nav__on": {
+		"message": "На",
+		"description": "Navigation Text for:On"
+	},
+	"nav__off": {
+		"message": "Выключенный",
+		"description": "Navigation Text for:Off"
+	},
+	"nav__only_logged_in": {
+		"message": "Перенаправлять только при входе в систему",
+		"description": "Navigation Text for:Redirect only when logged in"
+	},
+	"nav__only_checking_out": {
+		"message": "Перенаправление только при оформлении заказа",
+		"description": "Navigation Text for:Redirect only when checking out"
+	},
+	"nav__about": {
+		"message": "О расширении",
+		"description": "Navigation Text for: About Amazon Smile Redirect"
+	},
+	"nav__developerWebsite": {
+		"message": "Сайт разработчика",
+		"description": "Navigation Text for: Developer Website"
+	},
+	"nav__supportExtension": {
+		"message": "Расширение поддержки",
+		"description": "Navigation Text for: Support Extension"
+	},
+	"about__intro": {
+		"message": "Помогите своей любимой некоммерческой организации, покупая товары на Amazon через AmazonSmile.",
+		"description": "About page intro"
+	},
+	"about__overviewHeader": {
+		"message": "Обзор:",
+		"description": "About page Overview header"
+	},
+	"about__overviewParagraph": {
+		"message": "Это расширение автоматически перенаправит вас на соответствующую страницу AmazonSmile, поэтому вам никогда не придется забывать сначала перейти на AmazonSmile. Чтобы ваша некоммерческая организация получила выгоду от вашей покупки, вы должны совершить покупку через AmazonSmile.",
+		"description": "About page Overview text"
+	},
+	"about__supportedSitesHeader": {
+		"message": "Поддерживаемые сайты:",
+		"description": "About page Supported Site header"
+	},
+	"about__legalInformationHeader": {
+		"message": "Легальная информация:",
+		"description": "About page Legal Information header"
+	},
+	"about__legalInformationParagraph": {
+		"message": "AmazonSmile и логотип AmazonSmile являются товарными знаками Amazon.com, Inc. или ее дочерних компаний. Расширение не было создано и не одобрено Amazon.",
+		"description": "About page Legal Information text"
+	},
+	"about__allRightsReserved": {
+		"message": "Все права защищены.",
+		"description": "About page copyright All Rights Reserved"
+	}
+}

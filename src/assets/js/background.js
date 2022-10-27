@@ -1,94 +1,101 @@
+const manifest = chrome.runtime.getManifest();
 let extensionStatus;
 let onlyWhenLoggedInStatus;
+let onlyWhenCheckingOutStatus;
 
 // ---------------------------------------------------- Runtime //
-chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus'], result => {
-  extensionStatus = result.extensionStatus || 'enabled';
-  onlyWhenLoggedInStatus = result.onlyWhenLoggedInStatus || 'disabled';
+chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus', 'onlyWhenCheckingOutStatus'], (result) => {
+	extensionStatus = result.extensionStatus || 'enabled';
+	onlyWhenLoggedInStatus = result.onlyWhenLoggedInStatus || 'disabled';
+	onlyWhenCheckingOutStatus = result.onlyWhenCheckingOutStatus || 'disabled';
 
-  chrome.storage.local.set({ extensionStatus, onlyWhenLoggedInStatus }, () => { });
+	chrome.storage.local.set({ extensionStatus, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus }, () => { });
 
-  updateIcon();
+	updateIcon();
 });
 
 // -------------------------- On Message //
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  // Checking if user is logged out //
-  if (request.logOutCheck) {
-    const goToLogin = request.loggedOut;
+	let response = {};
+	let status;
 
-    sendResponse({ extensionStatus, goToLogin, onlyWhenLoggedInStatus });
-    return false;
-  }
+	// Checking if user is logged out //
+	if (request.logOutCheck) {
+		const goToLogin = request.loggedOut;
+		response = { extensionStatus, goToLogin, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus };
+	}
 
-  // Get Extension 'Status' //
-  if (request.getExtensionStatus) {
-    sendResponse({ extensionStatus });
-    return false;
-  }
+	// Get Extension Options //
+	if (request.getExtensionOptions) {
+		response = { extensionStatus, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus };
+	}
 
-  // Toggle 'Status' //
-  if (request.toggleStatus) {
-    const statusA = updateStatus(extensionStatus);
-    sendResponse({ extensionStatus: statusA });
-  }
+	// Toggle 'Status' //
+	if (request.toggleStatus) {
+		status = updateOptions('extensionStatus', extensionStatus);
+		response = { extensionStatus: status };
+	}
 
-  // Get Extension 'Only When Logged In' //
-  if (request.getOnlyWhenLoggedInStatus) {
-    sendResponse({ onlyWhenLoggedInStatus });
-    return false;
-  }
+	// Toggle 'Only When Logged In' //
+	if (request.onlyWhenLoggedInToggleStatus) {
+		status = updateOptions('onlyWhenLoggedInStatus', onlyWhenLoggedInStatus);
+		response = { onlyWhenLoggedInStatus: status };
+	}
 
-  // Toggle 'Only When Logged In' //
-  if (request.onlyWhenLoggedInToggleStatus) {
-    const statusB = updateOnlyWhenLoggedIn(onlyWhenLoggedInStatus);
-    sendResponse({ onlyWhenLoggedInStatus: statusB });
-  }
+	// Toggle 'Only When Checking Out' //
+	if (request.onlyWhenCheckingOutToggleStatus) {
+		status = updateOptions('onlyWhenCheckingOutStatus', onlyWhenCheckingOutStatus);
+		response = { onlyWhenCheckingOutStatus: status };
+	}
 
-  return false;
+	sendResponse(response);
+	return false;
 });
 
 // ---------------------------------------------------- Update Popup Status Icon //
 function updateIcon() {
-  if (extensionStatus === 'disabled') {
-    chrome.browserAction.setIcon({
-      path: {
-        16: 'assets/images/icon-disabled16.png',
-        48: 'assets/images/icon-disabled48.png',
-        128: 'assets/images/icon-disabled128.png',
-      },
-    });
+	const iconStatus = extensionStatus === 'disabled' ? '-disabled' : '';
 
-    return false;
-  }
+	// Check for Manifest V2 for compatibility //
+	if (manifest.manifest_version === 2) {
+		chrome.browserAction.setIcon({
+			path: {
+				16: 'assets/images/icon16.png',
+				48: 'assets/images/icon48.png',
+				128: 'assets/images/icon128.png',
+			},
+		});
 
-  chrome.browserAction.setIcon({
-    path: {
-      16: 'assets/images/icon16.png',
-      48: 'assets/images/icon48.png',
-      128: 'assets/images/icon128.png',
-    },
-  });
+		return false;
+	}
 
-  return false;
+	chrome.action.setIcon({
+		path: {
+			16: `/assets/images/icon${iconStatus}16.png`,
+			48: `/assets/images/icon${iconStatus}48.png`,
+			128: `/assets/images/icon${iconStatus}128.png`,
+		},
+	});
+
+	return false;
 }
 
-// ---------------------------------------------------- Update 'Status' //
-function updateStatus() {
-  extensionStatus = extensionStatus === 'enabled' ? 'disabled' : 'enabled';
+// ---------------------------------------------------- Update Options //
+const updateOptions = (key, val) => {
+	const status = val === 'enabled' ? 'disabled' : 'enabled';
 
-  chrome.storage.local.set({ extensionStatus }, () => { });
+	if (key === 'extensionStatus') {
+		extensionStatus = status;
+		updateIcon();
+	}
+	else if (key === 'onlyWhenLoggedInStatus') {
+		onlyWhenLoggedInStatus = status;
+	}
+	else if (key === 'onlyWhenCheckingOutStatus') {
+		onlyWhenCheckingOutStatus = status;
+	}
 
-  updateIcon();
+	chrome.storage.local.set({ [key]: status }, () => { });
 
-  return extensionStatus;
-}
-
-// ---------------------------------------------------- Update 'Only When Logged In' //
-function updateOnlyWhenLoggedIn() {
-  onlyWhenLoggedInStatus = onlyWhenLoggedInStatus === 'disabled' ? 'enabled' : 'disabled';
-
-  chrome.storage.local.set({ onlyWhenLoggedInStatus }, () => { });
-
-  return onlyWhenLoggedInStatus;
-}
+	return status;
+};

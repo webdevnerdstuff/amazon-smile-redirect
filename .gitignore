@@ -23,8 +23,6 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
-*.sqlite
 
 # OS generated files #
 ######################
@@ -40,19 +38,12 @@ Thumbs.db
 # Custom #
 ##########
 amazon-smile-redirect.pem
-
-.sass-cache
-node_modules
 npm-debug.log
 
+# Directories #
+###############
+node_modules
 .history/
-
-uploads/logs
-
-# Assets #
-##########
-dist/src/assets/css
-dist/src/assets/js
-dist/src/assets/vendor
-
+dist
 published
+zip-build

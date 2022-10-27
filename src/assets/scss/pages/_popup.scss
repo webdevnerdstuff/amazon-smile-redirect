@@ -1,32 +1,30 @@
 // ------------------------------------------------------ popup.html //
 #asr-popup {
-	font-size: 14px;
+	background-color: $white;
+	font-size: 0.9em;
 	margin: 0;
-	min-width: 18em;
-
-	.orange {
-		color: $orange;
-	}
+	min-width: 19em;
+	padding: 0.5em;
 
 	ul,
 	li,
-	p,
-	img {
+	p {
 		border: 0;
 		margin: 0;
 		padding: 0;
 	}
 
 	ul {
-		display: grid;
-		grid-template-rows: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
 		list-style-type: none;
 
 		li {
-			background-color: $white;
+			border-radius: 4px;
 			cursor: pointer;
-			padding: 7px;
-			transition: background-color .25s ease;
+			padding: 10px 7px;
+			transition: background-color 0.25s ease;
 
 			&:hover {
 				background-color: $list-hover;
@@ -37,21 +35,37 @@
 			}
 		}
 
-		.fa-fw {
-			margin-right: 5px;
-		}
+		.icon {
+			&--inline {
+				display: inline-block;
+				height: 1em;
+				overflow: visible;
+				vertical-align: -0.125em;
+			}
 
-		.fa-check {
-			color: $green;
-		}
+			&--sw {
+				margin-right: 0.4em;
+				text-align: center;
+				width: 1.25em;
+			}
 
-		.fa-info {
-			color: $blue;
-		}
+			&--amazon {
+				color: $orange;
+			}
 
-		.fa-times,
-		.fa-heart {
-			color: $red;
+			&--check {
+				color: $green;
+			}
+
+			&--info {
+				color: $blue;
+			}
+
+			&--times,
+			&--heart,
+			&--bug {
+				color: $red;
+			}
 		}
 	}
 }
