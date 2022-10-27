@@ -24,7 +24,9 @@ function isExcludedPage() {
 
 // ---------------------------------------------------- Checked if Logged Out //
 function loggedOut(navLineText) {
-	return navLineText === 'Hello. Sign in' || navLineText === 'Hello, Sign in' || navLineText === 'Hallo! Anmelden' || navLineText === 'Hallo, Anmelden' || navLineText === '';
+	const lowerNavLineText = navLineText.toLowerCase();
+
+	return lowerNavLineText === 'hello. sign in' || lowerNavLineText === 'hello, sign in' || lowerNavLineText === 'hallo! anmelden' || lowerNavLineText === 'hallo, anmelden' || lowerNavLineText === '';
 }
 
 // ---------------------------------------------------- Go To Page //
