@@ -25,11 +25,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		response = { extensionStatus, goToLogin, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus };
 	}
 
-	// Get Extension Options //
-	if (request.getExtensionOptions) {
-		response = { extensionStatus, onlyWhenLoggedInStatus, onlyWhenCheckingOutStatus };
-	}
-
 	// Toggle 'Status' //
 	if (request.toggleStatus) {
 		status = updateOptions('extensionStatus', extensionStatus);
