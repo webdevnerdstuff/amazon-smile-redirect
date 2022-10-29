@@ -44,10 +44,10 @@ const setElementsStatus = (btn, status) => {
 };
 
 // ---------------------------------------------------- Runtime SendMessage //
-chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
-	setElementsStatus(statusBtn, response.extensionStatus);
-	setElementsStatus(whenLoggedInBtn, response.onlyWhenLoggedInStatus);
-	setElementsStatus(whenCheckingOutBtn, response.onlyWhenCheckingOutStatus);
+chrome.storage.local.get(['extensionStatus', 'onlyWhenLoggedInStatus', 'onlyWhenCheckingOutStatus'], (result) => {
+	setElementsStatus(statusBtn, result.extensionStatus);
+	setElementsStatus(whenLoggedInBtn, result.onlyWhenLoggedInStatus);
+	setElementsStatus(whenCheckingOutBtn, result.onlyWhenCheckingOutStatus);
 });
 
 // ---------------------------------------------------- Status Toggles //
