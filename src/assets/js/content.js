@@ -1,9 +1,8 @@
 const config = require('../json/config.json');
 
 // ---------------------------------------------------- Get Storage //
-chrome.runtime.sendMessage({ getExtensionOptions: true }, (response) => {
-	const extensionStatus = response.extensionStatus;
-	fetchNavLines(extensionStatus);
+chrome.storage.local.get(['extensionStatus'], (result) => {
+	fetchNavLines(result.extensionStatus);
 
 	return false;
 });
@@ -49,7 +48,7 @@ function goToPage(navLineText, domainExtension, goToLogin, onlyWhenLoggedInStatu
 			// Redirect user to corresponding page on Amazon Smile //
 			window.location.replace(`https://smile.amazon.${domainExtension}${window.location.pathname}${window.location.search}`);
 		}
-		else if (onlyWhenLoggedInStatus !== 'enabled') {
+		else if (onlyWhenLoggedInStatus !== 'enabled' && goToLogin) {
 			// Redirect user to login page with return_to URL //
 			const redirectURL = encodeURIComponent(`https://smile.amazon.${domainExtension}${pathName}`);
 			const redirectSearch = encodeURIComponent(window.location.search);
