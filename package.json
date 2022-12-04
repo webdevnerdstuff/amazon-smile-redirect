@@ -1,6 +1,6 @@
 {
 	"name": "amazon-smile-redirect",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"description": "Amazon Smile Redirect",
 	"main": "index.js",
 	"scripts": {
@@ -10,10 +10,11 @@
 		"build": "pnpm build:release"
 	},
 	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies!",
+	"homepage": "https://amazonsmileredirect.com",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/webdevnerdstuff/amazon-smile-redirect"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.2",

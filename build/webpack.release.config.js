@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -35,7 +35,7 @@ const banner = `${packageName}
  @author ${packageJson.author}
  @copyright Copyright ${new Date().getFullYear()}, WebDevNerdStuff
  @homepage ${packageJson.homepage}
- @repository ${packageJson.repository}
+ @repository ${packageJson.repository.url}
  @license https://github.com/webdevnerdstuff/${packageJson.name}/blob/main/LICENSE.md
  `;
 
