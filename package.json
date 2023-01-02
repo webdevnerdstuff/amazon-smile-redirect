@@ -1,6 +1,6 @@
 {
 	"name": "amazon-smile-redirect",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"description": "Amazon Smile Redirect",
 	"main": "index.js",
 	"scripts": {
