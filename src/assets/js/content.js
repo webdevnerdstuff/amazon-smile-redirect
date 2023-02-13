@@ -3,7 +3,7 @@ const config = require('../json/config.json');
 // ---------------------------------------------------- Get Storage //
 function getLocalStorageValue() {
 	const todaysDate = new Date();
-	const endDate = new Date('2023-02-20');
+	const endDate = new Date('2023-02-19');
 
 	// Stop redirecting after end date //
 	if (todaysDate > endDate) {
@@ -180,7 +180,7 @@ text-transform: uppercase;
 	</p>
 
 	<p style="margin-bottom: 1.5em;">
-	As a reminder, you will want to remove the Amazon Smile Redirect extension from your browser after this date. I have also set the extension to no longer redirect after February 20, 2023 to avoid any issues. If anything changes, I will update this extension to reflect that.
+	As a reminder, you will want to remove the Amazon Smile Redirect extension from your browser after this date. I have also set the extension to no longer redirect after February 19, 2023 to avoid any issues. If anything changes, I will update this extension to reflect that.
 	</p>
 
 	<p style="margin-bottom: 2.5em;">
